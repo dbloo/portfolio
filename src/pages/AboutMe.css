@@ -57,8 +57,11 @@
   
     .about-container img {
       width: 100%; /* Ensure the image fits the container width */
-      height: auto;
-      padding-right: 15vw; /* Maintain aspect ratio */
+      height: 65vh;
+      margin-right: 15vw;
+      border-radius: 10px;
+      box-shadow: 0px 4px 10px  rgba(0, 0, 0, 0.3); 
+
     }
 
   
