@@ -71,7 +71,7 @@ function App() {
     id: 2,
     name: "THRU LA BLU",
     description: "This one tastes like raspberry.",
-    imageUrl: "/assets/images/BLU.JPG",
+    imageUrl: "/assets/images/BLU.jpg",
     size: "tall",
     materials: "12in x 16in Acrylic on Canvas "
 
@@ -82,7 +82,7 @@ function App() {
       id: 3,
       name: "SUNDOWN",
       description: "Just down the lane.",
-      imageUrl: "/assets/images/sundown.JPG",
+      imageUrl: "/assets/images/sundown.jpg",
       size: "medium",
       materials: "48in x 48in Acrylic on Canvas "
 
@@ -92,7 +92,7 @@ function App() {
       id: 4,
       name: "FORWARD",
       description: "Memories left behind still dictate the memories to come.",
-      imageUrl: "/assets/images/FORWARD.JPG",
+      imageUrl: "/assets/images/FORWARD.jpg",
       size: "medium",
       materials: "40in x 40in Acrylic on Canvas "
 
@@ -120,7 +120,7 @@ function App() {
       id: 7,
       name: "I THINK I THINK TOO MUCH",
       description: "Thought upon thought after thought.",
-      imageUrl: "/assets/images/think.JPG",
+      imageUrl: "/assets/images/think.jpg",
       size: "tall",
       materials: "45in x 31in Acrylic on Canvas "
 
@@ -139,7 +139,7 @@ function App() {
       id: 9,
       name: "SHOW YOUR FACE",
       description: "There is always something to hide.",
-      imageUrl: "/assets/images/SYF.JPG",
+      imageUrl: "/assets/images/SYF.jpg",
       size: "tall",
       materials: "20in x 24in Acrylic on Canvas "
 
@@ -169,7 +169,7 @@ function App() {
       id: 12,
       name: "ADEQUATE NATURAL",
       description: "It tok me forever to finish this one. Not because the process was labour intensive, or techically impressive. I just didn't wan't to deal with my emotions at the time. ",
-      imageUrl: "/assets/images/adequate.JPG",
+      imageUrl: "/assets/images/adequate.jpg",
       size: "medium",
       materials: "40in x 40in Acrylic on Canvas "
 
@@ -189,7 +189,7 @@ function App() {
       id: 14,
       name: "HUNDRED MARK",
       description: "💯",
-      imageUrl: "/assets/images/hundred.JPG",
+      imageUrl: "/assets/images/hundred.jpg",
       size: "tall",
       materials: "22in x 18in Acrylic and Oil Pastel Canvas "
 
@@ -213,7 +213,7 @@ function App() {
       id: 2,
       name: "SHUTDOWN",
       description: " ",
-      imageUrl: "/assets/images/SD.JPG",
+      imageUrl: "/assets/images/SD.jpg",
       size: "tall",
       materials: "8.5 x 11 in Pen and Ink on paper"
 
@@ -263,7 +263,7 @@ function App() {
       id: 6,
       name: "All Akimbo",
       description: " ",
-      imageUrl: "/assets/images/akimbo.JPG",
+      imageUrl: "/assets/images/akimbo.jpg",
       size: "tall",
       materials: "8.5in x 11in Digital "
 
@@ -273,7 +273,7 @@ function App() {
       id: 7,
       name: "i trusted u",
       description: " ",
-      imageUrl: "/assets/images/trusted.JPG",
+      imageUrl: "/assets/images/trusted.jpg",
       size: "tall",
       materials: "8.5in x 11in Digital "
 
@@ -297,7 +297,7 @@ function App() {
       id: 1,
       name: "Thanks For LIStening",
       description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
-      imageUrl: "/assets/images/lister.JPG",
+      imageUrl: "/assets/images/lister.jpg",
       size: "medium",
       materials: " "
 
@@ -376,7 +376,7 @@ function App() {
       id: 1,
       name: "MAKUHWAY",
       description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
-      imageUrl: "/assets/images/maw.JPG",
+      imageUrl: "/assets/images/maw.jpg",
       imagesUrl: ["/assets/images/lister.JPG", "/assets/images/underground.jpg" , "/assets/images/bc.jpg"],
       size: "medium",
       materials: " ",
@@ -423,7 +423,7 @@ function App() {
         id: 1,
         name: "Thanks For LIStening",
         description: " ",
-        imageUrl: "/assets/images/lister.JPG",
+        imageUrl: "/assets/images/lister.jpg",
         size: "medium",
         materials: " "
   
