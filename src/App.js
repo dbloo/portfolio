@@ -1,7 +1,7 @@
 import React from "react";
 import { useLocation } from "react-router-dom";
 import { useEffect } from "react";
-import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import { HashRouter as Router, Route, Routes } from "react-router-dom";
 import GraphicDesign from "./pages/GraphicDesign";
 import TraditionalArt from "./pages/TraditionalArt";
 import Drawings from "./pages/Drawings";
