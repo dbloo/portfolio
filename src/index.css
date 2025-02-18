@@ -1,13 +1,62 @@
-body {
+
+h1 {
+  font-family: "nimbus-sans-extended", sans-serif;
+  font-weight: 900;
+  font-style: normal;
+}
+
+p {
+  font-family: "nimbus-sans-extended", sans-serif;
+  font-weight: 100;
+}
+
+img {
+  pointer-events: none; /* Disable right-click and dragging */
+  user-select: none;    /* Prevent text selection */
+}
+
+
+
+html, body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  height: 100%;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  overflow-x: hidden;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.container {
+    margin-left: 2%;
+    margin-right: 2%;
+    margin-top: 2%;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+#root {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* Full viewport height */
+}
+
+footer {
+  margin-top: auto;
+  position: relative;
+}
+
+.content {
+  flex: 1; /* This makes the content area flexible, pushing the footer down */
+}
+

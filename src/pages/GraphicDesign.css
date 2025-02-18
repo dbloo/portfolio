@@ -1,0 +1,138 @@
+
+.gd-container { 
+    margin-top: 2%;
+    margin-left: 5vw;
+    margin-right: 5vw;
+    margin-bottom: 5vw;
+    height: 100%;
+    border: 1px solid #000; 
+  border-radius: 10px; 
+  padding: 20px; 
+   
+}
+
+.text-container-g{
+  margin-left: 5vw;
+  margin-right: 5vw;
+  margin-top: 5vw;
+  border: 1px solid #000; 
+  border-radius: 10px; 
+  padding: 20px; 
+}
+
+
+
+
+
+.text-page-top-g {
+  font-family: "nimbus-sans-extended", sans-serif;
+  font-weight: 900;
+  font-style: normal;
+  margin-bottom: 0px;
+  margin-top: 0px;
+  animation: fadeIn 0.5s ease-in-out forwards; /* Fade-in animation */
+  transition: transform 0.2s ease-in-out;
+  font-size: clamp(40px, 10vw, 100px);
+
+  border: 10px black;
+
+}
+.text-page-top-g2 {
+
+    font-family: "nimbus-sans-extended", sans-serif;
+    font-weight: 100;
+    font-style: normal;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    font-size: 50px;
+    animation: fadeIn 1s ease-in-out forwards; /* Fade-in animation */
+    transition: transform 0.3s ease-in-out;
+    font-size: clamp(12px, 5vw, 40px)
+}
+
+.gd-grid {
+    display: grid;
+    gap: 10px;
+    grid-template-columns: repeat(6, 1fr); /* Six equally-sized columns */
+    grid-auto-rows: 150px; /* Each row will have a minimum height of 150px */
+  }
+  
+  .gd-item {
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.3s ease-in-out;
+
+  }
+  
+  .gd-item img {
+    width: 50%;
+    object-fit: cover; 
+    height: auto;
+    opacity: 0; 
+    animation: fadeIn 1s ease-in-out forwards; 
+    
+  }
+
+  .gd-item img :hover { 
+    
+    transform: scale(1.05);
+    
+
+  }
+  
+  @keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+  }
+  .gd-item.large {
+    grid-column: span 4; /* Spans 4 columns */
+    grid-row: span 3;    /* Spans 3 rows */
+  }
+  
+  .gd-item.medium {
+    grid-column: span 3; /* Spans 3 columns */
+    grid-row: span 3;    /* Spans 2 rows */
+  }
+  
+  .gd-item.small {
+    grid-column: span 2; /* Spans 2 columns */
+    grid-row: span 1;    /* Spans 1 row */
+  }
+  
+  .gd-item.tall {
+    grid-column: span 2; /* Spans 2 columns */
+    grid-row: span 3;    /* Spans 3 rows */
+  }
+
+  @media (max-width: 768px) {
+    .gd-grid {
+      display: flex;
+      flex-direction: column; /* Stack the grid items vertically */
+      justify-content: center;
+      align-items: center;
+      gap: 20px; /* Add space between items */
+    }
+  
+    .gd-item {
+      width: 100%; /* Ensure each item takes full width on mobile */
+      max-width: 400px; /* Optional: Limit the max width for a cleaner look */
+    }
+  
+    .gd-item img {
+      width: 100%; /* Ensure the image fits the container width */
+      height: auto; /* Maintain aspect ratio */
+    }
+
+  
+  }
+  
+  /* Add more custom sizes if needed */
+  

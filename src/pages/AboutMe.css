@@ -1,0 +1,69 @@
+
+.about-container {
+
+    margin-left: 5vw;
+    margin-right: 5vw;
+    margin-top: 5vw;
+    margin-bottom: 5vw;
+    border: 1px solid #000; 
+    border-radius: 10px; 
+    padding: 20px; 
+
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+
+}
+
+.about-container h1{
+    font-family: "nimbus-sans-extended", sans-serif;
+    font-weight: 900;
+    font-style: normal;
+    margin-bottom: 5%;
+    margin-top: 0px;
+    animation: fadeIn 0.5s ease-in-out forwards; /* Fade-in animation */
+    font-size: clamp(40px, 10vw, 100px);
+    line-height: 80%;
+
+}
+.about-container p{
+    font-family: "nimbus-sans-extended", sans-serif;
+    font-weight: 100;
+    font-style: normal;
+    margin-bottom: 0px;
+    margin-top: 0px;
+    animation: fadeIn 0.5s ease-in-out forwards; /* Fade-in animation */
+    font-size: clamp(40px, 10vw, 12);
+    margin-left: 0.5%;
+
+}
+
+.about-container img {
+    width: 80%;
+    margin-left: 20%;
+}
+
+.about-text-container {
+    margin-right: 10%;
+}
+
+@media (max-width: 768px) {
+    .about-container {
+      display: flex;
+      flex-direction: column; /* Stack the grid items vertically */
+      justify-content: center;
+      align-items: center;
+      gap: 20px; /* Add space between items */
+    }
+  
+    .about-container img {
+      width: 100%; /* Ensure the image fits the container width */
+      height: auto;
+      padding-right: 15vw; /* Maintain aspect ratio */
+    }
+
+  
+  }
+
+
+
+
