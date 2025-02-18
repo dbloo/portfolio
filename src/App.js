@@ -92,7 +92,7 @@ function App() {
       id: 4,
       name: "FORWARD",
       description: "Memories left behind still dictate the memories to come.",
-      imageUrl: "/assets/images/FORWARD.jpg",
+      imageUrl: "/assets/images/forward.jpg",
       size: "medium",
       materials: "40in x 40in Acrylic on Canvas "
 
