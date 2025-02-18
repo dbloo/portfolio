@@ -60,7 +60,7 @@ function App() {
       id: 16,
       name: "Make more Money",
       description: "Success isn't always about hard work. Sometimes it's about getting really really uncomfortable. ",
-      imageUrl: "/assets/images/money.JPG",
+      imageUrl: "/assets/images/money.jpg",
       size: "tall",
       materials: "5 x 3ft Acrylic on Canvas "
 
