@@ -6,6 +6,8 @@ import GraphicDesign from "./pages/GraphicDesign";
 import TraditionalArt from "./pages/TraditionalArt";
 import Drawings from "./pages/Drawings";
 import Logos from "./pages/Logos";
+import Landing from "./pages/Landing.js";
+
 
 import Header from "./components/Header"; 
 import AboutMe from "./pages/AboutMe.js";
@@ -19,15 +21,6 @@ import Flyers from "./pages/Flyers.js";
 
 
 
-function ScrollToTop() {
-  const { pathname } = useLocation();
-
-  useEffect(() => {
-    window.scrollTo(0, 0);
-  }, [pathname]);
-
-  return null;
-}
 
 
 function App() {
@@ -58,9 +51,9 @@ function App() {
 
     {
       id: 16,
-      name: "Make more Money",
-      description: "Success isn't always about hard work. Sometimes it's about getting really really uncomfortable. ",
-      imageUrl: "/assets/images/money.jpg",
+      name: "Make less Money",
+      description: "Success isn't always about hard work. Sometimes it's just about getting reallyreallyreally uncomfortable. ",
+      imageUrl: "/assets/images/money.JPG",
       size: "tall",
       materials: "5 x 3ft Acrylic on Canvas "
 
@@ -482,14 +475,7 @@ function App() {
       
 
   ]
-}
-  
-
-    
-    
-
-    
-    
+}  
   
 
  
@@ -497,13 +483,14 @@ function App() {
   return (
     
     <Router>
-                <ScrollToTop />
 
       <div id= "root">
         <div className = "content">
         
         <Header />
             <Routes>
+
+              <Route path= "/" element = {<Landing />} />
 
               <Route path="/graphicDesign" element={<GraphicDesign category= "graphicDesign" images = {imageData}/>} />
               <Route path="/paintings" element={<TraditionalArt category="paintings" images = {imageData} />} />

@@ -14,14 +14,14 @@ const TraditionalArt = ({category, images}) => {
   if (!images) return <>spapit</>;
   
   return (
-    <div>
+    <div style={{marginTop: "13vh"}}>
 
       <div className = "text-container">
         <h1 className = "text-page-top">PAINTINGS</h1>
         <h3 className = "text-page-top-2">works of brush and paint</h3>
       </div>
 
-      <div className= "container">
+      <div id = "cont" className= "container">
         <div className="art-grid">
           
 

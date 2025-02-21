@@ -4,12 +4,20 @@
     text-align: center;
     position: relative;
     bottom: 0;
-    width: 100%;
-    height: 20vh;
+    width: 100vw;
+    height: auto;
+    padding-bottom: 10%;
 
     margin-top: auto;
     white-space: nowrap;
 }
+
+.copyright {
+  
+  text-wrap: wrap;
+  color: #999999
+}
+
 
   .footer-wrapper p {
     display: flex;
@@ -70,7 +78,7 @@ h2 {
     position: relative;
     bottom: 0;
     width: 100%;
-    height: 50vh;
+    height: auto;
 
     margin-top: auto;
     white-space: nowrap;
@@ -103,6 +111,12 @@ h2 {
     margin-top: 5vh;
     
 
+  }
+  .copyright {
+    padding-left: 5vw;
+    padding-right: 5vw;
+    padding-top: 2vw;
+    
   }
 
 

@@ -10,6 +10,12 @@ import "./Info.css";
 
    const { category, id } = useParams(); // Get category and ID from the URL
 
+   useEffect(() => {
+      
+         window.scroll(0, 0); // reset the scroll position to the top left of the document.
+      
+   }, []);
+
    if (!images[category]) {
       return <div>Category not found!</div>;
     }
@@ -21,6 +27,7 @@ import "./Info.css";
    if (!images[category]) {
      return <div>Image not found!</div>;
    }
+
 
 
 
