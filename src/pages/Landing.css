@@ -1,0 +1,33 @@
+.anim {
+    width: 50%;
+    display: flex;
+    margin-left: 25vw;
+}
+
+.greetingsContainer {
+    margin-top: 3vh;
+    padding-top: 10%;
+    padding-left: 10%;
+}
+
+.greetings h3 {
+
+    font-size: 32px;
+}
+
+@media (max-width: 768px) {
+    .anim {
+        width: 70%;
+        margin-left: 14%;
+        margin-top: 10vh;
+        margin-bottom: 13%;
+    }
+
+    .greetingsContainer {
+        margin-top: 3vh;
+        padding-top: 20%;
+        padding-left: 10%;
+    }
+    
+
+}

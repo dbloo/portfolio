@@ -7,14 +7,42 @@ function Header() {
   const [isOpen, setIsOpen] = useState(false); 
 
   const [expand, setExpand] = useState(false); 
+  const scrollRef = useRef(window.scrollY);
 
 
-  useEffect(() => {
-    setExpand(false);
-    setIsOpen(false);
+  const [prevScrollPos, setPrevScrollPos] = useState(0);
+  const [visible, setVisible] = useState(true);
+
+    const handleScroll = () => {
 
 
-  }, []);
+      const currentScrollPos = window.scrollY;
+
+
+  
+      if (currentScrollPos > prevScrollPos) {
+        console.log('Scrolling down'); 
+        setVisible(false);
+      } else {
+        console.log('Scrolling up'); 
+
+        setVisible(true);
+      }
+  
+      setPrevScrollPos(currentScrollPos);
+
+
+    };
+  
+    useEffect(() => {
+
+      window.addEventListener('scroll', handleScroll);
+  
+      return () => {
+
+        window.removeEventListener('scroll', handleScroll);
+      };
+    }, []);
 
   const toggleMenu = () => {
     setIsOpen(!isOpen);
@@ -30,13 +58,18 @@ function Header() {
 
   return (
 
-    
+    <header >
 
-    <div className= "navWrapper">   
+    <div className = {`navWrapper ${!visible && 'hidden'}`}>
+
 
       <nav> 
           <div className = "logo"> 
+          <Link to=" ">
+
             <img src = "./assets/icons/dbsig.svg" alt = "logo"></img>
+            
+            </Link>
           </div>
           <div className="hamburger" onClick={toggleMenu}>
 
@@ -68,6 +101,7 @@ function Header() {
       
       </nav>
     </div>
+    </header>
   );
 }
 
