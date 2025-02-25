@@ -5,20 +5,21 @@ function Footer() {
     return(
         <footer className = "footer-wrapper">
             <div className = "scrolling-text">
-                <h1>BUY MORE ARTBUY MORE ARTBUY MORE ARTBUY MORE ART</h1>
+                <h1>BUY MORE ARTBUY MORE ARTBUY MORE ARTBUY MORE ARTBUY MORE ARTBUY MORE ARTBUY MORE ARTBUY MORE ARTBUY MORE ARTBUY MORE ARTBUY MORE ARTBUY MORE ARTBUY MORE ARTBUY MORE ARTBUY MORE ARTBUY MORE ART</h1>
             </div>
 
             <div className = "info-wrapper">
                 <div className = "social-wrapper">
                     <span>
 
-                        <img src ="./assets/icons/tiktok.svg " alt = "tiktok"></img>
-                        <img src ="./assets/icons/instagram.svg " alt = "instagram"></img>
+                        <a href = "https://www.tiktok.com/@dom.ozail"><img src ="./assets/icons/tiktok.svg " alt = "tiktok"></img></a>
+                        <a href = "https://www.instagram.com/dom.ozail"><img src ="./assets/icons/instagram.svg " alt = "instagram"></img></a>
+                        <a href = "https://www.youtube.com/@dominic.bloomfield/featured"><img src ="./assets/icons/YT.svg " alt = "youtube" style = {{width: "80%"}}></img></a>
 
                     </span>
                 </div>
 
-                <p>2024 Copyright Dominic Bloomfield</p>
+                <p>2025 Copyright Dominic Bloomfield</p>
 
                 <p className = "copyright">The artist, (Dominic Bloomfield and All Associated Works), 
                     rights are protected by the Federal Copyright Act of 1976 and the Federal Visual Rights Act of 1990. 

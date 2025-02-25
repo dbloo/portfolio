@@ -3,6 +3,7 @@ import './AboutMe.css';
 
 function AboutMe() {
   return (
+    <div style={{marginTop: "13vh"}}>
     <div className = "about-container">
       <div clasName = "about-text-container">
         <h1 >Dominic Bloomfield</h1>
@@ -17,6 +18,7 @@ function AboutMe() {
 
       <img src = "./assets/images/portrait.JPEG"></img>
        
+    </div>
     </div>
   );
 }

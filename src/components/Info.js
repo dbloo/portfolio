@@ -41,7 +41,7 @@ import "./Info.css";
     return (
       
      
-                <>
+                <div style={{marginTop: "13vh"}}>
 
                     <div className= "info-container">
  
@@ -68,7 +68,7 @@ import "./Info.css";
                      </div>
 
                     </div> 
-                </>
+                </div>
         
 
            

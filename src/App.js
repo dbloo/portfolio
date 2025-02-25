@@ -180,6 +180,16 @@ function App() {
 
     {
       id: 14,
+      name: "TRY AGAIN",
+      description: "Reach for the sky.",
+      imageUrl: "/assets/images/tryagain.JPG",
+      size: "medium",
+      materials: "36in x 36in Acrylic on Cavnas"
+
+    },
+
+    {
+      id: 14,
       name: "HUNDRED MARK",
       description: "💯",
       imageUrl: "/assets/images/hundred.jpg",

@@ -28,8 +28,6 @@ return (
     <div className = "landingContainer">
          <div className = "greetingsContainer">
 
-            <h1 style={{fontSize: "32px"}}>GReeTINGS</h1>
-
         </div>
 
             <div id = "bm" className = "anim"></div>
