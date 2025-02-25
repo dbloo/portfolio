@@ -18,18 +18,26 @@ function Header() {
 
       const currentScrollPos = window.scrollY;
 
-
   
-      if (currentScrollPos > prevScrollPos) {
-        console.log('Scrolling down'); 
+      if (currentScrollPos > prevScrollPos ) {
+
+        // console.log('Scrolling down'); 
+
         setVisible(false);
-      } else {
-        console.log('Scrolling up'); 
+      } else if (currentScrollPos < prevScrollPos  + 1){
+
+        // console.log('Scrolling up'); 
+
 
         setVisible(true);
       }
-  
+
       setPrevScrollPos(currentScrollPos);
+
+      console.log(prevScrollPos)
+
+
+  
 
 
     };
@@ -65,7 +73,7 @@ function Header() {
 
       <nav> 
           <div className = "logo"> 
-          <Link to=" ">
+          <Link to="/">
 
             <img src = "./assets/icons/dbsig.svg" alt = "logo"></img>
             
