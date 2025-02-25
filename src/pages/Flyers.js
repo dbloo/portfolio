@@ -13,7 +13,7 @@ const Flyers = ({category, images}) => {
   if (!images) return <>spapit</>;
   
   return (
-    <div>
+    <div style={{marginTop: "13vh"}}>
 
       <div className = "text-container">
         <h1 className = "text-page-top">FLYERS</h1>

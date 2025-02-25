@@ -7,6 +7,7 @@
     width: 100vw;
     height: auto;
     padding-bottom: 10%;
+   
 
     margin-top: auto;
     white-space: nowrap;
@@ -24,6 +25,8 @@
     font-family: "input-sans", sans-serif;
     font-weight: 100;
     font-style: normal;
+    padding-left: 10%;
+    padding-right: 10%;
     bottom: 0;
     margin-top: 3vw;
     justify-content: center;
@@ -32,7 +35,7 @@
   .social-wrapper{
     width: 3%;
     height: 0;
-    margin-left: 47vw;
+    margin-left: 46vw;
   }
   
   .social-wrapper img{
@@ -95,10 +98,10 @@ h2 {
   }
 
   .social-wrapper{
-    width: 20%;
-    height: 50%;
+    width: 15%;
+    height: 20%;
     margin-top: 0;
-    margin-left:35vw;
+    margin-left:28vw;
   }
   
   .social-wrapper img{

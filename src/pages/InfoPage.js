@@ -6,7 +6,7 @@ const InfoPage = ({images}) => {
 
 
 
-    return (   <Info imageData={images}/>    );
+    return (   <div style={{marginTop: "13vh"}}><Info imageData={images}/> </div>   );
 
     
 }
