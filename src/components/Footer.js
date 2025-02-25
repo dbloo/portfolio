@@ -10,13 +10,11 @@ function Footer() {
 
             <div className = "info-wrapper">
                 <div className = "social-wrapper">
-                    <span>
 
-                        <a href = "https://www.tiktok.com/@dom.ozail"><img src ="./assets/icons/tiktok.svg " alt = "tiktok"></img></a>
+                        <a href = "https://www.tiktok.com/@dom.ozail" ><img src ="./assets/icons/tiktok.svg " alt = "tiktok"></img></a>
                         <a href = "https://www.instagram.com/dom.ozail"><img src ="./assets/icons/instagram.svg " alt = "instagram"></img></a>
                         <a href = "https://www.youtube.com/@dominic.bloomfield/featured"><img src ="./assets/icons/YT.svg " alt = "youtube" style = {{width: "80%"}}></img></a>
 
-                    </span>
                 </div>
 
                 <p>2025 Copyright Dominic Bloomfield</p>

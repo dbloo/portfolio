@@ -36,12 +36,16 @@
     width: 3%;
     height: 0;
     margin-left: 46vw;
+    margin-bottom: 5%;
+
   }
   
   .social-wrapper img{
     margin-right: 50%;
 
   }
+
+  
 
   .info-wrapper{
     margin-top: 2%
@@ -101,13 +105,14 @@ h2 {
     width: 15%;
     height: 20%;
     margin-top: 0;
-    margin-left:28vw;
+    margin-left:30vw;
+    margin-bottom: 10%;
+
   }
   
   .social-wrapper img{
     margin-right: 50%;
     display: inline;
-    margin-bottom: 30%;
   }
 
   .info-wrapper{
