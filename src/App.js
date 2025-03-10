@@ -1,7 +1,7 @@
 import React from "react";
 import { useLocation } from "react-router-dom";
 import { useEffect } from "react";
-import { HashRouter as Router, Route, Routes } from "react-router-dom";
+import { HashRouter as Router, Route, Routes, Navigate } from "react-router-dom";
 import GraphicDesign from "./pages/GraphicDesign";
 import TraditionalArt from "./pages/TraditionalArt";
 import Drawings from "./pages/Drawings";
@@ -18,6 +18,10 @@ import './index.css';
 import { imageData } from "./components/ImageData.js";
 import CoverArt from "./pages/CoverArt.js";
 import Flyers from "./pages/Flyers.js";
+import MusicVideo from "./pages/MusicVideo.js";
+import VideoShortForm from "./pages/VideoShortForm.js";
+import VideoShortFilm from "./pages/VideoShortFilm.js";
+import Construction from "./pages/Construction.js";
 
 
 
@@ -366,6 +370,48 @@ function App() {
 
     },
 
+    {
+      id: 2,
+      name: "IN DUE TIME",
+      description: " ",
+      imageUrl: "/assets/images/timedue.jpg",
+      size: "medium",
+      materials: "1350 x 1080px Poster"
+
+    },
+
+    {
+      id: 3,
+      name: "PRESS ON",
+      description: " ",
+      imageUrl: "/assets/images/press on.jpg",
+      size: "medium",
+      materials: "1350 x 1080px Poster"
+
+    },
+
+    {
+      id: 4,
+      name: "VILE",
+      description: " ",
+      imageUrl: "/assets/images/vile.jpg",
+      size: "medium",
+      materials: "1080 x 1920px Poster"
+
+    },
+
+    {
+      id: 4,
+      name: "FAST IS IN",
+      description: " ",
+      imageUrl: "/assets/images/moveover.jpg",
+      size: "medium",
+      materials: "1080 x 1920px Poster"
+
+    },
+
+
+
 
    
    
@@ -377,45 +423,59 @@ function App() {
 
     {
       id: 1,
-      name: "MAKUHWAY",
-      description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
-      imageUrl: "/assets/images/maw.jpg",
+      name: "KEN BENZ Logo Type",
+      description: " ",
+      imageUrl: "/assets/images/kenni.jpg",
       imagesUrl: ["/assets/images/lister.JPG", "/assets/images/underground.jpg" , "/assets/images/bc.jpg"],
       size: "medium",
       materials: " ",
-      carousel: "yes"
+      carousel: "no"
 
     },
 
     {
       id: 2,
-      name: "Studio Unpleasant",
-      description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
-      imageUrl: "/assets/images/unpl.jpg",
+      name: "KEN BENZ Logo Mockup",
+      description: " ",
+      imageUrl: "/assets/images/kbb.jpeg",
+      imagesUrl: ["/assets/images/lister.JPG", "/assets/images/underground.jpg" , "/assets/images/bc.jpg"],
       size: "medium",
-      materials: "3000 x 3000px Cover Art"
+      materials: " ",
+      carousel: "no"
 
     },
 
     {
       id: 3,
-      name: "Traction",
+      name: "Studio Unpleasant",
       description: " ",
-      imageUrl: "/assets/images/tr.jpg",
+      imageUrl: "/assets/images/unpl.jpg",
       size: "medium",
-      materials: "1350 x 1080px Flyer"
+      materials: " "
 
     },
 
     {
       id: 4,
+      name: "Traction",
+      description: " ",
+      imageUrl: "/assets/images/tr.jpg",
+      size: "medium",
+      materials: " "
+
+    },
+
+    {
+      id: 5,
       name: "MAKUHWAY",
       description: " ",
       imageUrl: "/assets/images/maww.jpg",
       size: "medium",
-      materials: "3000 x 3000px Cover Art"
+      materials: " "
 
     },
+
+    
 
   ],
 
@@ -484,7 +544,57 @@ function App() {
 
       
 
-  ]
+  ],
+
+  shortform: [
+
+    {
+      id: 1,
+      name: "Create",
+      description: " ",
+      imageUrl: "/assets/images/create.jpg",
+      size: "tall ",
+      materials: " ",
+      video: "yes",
+      embedURL: "https://www.youtube.com/watch?v=lwFH05unSZg"
+
+    },
+
+
+
+  ],
+
+  musicvideo: [
+
+    {
+      id: 1,
+      name: "Create",
+      description: " ",
+      imageUrl: "/assets/images/create.jpg",
+      size: "tall ",
+      materials: " ",
+      video: "yes",
+      embedURL: "https://www.youtube.com/watch?v=LlsO9MCLc_k"
+
+    },
+
+
+
+  ],
+
+  shortfilm: [
+
+    {
+      id: 1,
+      name: " ",
+      description: " ",
+      imageUrl: "/assets/images/ ",
+      size: " ",
+      materials: " "
+
+    },
+
+  ],
 }  
   
 
@@ -511,6 +621,16 @@ function App() {
               <Route path="/graphicDesign/logos" element={<Logos category="logos" images = {imageData} />} />
               <Route path="/graphicDesign/cover-art" element={<CoverArt category="coverart" images = {imageData} />} />
               <Route path="/graphicDesign/flyers" element={<Flyers category="flyers" images = {imageData} />} />
+              <Route path="/construction" element={<Construction />} />
+
+
+              {/* <Route path="/video/shortform" element={<VideoShortForm category="shortform" images = {imageData} />} />
+              <Route path="/video/musicvideos" element={<MusicVideo category="musicvideo" images = {imageData} />} />
+              <Route path="/video/shortfilms" element={<VideoShortFilm category="shortfilm" images = {imageData} />} /> */}
+
+              <Route path="/video/shortform" element={<Navigate to = "/construction"/>} />
+              <Route path="/video/musicvideos" element={<Navigate to = "/construction"/>} />
+              <Route path="/video/shortfilms" element={<Navigate to = "/construction"/>} />
 
 
 

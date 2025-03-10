@@ -2,6 +2,9 @@ import React, { useEffect } from "react";
 import { useParams } from "react-router-dom";
 import { Carousel } from "react-responsive-carousel";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
+
+import { InstagramEmbed, YouTubeEmbed } from 'react-social-media-embed';
+
 import "./Info.css";
 
  const  Info = ({images}) => {
@@ -75,7 +78,7 @@ import "./Info.css";
            
         );
 
-      } else {
+      } else if (image.video ==="yes") {
 
         return (
       
@@ -87,7 +90,10 @@ import "./Info.css";
                  <div className = "image-container">
 
 
-                           <img src = {image.imageUrl}></img>
+                           <div className= "embedContainer">
+                          <YouTubeEmbed url = {image.embedURL}  width={400} height={500}/>
+                           
+                           </div>
 
                  <div className = "info-text-container">
                     <h1 className = "text-header">{image.name}</h1>
@@ -106,7 +112,38 @@ import "./Info.css";
     
  );
 
+} else {
+
+   return (
+      
+     
+      <>
+
+          <div className= "info-container">
+
+              <div className = "image-container">
+
+
+                        <img src = {image.imageUrl}></img>
+
+              <div className = "info-text-container">
+                 <h1 className = "text-header">{image.name}</h1>
+                    
+                 <h3 className = "materials">{image.materials}</h3> 
+                 <p className = "description">{image.description}</p> 
+              </div>
+
+           </div>
+
+          </div> 
+      </>
+
+   );
+
+
 }
+
+
 
 
     

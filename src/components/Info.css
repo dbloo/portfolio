@@ -15,6 +15,11 @@ h3{
     color: grey;
 }
 
+.embedContainer {
+    border-radius: 50px;
+    width: auto;
+}
+
 .materials {
     margin-top: 0px;
 }
@@ -46,6 +51,10 @@ h3{
 
 
 @media (max-width: 768px) {
+
+    .embedContainer {
+        border-radius: 50px;
+    }
     
     .image-container img {
 

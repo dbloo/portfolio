@@ -6,7 +6,9 @@ function Header() {
 
   const [isOpen, setIsOpen] = useState(false); 
 
-  const [expand, setExpand] = useState(false); 
+  const [expandGD, setExpandGD] = useState(false); 
+  const [expandVD, setExpandVD] = useState(false); 
+
   const scrollRef = useRef(window.scrollY);
 
 
@@ -54,12 +56,21 @@ function Header() {
 
   const toggleMenu = () => {
     setIsOpen(!isOpen);
-    setExpand(false);
+    setExpandGD(false);
+    setExpandVD(false);
+
 
   };
 
-  const expandMenu = () => {
-    setExpand(!expand);
+  const expandMenuGD = () => {
+    setExpandGD(!expandGD);
+    setExpandVD(false);
+  };
+
+  const expandMenuVD = () => {
+    setExpandVD(!expandVD);
+    setExpandGD(false);
+
   };
 
  
@@ -92,15 +103,26 @@ function Header() {
 
         </div>
           <ul className={`nav-links ${isOpen ? "open" : ""}`} >
-            <li className = "graphicdesign"onClick={expandMenu} style={{cursor: "pointer"}}>Graphic Design</li>
+            <li className = "graphicdesign"onClick={expandMenuGD} style={{cursor: "pointer"}}>Graphic Design</li>
 
-            {expand ? (
-              <div className = {`expanded-gd ${expand ? "expanded" : ""}`}>
+            {expandGD ? (
+              <div className = {`expanded-gd ${expandGD ? "expanded" : ""}`}>
                 <li className = "li-logos"><Link to="/graphicDesign/logos" onClick={toggleMenu}>Logos</Link></li>
                 <li className = "li-logos"><Link to="/graphicDesign/cover-art" onClick={toggleMenu}>Cover Art</Link></li>
                 <li className = "li-logos"><Link to="/graphicDesign/flyers" onClick={toggleMenu}>Flyers</Link></li>
               </div>
              ):(<></>)}
+
+            <li className = "video"onClick={expandMenuVD} style={{cursor: "pointer"}}>Video</li>
+
+            {expandVD ? (
+              <div className = {`expanded-gd ${expandVD ? "expanded" : ""}`}>
+                <li className = "li-logos"><Link to="/video/shortform" onClick={toggleMenu}>Short Form</Link></li>
+                <li className = "li-logos"><Link to="/video/musicvideos" onClick={toggleMenu}>Music Videos</Link></li>
+                <li className = "li-logos"><Link to="/video/shortfilms" onClick={toggleMenu}>Short Films</Link></li>
+              </div>
+            ):(<></>)}
+            
             <li><Link to="/paintings"onClick={toggleMenu}>Paintings</Link></li>
             <li><Link to="/drawings"onClick={toggleMenu}>Drawings</Link></li>
             <li><Link to="/about"onClick={toggleMenu}>About</Link></li>
