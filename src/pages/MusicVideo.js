@@ -1,8 +1,9 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import './TraditionalArt.css';
 import { Link } from 'react-router-dom';
 
-const Flyers = ({category, images}) => {
+const MusicVideo = ({category, images}) => {
+
 
   const categoryImages = images[category];
 
@@ -16,11 +17,11 @@ const Flyers = ({category, images}) => {
     <div style={{marginTop: "13vh"}}>
 
       <div className = "text-container">
-        <h1 className = "text-page-top">FLYERS & POSTERS</h1>
-        <h3 className = "text-page-top-2">Pull a crowd</h3>
+        <h1 className = "text-page-top">Music Videos</h1>
+        <h3 className = "text-page-top-2">Moving music Pictures</h3>
       </div>
 
-      <div className= "container">
+      <div id = "cont" className= "container">
         <div className="art-grid">
           
 
@@ -47,4 +48,4 @@ const Flyers = ({category, images}) => {
   );
 }
 
-export default Flyers;
+export default MusicVideo;
