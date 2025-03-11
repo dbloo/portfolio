@@ -198,7 +198,17 @@ function App() {
       description: "💯",
       imageUrl: "/assets/images/hundred.jpg",
       size: "tall",
-      materials: "22in x 18in Acrylic and Oil Pastel Canvas "
+      materials: "22in x 18in Acrylic and Oil Pastel on Canvas "
+
+    },
+
+    {
+      id: 15,
+      name: "CATCH AND RELEASE",
+      description: " ",
+      imageUrl: "/assets/images/catch.JPG",
+      size: "medium",
+      materials: "36in x 36in Acrylic on Canvas "
 
     },
 
@@ -298,62 +308,6 @@ function App() {
 
   ],
 
-  graphicDesign: [
-
-    {
-      id: 1,
-      name: "Thanks For LIStening",
-      description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
-      imageUrl: "/assets/images/lister.jpg",
-      size: "medium",
-      materials: " "
-
-    },
-
-    {
-      id: 2,
-      name: "Tomes from The Underground",
-      description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
-      imageUrl: "/assets/images/underground.jpg",
-      size: "medium",
-      materials: "3000 x 3000px Cover Art"
-
-    },
-
-    {
-      id: 4,
-      name: "Thanks For LIStening",
-      description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
-      imageUrl: "/assets/images/messhoodie.jpg",
-      size: "medium",
-      materials: "3000 x 3000px Cover Art"
-
-    },
-
-    {
-      id: 5,
-      name: "LOOP.",
-      description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
-      imageUrl: "/assets/images/loop.JPG",
-      size: "medium",
-      materials: "3000 x 3000px Cover Art"
-
-    },
-    {
-      id: 6,
-      name: "TWELFTH HOUR.",
-      description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
-      imageUrl: "/assets/images/12.JPG",
-      size: "medium",
-      materials: "3000 x 3000px Cover Art"
-
-    },
-
-   
-   
-
-  ],
-
   flyers: [
 
     {
@@ -365,9 +319,7 @@ function App() {
       materials: "1350 x 1080px Movie Poster Mockup"
 
     },
-
    
-
    
 
     {
@@ -463,7 +415,7 @@ function App() {
       id: 3,
       name: "Studio Unpleasant",
       description: " ",
-      imageUrl: "/assets/images/unpl.jpg",
+      imageUrl: "/assets/images/un.jpg",
       size: "medium",
       materials: " "
 
@@ -473,7 +425,7 @@ function App() {
       id: 4,
       name: "Traction",
       description: " ",
-      imageUrl: "/assets/images/tr.jpg",
+      imageUrl: "/assets/images/tracc.jpg",
       size: "medium",
       materials: " "
 
@@ -483,7 +435,37 @@ function App() {
       id: 5,
       name: "MAKUHWAY",
       description: " ",
-      imageUrl: "/assets/images/maww.jpg",
+      imageUrl: "/assets/images/mawling.jpg",
+      size: "medium",
+      materials: " "
+
+    },
+
+    {
+      id: 5,
+      name: "POSE",
+      description: " ",
+      imageUrl: "/assets/images/pose.jpg",
+      size: "medium",
+      materials: " "
+
+    },
+
+    {
+      id: 5,
+      name: "PECK.LIVE",
+      description: " ",
+      imageUrl: "/assets/images/pkk.jpg",
+      size: "medium",
+      materials: " "
+
+    },
+
+    {
+      id: 5,
+      name: "BULLS i URBAN",
+      description: " ",
+      imageUrl: "/assets/images/biu.jpg",
       size: "medium",
       materials: " "
 
@@ -521,7 +503,7 @@ function App() {
         id: 3,
         name: "LOOP.",
         description: " ",
-        imageUrl: "/assets/images/loop.jpg",
+        imageUrl: "/assets/images/loop.JPG",
         size: "medium",
         materials: "3000 x 3000px Cover Art"
   
@@ -530,7 +512,7 @@ function App() {
         id: 4,
         name: "TWELFTH HOUR.",
         description: " ",
-        imageUrl: "/assets/images/12.jpg",
+        imageUrl: "/assets/images/12.JPG",
         size: "medium",
         materials: "3000 x 3000px Cover Art"
   

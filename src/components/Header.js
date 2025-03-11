@@ -83,8 +83,8 @@ function Header() {
 
 
       <nav> 
-          <div className = "logo"> 
-          <Link to="/">
+          <div className = "logo" onClick={toggleMenu}> 
+          <Link to="/" >
 
             <img src = "./assets/icons/dbsig.svg" alt = "logo"></img>
             
