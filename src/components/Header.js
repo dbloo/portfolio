@@ -109,7 +109,7 @@ function Header() {
               <div className = {`expanded-gd ${expandGD ? "expanded" : ""}`}>
                 <li className = "li-logos"><Link to="/graphicDesign/logos" onClick={toggleMenu}>Logos</Link></li>
                 <li className = "li-logos"><Link to="/graphicDesign/cover-art" onClick={toggleMenu}>Cover Art</Link></li>
-                <li className = "li-logos"><Link to="/graphicDesign/flyers" onClick={toggleMenu}>Flyers</Link></li>
+                <li className = "li-logos"><Link to="/graphicDesign/flyers" onClick={toggleMenu}>Flyers & Posters</Link></li>
               </div>
              ):(<></>)}
 

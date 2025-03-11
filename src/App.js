@@ -356,12 +356,24 @@ function App() {
 
   flyers: [
 
+    {
+      id: 1,
+      name: "SONDER",
+      description: " ",
+      imageUrl: "/assets/images/sonder.jpg",
+      size: "medium",
+      materials: "1350 x 1080px Movie Poster Mockup"
+
+    },
+
    
 
    
 
     {
-      id: 1,
+
+      
+      id: 2,
       name: "BREAKCORE",
       description: "A rave hosted by SATURNSARii with Perrero Del Futuro in Wynwood, Miami FL on March, 11 2023 ",
       imageUrl: "/assets/images/bc.jpg",
@@ -370,8 +382,10 @@ function App() {
 
     },
 
+    
+
     {
-      id: 2,
+      id: 3,
       name: "IN DUE TIME",
       description: " ",
       imageUrl: "/assets/images/timedue.jpg",
@@ -381,7 +395,7 @@ function App() {
     },
 
     {
-      id: 3,
+      id: 4,
       name: "PRESS ON",
       description: " ",
       imageUrl: "/assets/images/press on.jpg",
@@ -391,7 +405,7 @@ function App() {
     },
 
     {
-      id: 4,
+      id: 5,
       name: "VILE",
       description: " ",
       imageUrl: "/assets/images/vile.jpg",
@@ -401,7 +415,7 @@ function App() {
     },
 
     {
-      id: 4,
+      id: 6,
       name: "FAST IS IN",
       description: " ",
       imageUrl: "/assets/images/moveover.jpg",
