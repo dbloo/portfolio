@@ -319,13 +319,23 @@ function App() {
       materials: "1350 x 1080px Movie Poster Mockup"
 
     },
+
+    {
+      id: 2,
+      name: "DOUBLE",
+      description: " ",
+      imageUrl: "/assets/images/duble.jpg",
+      size: "medium",
+      materials: "1350 x 1080px Movie Poster Mockup"
+
+    },
    
    
 
     {
 
       
-      id: 2,
+      id: 3,
       name: "BREAKCORE",
       description: "A rave hosted by SATURNSARii with Perrero Del Futuro in Wynwood, Miami FL on March, 11 2023 ",
       imageUrl: "/assets/images/bc.jpg",
@@ -337,7 +347,7 @@ function App() {
     
 
     {
-      id: 3,
+      id: 4,
       name: "IN DUE TIME",
       description: " ",
       imageUrl: "/assets/images/timedue.jpg",
@@ -347,7 +357,7 @@ function App() {
     },
 
     {
-      id: 4,
+      id: 5,
       name: "PRESS ON",
       description: " ",
       imageUrl: "/assets/images/press on.jpg",
@@ -357,7 +367,7 @@ function App() {
     },
 
     {
-      id: 5,
+      id: 6,
       name: "VILE",
       description: " ",
       imageUrl: "/assets/images/vile.jpg",
@@ -367,7 +377,7 @@ function App() {
     },
 
     {
-      id: 6,
+      id: 7,
       name: "FAST IS IN",
       description: " ",
       imageUrl: "/assets/images/moveover.jpg",
@@ -442,7 +452,7 @@ function App() {
     },
 
     {
-      id: 5,
+      id: 6,
       name: "POSE",
       description: " ",
       imageUrl: "/assets/images/pose.jpg",
@@ -452,7 +462,7 @@ function App() {
     },
 
     {
-      id: 5,
+      id: 7,
       name: "PECK.LIVE",
       description: " ",
       imageUrl: "/assets/images/pkk.jpg",
@@ -462,7 +472,7 @@ function App() {
     },
 
     {
-      id: 5,
+      id: 8,
       name: "BULLS i URBAN",
       description: " ",
       imageUrl: "/assets/images/biu.jpg",
