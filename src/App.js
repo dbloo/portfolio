@@ -277,7 +277,7 @@ function App() {
     },
 
     {
-      id: 6,
+      id: 7,
       name: "All Akimbo",
       description: " ",
       imageUrl: "/assets/images/akimbo.jpg",
@@ -287,7 +287,7 @@ function App() {
     },
 
     {
-      id: 7,
+      id: 8,
       name: "i trusted u",
       description: " ",
       imageUrl: "/assets/images/trusted.jpg",
@@ -297,7 +297,7 @@ function App() {
     },
 
     {
-      id: 8,
+      id: 9,
       name: "thisisntarobberyitsjustperspective",
       description: " ",
       imageUrl: "/assets/images/robbery.JPG",
@@ -329,13 +329,23 @@ function App() {
       materials: "1350 x 1080px Movie Poster Mockup"
 
     },
+
+    {
+      id: 3,
+      name: "BAUMHEIM",
+      description: " ",
+      imageUrl: "/assets/images/baum.jpg",
+      size: "medium",
+      materials: "1350 x 1080px Movie Poster Mockup"
+
+    },
    
    
 
     {
 
       
-      id: 3,
+      id: 4,
       name: "BREAKCORE",
       description: "A rave hosted by SATURNSARii with Perrero Del Futuro in Wynwood, Miami FL on March, 11 2023 ",
       imageUrl: "/assets/images/bc.jpg",
@@ -347,7 +357,7 @@ function App() {
     
 
     {
-      id: 4,
+      id: 5,
       name: "IN DUE TIME",
       description: " ",
       imageUrl: "/assets/images/timedue.jpg",
@@ -357,7 +367,7 @@ function App() {
     },
 
     {
-      id: 5,
+      id: 6,
       name: "PRESS ON",
       description: " ",
       imageUrl: "/assets/images/press on.jpg",
@@ -367,7 +377,7 @@ function App() {
     },
 
     {
-      id: 6,
+      id: 7,
       name: "VILE",
       description: " ",
       imageUrl: "/assets/images/vile.jpg",
@@ -377,7 +387,7 @@ function App() {
     },
 
     {
-      id: 7,
+      id: 8,
       name: "FAST IS IN",
       description: " ",
       imageUrl: "/assets/images/moveover.jpg",
