@@ -21,6 +21,8 @@ import Flyers from "./pages/Flyers.js";
 import MusicVideo from "./pages/MusicVideo.js";
 import VideoShortForm from "./pages/VideoShortForm.js";
 import VideoShortFilm from "./pages/VideoShortFilm.js";
+import VideoReels from "./pages/VideoReels.js";
+
 import Construction from "./pages/Construction.js";
 
 
@@ -644,9 +646,14 @@ function App() {
               <Route path="/video/musicvideos" element={<MusicVideo category="musicvideo" images = {imageData} />} />
               <Route path="/video/shortfilms" element={<VideoShortFilm category="shortfilm" images = {imageData} />} /> */}
 
+              
+
               <Route path="/video/shortform" element={<Navigate to = "/construction"/>} />
               <Route path="/video/musicvideos" element={<Navigate to = "/construction"/>} />
               <Route path="/video/shortfilms" element={<Navigate to = "/construction"/>} />
+
+              <Route path="/video/reels" element={<VideoReels/>} />
+
 
 
 

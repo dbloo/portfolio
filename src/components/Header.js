@@ -117,9 +117,11 @@ function Header() {
 
             {expandVD ? (
               <div className = {`expanded-gd ${expandVD ? "expanded" : ""}`}>
-                <li className = "li-logos"><Link to="/video/shortform" onClick={toggleMenu}>Short Form</Link></li>
+                {/* <li className = "li-logos"><Link to="/video/shortform" onClick={toggleMenu}>Short Form</Link></li>
                 <li className = "li-logos"><Link to="/video/musicvideos" onClick={toggleMenu}>Music Videos</Link></li>
-                <li className = "li-logos"><Link to="/video/shortfilms" onClick={toggleMenu}>Short Films</Link></li>
+                <li className = "li-logos"><Link to="/video/shortfilms" onClick={toggleMenu}>Short Films</Link></li> */}
+                <li className = "li-logos"><Link to="/video/reels" onClick={toggleMenu}>Reels</Link></li>
+
               </div>
             ):(<></>)}
             
