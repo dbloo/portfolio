@@ -11,6 +11,18 @@
    
 }
 
+.container-video { 
+  margin-top: 2%;
+  margin-left: 15vw;
+  margin-right: 15vw;
+  margin-bottom: 5vw;
+  height: 100%;
+  border: 1px solid #000; 
+  border-radius: 10px; 
+  padding: 20px; 
+ 
+}
+
 .text-container{
   margin-left: 15vw;
   margin-right: 15vw;
@@ -190,6 +202,18 @@
       padding: 20px; 
      
   }
+
+  .container-video { 
+    margin-top: 2%;
+    margin-left: 5vw;
+    margin-right: 5vw;
+    margin-bottom: 5vw;
+    height: auto;
+    border: 1px solid #000; 
+    border-radius: 10px; 
+    padding: 20px; 
+   
+}
   
   .text-container{
     margin-left: 5vw;
