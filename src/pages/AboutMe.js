@@ -16,7 +16,7 @@ function AboutMe() {
         </p>
       </div>
 
-      <img src = "./assets/images/portrait.JPEG"></img>
+      <img src = "./assets/images/portrait.jpg"></img>
        
     </div>
     </div>
