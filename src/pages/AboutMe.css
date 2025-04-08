@@ -7,7 +7,7 @@
     margin-bottom: 5vw;
     border: 1px solid #000; 
     border-radius: 10px; 
-    padding: 20px; 
+    padding: 5%; 
 
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -49,6 +49,7 @@
 @media (max-width: 768px) {
     .about-container {
       display: flex;
+      position: relative;
       flex-direction: column; /* Stack the grid items vertically */
       justify-content: center;
       align-items: center;
@@ -58,6 +59,7 @@
     .about-container img {
       width: 100%; /* Ensure the image fits the container width */
       margin-right: 15vw;
+      height: 60vh;
       border-radius: 10px;
       box-shadow: 0px 4px 10px  rgba(0, 0, 0, 0.3); 
 
