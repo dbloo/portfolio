@@ -48,7 +48,6 @@ nav {
   background-color: #ffffff;
   padding-top: 5%;
   padding-right: 5%;
-  padding-top: 3vw;
   display: flex;
   justify-content: space-between;
   z-index: auto;
@@ -88,9 +87,7 @@ nav ul li a:hover {
 
 .hamburger {
   display: none; /* Hidden by default on desktop */
-  justify-content: right;
-  margin-right: 5vw;
-  margin-top: 5vw;
+  
 }
 
 .navWrapper {
@@ -224,7 +221,6 @@ z-index: 10000;
     padding-top: 5%;
     padding-right: 0%;
     padding-top: 3vw;
-    display: flex;
     justify-content: right;
     
    
@@ -313,9 +309,135 @@ z-index: 10000;
   .nav-links li:nth-child(4){
     border-bottom: 1px solid #000000;
 
+
+    
+  }
+
+  .hamburger-wrapper{
+    width: auto;
+    height: auto;
+    margin-top: 4vh;
+    margin-right: 15vw;
+
+  }
+
+  .hamburger {
+    display: inline-block;
+
+    cursor: pointer;
+    width: 60px;
+    height: 70px;
+    rotate: 90deg;
+
+    
+     /* Show hamburger on mobile */
+
+  }
+
+
+ .hamburger span {
+  transition: 0.3s ease;
+  transform: translate(-50%, -50%);
+
+ }
+
+
+  .ham{
+    background-color: #000;
+    border-radius:20px;
+    width: 10%;
+    height: 40%;
+    position: absolute;
+
+
+
   }
 
   
+  .ham2{
+    background-color: #000;
+    border-radius:20px;
+    width: 10%;
+    height: 40%;
+    margin-left: 20%;
+    position: absolute;
+
+
+
+
+
+
+
+  }
+
+  .ham3{
+    background-color: #000;
+    border-radius:20px;
+    width: 10%;
+    height: 20%;
+    position: absolute;
+
+    margin-left: 40%;
+    margin-top: -10%;
+
+
+
+
+
+  }
+
+  .ham.active {
+
+
+    transform: translate(50%, -50%)rotate(40deg);
+
+
+    
+  }
+
+  .ham3.active {
+
+    opacity: 0;
+
+    
+  }
+
+  .ham2.active {
+    margin-left: 10.5%;
+
+
+    transform: translate(-50%, -50%) rotate(-40deg);
+
+    
+  }
+
+  .close{
+    background-color: #000;
+    border-radius:20px;
+    width: 10%;
+    height: 40%;
+    position: absolute;
+    rotate: 40deg;
+
+  }
+
+  .close2{
+    background-color: #000;
+    border-radius:20px;
+    width: 10%;
+    height: 40%;
+    position: absolute;
+    rotate: -40deg;
+
+  }
+
+  
+
+  .closeMenu{
+    width: 10%;
+    height: 10%;
+    margin-left:20%
+  }
 
   
 
@@ -332,10 +454,10 @@ z-index: 10000;
   }
   
 
-  .hamburger {
-    display: flex;
-     /* Show hamburger on mobile */
+  .logolink a{
+    height: 300px;
   }
+  
 
  
 
@@ -351,8 +473,8 @@ z-index: 10000;
 
   .logo img{
     margin-left: 5vw;
-    width: 30%;
-    margin-top: 5vw;
+    width: 20%;
+    margin-top: 8vw;
   
   }
 }

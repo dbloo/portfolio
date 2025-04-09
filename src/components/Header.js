@@ -15,6 +15,8 @@ function Header() {
   const [prevScrollPos, setPrevScrollPos] = useState(0);
   const [visible, setVisible] = useState(true);
 
+  const hamMenu = document.querySelector('hamburger')
+
     const handleScroll = () => {
 
 
@@ -62,6 +64,14 @@ function Header() {
 
   };
 
+  const logoToggleMenu = () => {
+    setIsOpen(false);
+    setExpandGD(false);
+    setExpandVD(false);
+
+
+  };
+
   const expandMenuGD = () => {
     setExpandGD(!expandGD);
     setExpandVD(false);
@@ -83,25 +93,35 @@ function Header() {
 
 
       <nav> 
-          <div className = "logo" onClick={toggleMenu}> 
-          <Link to="/" >
+          <div className = "logo" onClick={logoToggleMenu}> 
+          <Link className='logolink' to="/" >
 
             <img src = "./assets/icons/dbsig.svg" alt = "logo"></img>
             
             </Link>
           </div>
-          <div className="hamburger" onClick={toggleMenu}>
+          <div className = "hamburger-wrapper" onClick={toggleMenu}>
+          <div className="hamburger" >
 
-            {!isOpen ? (
     
-            <img src = "./assets/icons/burger-menu.svg" alt = "hamburgerButton" className = "hamburgerButton"></img>
-          ) : (
+            {/* // <img src = "./assets/icons/burger-menu.svg" alt = "hamburgerButton" className = "hamburgerButton"></img> */}
+           
+              <span className = {`ham ${isOpen ? "active" : "" }`}></span>
+              <span className = {`ham2 ${isOpen ? "active" : "" }`}></span>
+              <span className = {`ham3 ${isOpen ? "active" : "" }`}></span>
+            
 
-            <img src = "./assets/icons/x.svg" alt = "logo" className = "closeButton"></img>
 
-          )}
+
+        
+           
+            {/* // <img src = "./assets/icons/x.svg" alt = "logo" className = "closeButton"></img> */}
+
+         
 
         </div>
+        </div>
+
           <ul className={`nav-links ${isOpen ? "open" : ""}`} >
             <li className = "graphicdesign"onClick={expandMenuGD} style={{cursor: "pointer"}}>Graphic Design</li>
 
