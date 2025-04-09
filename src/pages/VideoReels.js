@@ -12,7 +12,7 @@ const VideoReels = () => {
   
   
   return (
-    <div style={{marginTop: "13vh"}}>
+    <div style={{marginTop: "16vh"}}>
 
       <div className = "text-container">
         <h1 className = "text-page-top">Reel</h1>
