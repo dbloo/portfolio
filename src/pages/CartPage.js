@@ -32,7 +32,6 @@ export default function CartPage() {
   
   
   // Redirect to Stripe
-  window.location.href = data.sessionId;
   };
   if (subtotal !== 0 ){
   return (
