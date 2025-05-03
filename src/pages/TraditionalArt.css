@@ -84,6 +84,12 @@
     opacity: 0; 
     animation: fadeIn 1s ease-in-out forwards; 
   }
+
+  .art-page-container {
+    margin-top: 18vh;
+
+  }
+  
   
 
   .art-item :hover { 

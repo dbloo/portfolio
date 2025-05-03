@@ -22,8 +22,15 @@ import MusicVideo from "./pages/MusicVideo.js";
 import VideoShortForm from "./pages/VideoShortForm.js";
 import VideoShortFilm from "./pages/VideoShortFilm.js";
 import VideoReels from "./pages/VideoReels.js";
+import ShopPrints from "./pages/ShopPrints.js"
 
 import Construction from "./pages/Construction.js";
+import ProductPage from "./pages/ProductPage.js";
+import ShopOriginals from "./pages/ShopOriginals.js";
+import CartPage from "./pages/CartPage.js";
+
+import { CartProvider } from './context/CartContext';
+
 
 
 
@@ -170,7 +177,9 @@ function App() {
       description: "It tok me forever to finish this one. Not because the process was labour intensive, or techically impressive. I just didn't wan't to deal with my emotions at the time. ",
       imageUrl: "/assets/images/adequate.jpg",
       size: "medium",
-      materials: "40in x 40in Acrylic on Canvas "
+      materials: "40in x 40in Acrylic on Canvas ",
+      selling: "yes",
+      price: "50.00"
 
     },
 
@@ -209,6 +218,16 @@ function App() {
       name: "CATCH AND RELEASE",
       description: " ",
       imageUrl: "/assets/images/catch.JPG",
+      size: "medium",
+      materials: "36in x 36in Acrylic on Canvas "
+
+    },
+
+    {
+      id: 16,
+      name: "Mr. Crystal",
+      description: "",
+      imageUrl: "/assets/images/crystal.JPG",
       size: "medium",
       materials: "36in x 36in Acrylic on Canvas "
 
@@ -613,13 +632,411 @@ function App() {
     },
 
   ],
+
+ 
 }  
+
+const productData = {
+  prints: [
+
+    {
+      id: 1,
+      name: "DON'T BEAT YOURSELF UP",
+      description: "Do as I say, not as I do.",
+      imageUrl: "/assets/images/sundown.jpg",
+      size: [
+        { name: "8.5 x 11 inches", price: 30 },
+        { name: "12 x 16 inches", price: 35 },
+        { name: "18 x 24 inches", price: 40 }
+
+      ],
+      
+      initPrice: 30,
+      materials: "Giclee Print",
+      productType: "print"
+
+
+    },
+
+    {
+      id: 2,
+      name: "DON'T BEAT YOURSELF UP",
+      description: "Do as I say, not as I do.",
+      imageUrl: "/assets/images/dbyu.JPG",
+      size: [
+        { name: "8.5 x 11 inches", price: 30 },
+        { name: "12 x 16 inches", price: 35 },
+        { name: "18 x 24 inches", price: 40 }
+
+      ],
+      
+      initPrice: 30,
+      materials: "Giclee Print",
+      productType: "print"
+
+
+    },
+
+    {
+      id: 3,
+      name: "FLY CATCHER",
+      description: "Do as I say, not as I do.",
+      imageUrl: "/assets/images/flycatcher.JPG",
+      size: [
+        { name: "8.5 x 11 inches", price: 30 },
+        { name: "12 x 16 inches", price: 35 },
+        { name: "18 x 24 inches", price: 40 }
+
+      ],
+      
+      initPrice: 30,
+      materials: "Giclee Print",
+      productType: "print"
+
+
+    },
+
+    {
+      id: 4,
+      name: "SHOW YOUR FACE",
+      description: "Do as I say, not as I do.",
+      imageUrl: "/assets/images/SYF.JPG",
+      size: [
+        { name: "8.5 x 11 inches", price: 30 },
+        { name: "12 x 16 inches", price: 35 },
+        { name: "18 x 24 inches", price: 40 }
+
+      ],
+      
+      initPrice: 30,
+      materials: "Giclee Print",
+      productType: "print"
+
+
+    },
+
+    {
+      id: 5,
+      name: "MAKE LESS MONEY",
+      description: "Do as I say, not as I do.",
+      imageUrl: "/assets/images/money.JPG",
+      size: [
+        { name: "8.5 x 11 inches", price: 30 },
+        { name: "12 x 16 inches", price: 35 },
+        { name: "18 x 24 inches", price: 40 }
+
+      ],
+      
+      initPrice: 30,
+      materials: "Giclee Print",
+      productType: "print"
+
+
+    },
+
+    
+
+    {
+      id: 6,
+      name: "Mr. Crystal",
+      description: "Do as I say, not as I do.",
+      imageUrl: "/assets/images/crystal.JPG",
+      size: [
+        { name: "8.5 x 11 inches", price: 30 },
+        { name: "12 x 16 inches", price: 35 },
+        { name: "18 x 24 inches", price: 40 }
+
+      ],
+      
+      initPrice: 30,
+      materials: "Giclee Print",
+      productType: "print"
+
+
+    },
+
+    {
+      id: 7,
+      name: "All Akimbo",
+      description: "Do as I say, not as I do.",
+      imageUrl: "/assets/images/akimbo.jpg",
+      size: [
+        { name: "8.5 x 11 inches", price: 30 },
+        { name: "12 x 16 inches", price: 35 },
+        { name: "18 x 24 inches", price: 40 }
+
+      ],
+      
+      initPrice: 30,
+      materials: "Giclee Print", 
+      productType: "print"
+
+
+    },
+
+    {
+      id: 8,
+      name: "THE ARBITER",
+      description: "Do as I say, not as I do.",
+      imageUrl: "/assets/images/arbiter.JPG",
+      size: [
+        { name: "8.5 x 11 inches", price: 30 },
+        { name: "12 x 16 inches", price: 35 },
+        { name: "18 x 24 inches", price: 40 }
+
+      ],
+      
+      initPrice: 30,
+      materials: "Giclee Print",
+      productType: "print"
+
+
+    },
+
+    {
+      id: 9,
+      name: "Shutdown",
+      description: "Do as I say, not as I do.",
+      imageUrl: "/assets/images/SD.jpg",
+      size: [
+        { name: "8.5 x 11 inches", price: 30 },
+        { name: "12 x 16 inches", price: 35 },
+        { name: "18 x 24 inches", price: 40 }
+
+      ],
+      
+      initPrice: 30,
+      materials: "Giclee Print",
+      productType: "print"
+
+
+    },
+
+    {
+      id: 10,
+      name: "Rogue Poison",
+      description: "Do as I say, not as I do.",
+      imageUrl: "/assets/images/rogue.jpg",
+      size: [
+        { name: "8.5 x 11 inches", price: 30 },
+        { name: "12 x 16 inches", price: 35 },
+        { name: "18 x 24 inches", price: 40 }
+
+      ],
+      
+      initPrice: 30,
+      materials: "Giclee Print",
+      productType: "print"
+
+
+    },
+
+    {
+      id: 11,
+      name: "thisisntarobberyitsjustperspective",
+      description: " ",
+      imageUrl: "/assets/images/robbery.JPG",
+      size: [
+        { name: "8.5 x 11 inches", price: 30 },
+        { name: "12 x 16 inches", price: 35 },
+        { name: "18 x 24 inches", price: 40 }
+
+      ],
+      
+      initPrice: 30,
+      materials: "Giclee Print",
+      productType: "print"
+
+    },
+
+    {
+      id: 12,
+      name: "DAMNED",
+      description: " ",
+      imageUrl: "/assets/images/damned.JPG",
+      size: [
+        { name: "8.5 x 11 inches", price: 30 },
+        { name: "12 x 16 inches", price: 35 },
+        { name: "18 x 24 inches", price: 40 }
+
+      ],
+      
+      initPrice: 30,
+      materials: "Giclee Print",
+      productType: "print"
+
+    },
+
+  ],
+
+  originals: [
+
+    {
+      id: 1,
+      name: "FLY CATCHER",
+      description: "Do as I say, not as I do.",
+      imageUrl: "/assets/images/flycatcher.JPG",
+      size: [
+        { name: "24 x 36 inches", price: 1200 },
+
+
+      ],
+      
+      initPrice: 1200,
+      materials: "Acrylic on Canvas",
+      productType: "original"
+
+
+    },
+
+    {
+      id: 2,
+      name: "Mr. Crystal",
+      description: "Do as I say, not as I do.",
+      imageUrl: "/assets/images/crystal.JPG",
+      size: [
+        { name: "17 x 15 inches", price: 800 },
+
+      ],
+      
+      initPrice: 800,
+      materials: "Acrylic on Canvas",
+      productType: "original"
+
+
+    },
+
+    {
+      id: 3,
+      name: "Sundown",
+      description: "Do as I say, not as I do.",
+      imageUrl: "/assets/images/sundown.jpg",
+      size: [
+        { name: "48 x 48 inches", price: 4300 },
+
+      ],
+      
+      initPrice: 4300,
+      materials: "Acrylic on Canvas",
+      productType: "original"
+
+
+    },
+
+    {
+      id: 4,
+      name: "Make Less Money",
+      description: "Do as I say, not as I do.",
+      imageUrl: "/assets/images/money.JPG",
+      size: [
+        { name: "5 x 3 ft", price: 5600 },
+
+      ],
+      
+      initPrice: 5600,
+      materials: "Acrylic on Canvas",
+      productType: "original"
+
+
+    },
+
+    {
+      id: 5,
+      name: "Try Again",
+      description: "Do as I say, not as I do.",
+      imageUrl: "/assets/images/tryagain.JPG",
+      size: [
+        { name: "36 x 36 inches", price: 4600 },
+
+      ],
+      
+      initPrice: 4600,
+      materials: "Acrylic on Canvas",
+      productType: "original"
+
+
+    },
+
+    {
+      id: 6,
+      name: "SHOW YOUR FACE",
+      description: "Do as I say, not as I do.",
+      imageUrl: "/assets/images/SYF.JPG",
+      size: [
+        { name: "17 x 15 inches", price: 1400 },
+
+      ],
+      
+      initPrice: 1400,
+      materials: "Acrylic on Canvas",
+      productType: "original"
+
+
+    },
+
+    {
+      id: 7,
+      name: "Don't Beat Yourself Up",
+      description: "Do as I say, not as I do.",
+      imageUrl: "/assets/images/dbyu.JPG",
+      size: [
+        { name: "10 x 8 inches", price: 400 },
+
+      ],
+      
+      initPrice: 400,
+      materials: "Acrylic on Canvas",
+      productType: "original"
+
+
+    },
+
+    {
+      id: 8,
+      name: "Catch and Release",
+      description: "Do as I say, not as I do.",
+      imageUrl: "/assets/images/catch.JPG",
+      size: [
+        { name: "36 x 36 inches", price: 3400 },
+
+      ],
+      
+      initPrice: 3400,
+      materials: "Acrylic on Canvas",
+      productType: "original"
+
+
+    },
+
+    {
+      id: 9,
+      name: "Adequate Natural",
+      description: "Do as I say, not as I do.",
+      imageUrl: "/assets/images/adequate.jpg",
+      size: [
+        { name: "36 x 36 inches", price: 4600 },
+
+      ],
+      
+      initPrice: 4600,
+      materials: "Acrylic on Canvas",
+      productType: "original"
+
+
+    },
+
+    
+
+    
+
+  ]
+}
   
 
  
   
   return (
-    
+    <CartProvider>
     <Router>
 
       <div id= "root">
@@ -634,6 +1051,8 @@ function App() {
               <Route path="/paintings" element={<TraditionalArt category="paintings" images = {imageData} />} />
               <Route path="/about" element={<AboutMe />} />
               <Route path="/info/:category/:id" element={<Info images = {imageData} />} />
+              <Route path="/product/:category/:id" element={<ProductPage product = {productData} />} />
+
               <Route path="/drawings" element={<Drawings category="drawings" images = {imageData} />} />
 
               <Route path="/graphicDesign/logos" element={<Logos category="logos" images = {imageData} />} />
@@ -654,6 +1073,13 @@ function App() {
 
               <Route path="/video/reels" element={<VideoReels/>} />
 
+              <Route path="/shop-prints" element={<ShopPrints category = "prints" products = {productData}/>} />
+              <Route path="/shop-originals" element={<ShopOriginals category = "originals" products = {productData}/>} />
+
+              <Route path="/checkout" element={<CartPage />} />
+
+
+
 
 
 
@@ -668,6 +1094,8 @@ function App() {
       
 
     </Router>
+
+    </CartProvider>
   );
 }
 

@@ -1,4 +1,7 @@
+.art-page-container {
+    margin-top: 18vh;
 
+}
 .about-container {
 
     margin-left: 5vw;
@@ -40,6 +43,8 @@
 .about-container img {
     width: 80%;
     margin-left: 20%;
+    border-radius: 10px; 
+
 }
 
 .about-text-container {
