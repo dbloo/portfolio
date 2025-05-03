@@ -2,6 +2,9 @@ import { useCart } from '../context/CartContext';
 import { useEffect } from 'react';
 import { loadStripe } from '@stripe/stripe-js';
 
+import { httpsCallable } from 'firebase/functions';
+
+
 import Spinner from "../components/Spinner";
 
 import "./CartPage.css"
@@ -23,8 +26,16 @@ export default function CartPage() {
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ cart }),
     });
+
     const session = await response.json();
-    await stripe.redirectToCheckout({ sessionId: session.id });
+
+    const checkout = httpsCallable(functions, 'createCheckoutSession');
+    const { data } = await checkout({
+    items: [{ id: product.id, quantity: 1 }]
+  });
+  
+  // Redirect to Stripe
+  window.location.href = data.sessionId;
   };
   if (subtotal !== 0 ){
   return (
