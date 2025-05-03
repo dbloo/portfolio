@@ -1,55 +1,68 @@
-const functions = require('firebase-functions');
-const admin = require('firebase-admin');
-const stripe = require('stripe')(process.env.STRIPE_SECRET);
+const functions = require("firebase-functions");
+const admin = require("firebase-admin");
+const stripe = require("stripe")(functions.config().stripe.secret); // Set via CLI
+const express = require("express");
 
 admin.initializeApp();
 
-exports.createCheckoutSession = functions.https.onCall(async (data, context) => {
-  // Validate auth
-  if (!context.auth) throw new functions.https.HttpsError('unauthenticated', 'Not logged in');
+const app = express();
+app.use(express.json());
 
-  // Firestore transaction to check inventory
-  const productRefs = data.items.map(item => 
-    admin.firestore().doc(`products/${item.id}`)
-  );
+app.post("/checkout", async (req, res) => {
+  try {
+    const { items, userId } = req.body;
 
-  const products = await admin.firestore().runTransaction(async (tx) => {
-    const snaps = await tx.getAll(...productRefs);
-    return snaps.map(snap => snap.data());
-  });
+    if (!userId) {
+      return res.status(401).json({ error: "User ID is required" });
+    }
 
-  // Create Stripe session
-  const session = await stripe.checkout.sessions.create({
-    payment_method_types: ['card'],
-    line_items: data.items.map((item, i) => ({
-      price_data: {
-        currency: 'usd',
-        product_data: { name: products[i].name },
-        unit_amount: products[i].price,
-      },
-      quantity: item.quantity,
-    })),
-    mode: 'payment',
-    success_url: `${process.env.HOSTING_URL}/success?session_id={CHECKOUT_SESSION_ID}`,
-    cancel_url: `${process.env.HOSTING_URL}/cart`,
-    metadata: { userId: context.auth.uid }
-  });
+    const productRefs = items.map((item) =>
+      admin.firestore().doc(`products/${item.id}`)
+    );
 
-  return { sessionId: session.id };
+    const products = await admin.firestore().runTransaction(async (tx) => {
+      const snaps = await tx.getAll(...productRefs);
+      return snaps.map((snap) => snap.data());
+    });
+
+    const session = await stripe.checkout.sessions.create({
+      payment_method_types: ["card"],
+      line_items: items.map((item, i) => ({
+        price_data: {
+          currency: "usd",
+          product_data: { name: products[i].name },
+          unit_amount: products[i].price,
+        },
+        quantity: item.quantity,
+      })),
+      mode: "payment",
+      success_url: `${req.headers.origin}/success?session_id={CHECKOUT_SESSION_ID}`,
+      cancel_url: `${req.headers.origin}/cart`,
+      metadata: { userId },
+    });
+
+    return res.status(200).json({ id: session.id });
+  } catch (err) {
+    console.error("Checkout error:", err);
+    return res.status(500).json({ error: err.message });
+  }
 });
 
+exports.api = functions.https.onRequest(app);
 
 exports.updateInventory = functions.firestore
-  .document('orders/{orderId}')
-  .onCreate(async (snap, context) => {
+  .document("orders/{orderId}")
+  .onCreate(async (snap) => {
     const order = snap.data();
     const batch = admin.firestore().batch();
 
-    order.items.forEach(item => {
+    order.items.forEach((item) => {
       const productRef = admin.firestore().doc(`products/${item.id}`);
       batch.update(productRef, {
-        'inventory.available': admin.firestore.FieldValue.increment(-item.quantity),
-        'inventory.sold': admin.firestore.FieldValue.increment(item.quantity)
+        "inventory.available": admin.firestore.FieldValue.increment(
+          -item.quantity
+        ),
+        "inventory.sold": admin.firestore.FieldValue.increment(item.quantity),
       });
     });
 
