@@ -30,6 +30,14 @@ export function CartProvider({ children }) {
 
     await new Promise(resolve => setTimeout(resolve, 800));
 
+    const productRef = doc(db, 'products', product.id);
+    const productSnap = await getDoc(productRef);
+  
+    if (productSnap.data().inventory.available < 1) {
+      alert('This item is out of stock');
+      return;
+    }
+
 
 
     setCart((prevCart) => {

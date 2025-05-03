@@ -37,3 +37,21 @@ exports.createCheckoutSession = functions.https.onCall(async (data, context) => 
 
   return { sessionId: session.id };
 });
+
+
+exports.updateInventory = functions.firestore
+  .document('orders/{orderId}')
+  .onCreate(async (snap, context) => {
+    const order = snap.data();
+    const batch = admin.firestore().batch();
+
+    order.items.forEach(item => {
+      const productRef = admin.firestore().doc(`products/${item.id}`);
+      batch.update(productRef, {
+        'inventory.available': admin.firestore.FieldValue.increment(-item.quantity),
+        'inventory.sold': admin.firestore.FieldValue.increment(item.quantity)
+      });
+    });
+
+    await batch.commit();
+  });
