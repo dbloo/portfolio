@@ -29,10 +29,7 @@ export default function CartPage() {
 
     const session = await response.json();
 
-    const checkout = httpsCallable(functions, 'createCheckoutSession');
-    const { data } = await checkout({
-    items: [{ id: product.id, quantity: 1 }]
-  });
+  
   
   // Redirect to Stripe
   window.location.href = data.sessionId;
