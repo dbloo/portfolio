@@ -1,0 +1,174 @@
+.pageContainer {
+
+    margin-top: 10%;
+    margin-left: 15vw;
+    margin-right: 15vw;
+    margin-bottom: 5vw;
+    width: auto;
+
+    
+    padding: 20px; 
+
+}
+
+.titleContainer {
+
+    border: 1px solid #000; 
+    border-radius: 10px; 
+    padding-left: 2%;
+
+    margin-bottom: 2%;
+
+}
+
+.titleContainer h1{
+
+    font-size: clamp(30px, 5vw, 100px);
+    animation: fadeIn 0.5s ease-in-out forwards; 
+
+
+}
+
+.itemContainer {
+
+    border: 1px solid #000; 
+    border-radius: 10px; 
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 16px;
+
+
+
+    padding: 2%
+
+   
+  
+
+   
+
+}
+
+.itemContainer img{
+    animation: fadeIn 0.8s ease-in-out forwards; 
+    object-fit: cover;
+    overflow: hidden;
+
+}
+
+.buy-container p{
+    font-size: 1.2rem;
+}
+
+.product img{
+ width: 100%;
+ object-fit: cover; 
+ overflow: hidden;
+
+ 
+
+}
+
+.product{
+position: relative;
+
+}
+
+
+
+.product-container {
+   object-fit: cover; 
+   overflow: hidden;
+   padding-bottom: 20%;
+   padding-right: 3%;
+   
+
+
+   
+}
+
+.buy-container {
+    display: flex;
+    justify-content: space-between;
+
+   
+}
+
+.buy-container button {
+
+    right: 50px;
+    border: none;
+    border-radius: 20px;
+    box-shadow: 0px 4px 10px  rgba(0, 0, 0, 0.3); 
+}
+
+.thumbnail-container{
+    display: flex;
+    height: 60vh;
+
+
+}
+
+.title-thumbnail-wrapper a {
+    color: #000;
+}
+
+.title-thumbnail-wrapper {
+    display: block;
+    
+    justify-content: space-between;
+
+}
+
+a {
+    text-decoration: none;
+}
+
+@media (max-width: 768px) {
+    .pageContainer {
+
+        margin-top: 30%;
+        margin-left: 2vw;
+        margin-right: 2vw;
+        margin-bottom: 5vw;
+        width: auto;
+    
+        
+        padding: 20px; 
+    
+    }
+
+
+    .itemContainer {
+        display: flex;
+        flex-direction: column;
+        padding-top: 5%;
+    }
+
+    .thumbnail-container{
+        display: flex;
+        height: auto;
+    
+    
+    }
+
+    .buy-container {
+
+       justify-content: space-between;
+    }
+
+    .product-container{
+        padding-left: 3%;
+    }
+    
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+  }

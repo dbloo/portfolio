@@ -13,7 +13,7 @@ const Logos = ({category, images}) => {
   if (!images) return <>spapit</>;
   
   return (
-    <div style = {{marginTop: "16vh"}}>
+    <div className = "art-page-container">
 
       <div className = "text-container">
         <h1 className = "text-page-top">LOGOS</h1>

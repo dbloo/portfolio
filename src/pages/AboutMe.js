@@ -3,7 +3,7 @@ import './AboutMe.css';
 
 function AboutMe() {
   return (
-    <div style={{marginTop: "16vh"}}>
+    <div className = "art-page-container">
     <div className = "about-container">
       <div clasName = "about-text-container">
         <h1 >Dominic Bloomfield</h1>

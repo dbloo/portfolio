@@ -1,35 +1,58 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { Carousel } from "react-responsive-carousel";
+
+
+
+
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 
-import { InstagramEmbed, YouTubeEmbed } from 'react-social-media-embed';
+
+
+import {YouTubeEmbed } from 'react-social-media-embed';
 
 import "./Info.css";
 
  const  Info = ({images}) => {
 
+
+
+
+   const [quantity, setQuantity] = useState(1);
+
+   const { category, id } = useParams(); 
+
+
+
    
 
-   const { category, id } = useParams(); // Get category and ID from the URL
+
+
+   const categoryImages = images[category]; 
+
+   
+   const image = categoryImages.find((img) => img.id === parseInt(id)); 
+
+
+
+  
+ 
+
 
    useEffect(() => {
       
-         window.scroll(0, 0); // reset the scroll position to the top left of the document.
+         window.scroll(0, 0); 
       
    }, []);
+
+  
+       
+
+  
 
    if (!images[category]) {
       return <div>Category not found!</div>;
     }
-   
-   const categoryImages = images[category]; // Get images for the specified category
-   
-   const image = categoryImages.find((img) => img.id === parseInt(id)); // Find the image
- 
-   if (!images[category]) {
-     return <div>Image not found!</div>;
-   }
 
 
 
@@ -112,7 +135,7 @@ import "./Info.css";
     
  );
 
-} else {
+}else {
 
    return (
       
@@ -125,6 +148,7 @@ import "./Info.css";
 
 
                         <img src = {image.imageUrl}></img>
+                        
 
               <div className = "info-text-container">
                  <h1 className = "text-header">{image.name}</h1>
@@ -139,7 +163,6 @@ import "./Info.css";
       </>
 
    );
-
 
 }
 

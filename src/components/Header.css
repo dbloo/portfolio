@@ -1,16 +1,33 @@
 
 .logo img{
   margin-left: 5vw;
-  width: 20%;
+  width: 80px;
   
 
 }
+
+.logo {
+  display: flex;
+}
+
+.cart img{
+  display: none;
+}
+
+.cart-desktop img {
+  width: 30px;
+  margin-right: 120%;
+  padding-top: 30px; 
+  padding-left: 140px;
+}
+
+
 
 
 
 .expanded-gd {
 display: none;
-margin-right: 5%;
+
 
 
 }
@@ -33,10 +50,10 @@ margin-right: 5%;
   display: inline-flex;
   justify-content: baseline;
 
-  transition: transform 0.8s ease-out;
   padding-left: 5%;
   padding-right: 5%;
   padding-top: 3.2%;
+
 }
 
 
@@ -71,8 +88,8 @@ nav ul {
 nav ul li {
   padding-top: 5%;
   margin-right: 15px;
-  animation: fadeIn 1s ease-in-out forwards; 
   transition: transform 0.3s ease-in-out; 
+  
 }
 
 nav ul li a {
@@ -83,6 +100,11 @@ nav ul li a {
 
 nav ul li a:hover {
   color: #a6ff00;
+}
+
+nav ul li:hover {
+  color: #a6ff00;
+
 }
 
 .hamburger {
@@ -96,15 +118,16 @@ nav ul li a:hover {
   top: 0;
   left: 0;
   right: 0;
-  background-color: white;
   
   z-index: 10000;
   transition: 0.3s linear ease-in-out;
+  
+  
 
 }
 
 .navWrapper.hidden {
-top: -110px;
+top: -170px;
 transition: 0.3s linear ease-in-out;
 position: fixed;
 left: 0;
@@ -115,6 +138,10 @@ z-index: 10000;
 
 }
 
+
+.nav-links {
+  padding-bottom: 1%;
+}
 
 
 
@@ -133,16 +160,35 @@ z-index: 10000;
 
 @media (max-width: 768px) {
 
-  .navWrapper {
+  .cart-desktop img {
+    display: none;
+  }
+
+  
+  
+
+  .navWrapper nav{
 
       top: 0;
       left: 0;
       right: 0;
       background-color: white;
+      width: 100%;
       
       z-index: 10000;
       transition: 0.3s linear ease-in-out;
 
+  }
+
+  .cart img{
+    display: block;
+    width: 30px;
+  }
+
+  .cart{
+    padding-left: 50%;
+    padding-top: 8%;
+    width: 40px;
   }
 
   .navWrapper.hidden {
@@ -160,6 +206,8 @@ z-index: 10000;
 
   .expanded-gd li{
     background-color: #000;
+    transition: transform 1.3s ease-out;
+
 
 
 
@@ -186,6 +234,8 @@ z-index: 10000;
   
 .expanded-gd {
   display: none;
+  transition: transform 1.3s ease-out;
+
 
 
 }
@@ -193,7 +243,6 @@ z-index: 10000;
 
   .expanded-gd a {
     text-decoration: none;
-    padding-left: 10%;
     color: rgb(255, 255, 255);
 
 
@@ -221,7 +270,9 @@ z-index: 10000;
     padding-top: 5%;
     padding-right: 0%;
     padding-top: 3vw;
-    justify-content: right;
+    justify-content: space-between;
+    display: flex;
+
     
    
   }
@@ -234,6 +285,7 @@ z-index: 10000;
     flex-direction: column;
     align-items: right;
     z-index: 10000000;
+    
 
     border: 1px solid #000; 
 
@@ -255,6 +307,8 @@ z-index: 10000;
 
     animation: fadeIn 0.5s ease-in-out forwards; 
     transition: transform 1.3s ease-out;
+    
+    
 
   }
 
@@ -314,20 +368,22 @@ z-index: 10000;
   }
 
   .hamburger-wrapper{
-    width: auto;
-    height: auto;
-    margin-top: 4vh;
-    margin-right: 11vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    position: relative;
+    margin-right: 5vw;
+    margin-top: 3.5vw;
 
   }
 
   .hamburger {
     display: inline-block;
+    position: relative;
 
     cursor: pointer;
-    width: 60px;
-    height: 70px;
-    rotate: 90deg;
 
     
      /* Show hamburger on mobile */
@@ -345,9 +401,10 @@ z-index: 10000;
   .ham{
     background-color: #000;
     border-radius:20px;
-    width: 10%;
-    height: 40%;
+    width: 30px;
+    height: 4px;
     position: absolute;
+    top: 10px;
 
 
 
@@ -355,11 +412,11 @@ z-index: 10000;
 
   
   .ham2{
+    display: flex;
     background-color: #000;
     border-radius:20px;
-    width: 10%;
-    height: 40%;
-    margin-left: 20%;
+    width: 30px;
+    height: 4px;
     position: absolute;
 
 
@@ -373,12 +430,12 @@ z-index: 10000;
   .ham3{
     background-color: #000;
     border-radius:20px;
-    width: 10%;
-    height: 20%;
+    width: 15px;
+    height: 4px;
+    top: 20px;
+    right: -22px;
     position: absolute;
 
-    margin-left: 40%;
-    margin-top: -10%;
 
 
 
@@ -389,7 +446,7 @@ z-index: 10000;
   .ham.active {
 
 
-    transform: translate(50%, -50%)rotate(40deg);
+    transform: translate(-50%, -50%)rotate(40deg);
 
 
     
@@ -397,7 +454,9 @@ z-index: 10000;
 
   .ham3.active {
 
-    opacity: 0;
+    transform: translate(-50%, -155%)rotate(40deg);
+    transition: 0.2s ease;
+
 
     
   }
@@ -406,7 +465,7 @@ z-index: 10000;
     margin-left: 10.5%;
 
 
-    transform: translate(-50%, -50%) rotate(-40deg);
+    transform: translate(-50%, 200%) rotate(-40deg);
 
     
   }
@@ -454,8 +513,9 @@ z-index: 10000;
   }
   
 
-  .logolink a{
-    height: 300px;
+  .logolink{
+    
+    width: 60px;
   }
   
 
@@ -471,9 +531,13 @@ z-index: 10000;
     width: 10%;  
   }
 
+  .logo {
+    justify-content: center;
+    display: flex;
+  }
+
   .logo img{
-    margin-left: 5vw;
-    width: 18%;
+    width: 50px;
     margin-top: 9vw;
   
   }

@@ -25,7 +25,7 @@ h3{
 }
 
 .info-container { 
-    margin-top: 13vh;
+    margin-top: 18vh;
     margin-left: 5vw;
     margin-right: 5vw;
     margin-bottom: 5vw;
@@ -37,21 +37,234 @@ h3{
    
 }
 
+.quantitySelector {
+    display: flex;
+    justify-content: space-between;
+    
+
+    width: 100px;
+    border: 1px solid #000;
+    border-radius: 20px;
+    margin-left: 15%;
+
+}
+
+.quantitySelector p {
+    padding-top: 20%;
+}
+
+
+
+.addToCart {
+
+    background-color: #fff;
+    border: 1px solid #000;
+    border-radius: 20px;
+    padding: 5%;
+    margin-top: 12%;
+    height: 50%;
+    display: flex;
+    position: relative;
+    justify-content: center;
+    width: 100%;
+    color: #000;        
+
+
+
+}
+
+
+
+.size-quantity{
+    display: flex;
+    
+}
+.selector-wrapper {
+    justify-content: space-between;
+    border-top: 1px solid #000;
+}
+
+.sizeSelector select{ 
+    margin-top: 10%;
+    padding: 20%;
+    background-color: #fff;
+    border: 1px solid #000;
+    border-radius: 20px;
+
+    cursor: pointer;
+}
+.addToCart:hover {
+    background-color: #bfbfbf;
+    cursor: pointer;
+
+
+}
+
+.addToCart:disabled {
+    opacity: 50%;
+    cursor: not-allowed;
+
+    .addToCart:hover {
+        background-color: #ffffff;
+    
+    
+    }
+
+
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+  }
+  
+
+.confirmation-message p {
+
+    animation: fadeIn 1s ease-in-out forwards; 
+
+
+}
+
+
+.quantitySelector button {
+    
+    background-color: #fff;
+    border: none;
+    cursor: pointer;
+    color: #000;   
+
+    
+    
+}
+
+
+.quantitySelector button:hover {
+    animation: fadeOut 1.5s ease;
+
+    
+    
+}
+
+
+
+@keyframes fadeOut {
+    0% {
+        background-color: #bfbfbf;
+
+        
+    }
+    100% {
+        background-color: #ffffff;
+
+    }
+}
+
+
+.quantitySelector button:nth-child(3){
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    border-left: 1px solid #000;
+    padding-right: 10%;
+
+}
+
+.quantitySelector button:nth-child(1){
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+    border-right: 1px solid #000;
+    padding-left: 10%;
+
+
+}
+
+.quantitySelector {     margin-top: 2%;
+}
+
+
 .image-container {
     display: inline-flex;
 }
 
 .info-text-container {
+    width: 30vw;
+    word-wrap: break-word;
     padding-left: 3%;
-    padding-right: 3%;
+}
+
+.price {
+    font-size: 2.5rem;
 }
 
 
+
+.selector-wrapper{
+    padding-top: 10%;
+  }
+
+
+
+  .button-message {
+    position: relative;
+  }
 
 
 
 @media (max-width: 768px) {
 
+
+
+    .spinner-add {
+        
+            display: flex;
+            position: absolute;
+            left:  140px;
+            top: -3px;
+            
+
+     
+    }
+   
+    .info-text-container {
+        width: 75vw;
+        word-wrap: break-word;
+        padding-left: 3%;
+    }
+
+    .quantitySelector button:hover {
+        animation: fadeOut 1.5s ease;
+    
+        
+        
+    }
+    .quantitySelector p {
+        padding-top: 0%;
+    }
+
+
+
+    .addToCart {
+
+        background-color: #fff;
+        border: 1px solid #000;
+        border-radius: 20px;
+        padding: 5%;
+        margin-top: 12%;
+        height: 50%;
+        display: flex;
+        justify-content: center;
+
+        width: 100%;
+    
+    
+    }
+    
     .embedContainer {
         border-radius: 50px;
     }
@@ -81,4 +294,48 @@ h3{
         margin-top: 3rem;
     }
 
+    .info-container {
+        margin-top: 15vh;
+    }
+
+    .quantitySelector {
+        display: flex;
+        justify-content: space-between;
+        
+    
+        width: 100px;
+        border: 1px solid #000;
+        border-radius: 20px;
+        margin-left: 5%;
+        margin-top: 6%;
+        height: 3.2rem;
+
+    }
+
+    .sizeSelector select{ 
+        margin-top: 10%;
+        padding: 20%;
+        background-color: #fff;
+        border: 1px solid #000;
+        border-radius: 20px;
+        width: 200px;
+        height: 50px;
+        color: #000;        
+    
+
   }
+
+  .selector-wrapper{
+    padding-top: 10%;
+  }
+    .price{
+        display: flex;
+        justify-content: center;
+    }
+
+  .size-quantity{
+    display: flex;
+    justify-content: space-between;
+    
+}
+}

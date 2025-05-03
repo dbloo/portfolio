@@ -33,6 +33,20 @@ const VideoReels = () => {
           allowfullscreen>
 
         </iframe>
+
+        <iframe 
+        src = "https://youtube.com/embed/FSh7hbgB-sU?si=ZdA2cHD-k8PzdOK7" 
+        type = "video/mp4"
+        frameborder="0" 
+        width="100%" 
+        height="610" 
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+
+        >
+
+
+        </iframe>
+      
       
       </div>
     </div>
