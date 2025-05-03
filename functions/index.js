@@ -1,7 +1,9 @@
 const functions = require("firebase-functions");
 const admin = require("firebase-admin");
 const stripe = require("stripe")(
-  functions.config().stripe.secret
+
+  process.env.STRIPE_SECRET_KEY
+
 );
 
 const express = require("express");
