@@ -1,5 +1,15 @@
 {
   "projects": {
+<<<<<<< HEAD
+    "default": "dbportf101",
+    "portfolio": "dbportf101",
+    "staging": "dbportf101"
+  },
+  "targets": {},
+  "etags": {}
+}
+=======
     "default": "dbportf101"
   }
 }
+>>>>>>> cba2d32e104c7ffb911089781ddd61e1c6ae0bad

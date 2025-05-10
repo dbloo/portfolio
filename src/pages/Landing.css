@@ -2,6 +2,16 @@
     width: 50%;
     display: flex;
     margin-left: 25vw;
+<<<<<<< HEAD
+    animation: fadeIn 0.7s;
+
+}
+
+.landingContainer {
+    width: 100%;
+    height: 100vh;
+=======
+>>>>>>> cba2d32e104c7ffb911089781ddd61e1c6ae0bad
 }
 
 .greetingsContainer {
@@ -15,7 +25,26 @@
     font-size: 32px;
 }
 
+<<<<<<< HEAD
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+  }
+
 @media (max-width: 768px) {
+    .landingContainer {
+        width: 100%;
+        height: 60vh;
+    }
+=======
+@media (max-width: 768px) {
+>>>>>>> cba2d32e104c7ffb911089781ddd61e1c6ae0bad
     .anim {
         width: 70%;
         margin-left: 14%;

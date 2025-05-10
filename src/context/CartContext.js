@@ -1,6 +1,9 @@
 import { createContext, useState, useContext, useEffect  } from "react";
 import Spinner from "../components/Spinner";
+<<<<<<< HEAD
+=======
 import { httpsCallable } from 'firebase/functions';
+>>>>>>> cba2d32e104c7ffb911089781ddd61e1c6ae0bad
 
 
 const CartContext = createContext();
@@ -113,7 +116,11 @@ export function CartProvider({ children }) {
   );
 
   return (
+<<<<<<< HEAD
+    <CartContext.Provider value={{ cart, addToCart, removeFromCart, subtotal, isItemInCart, isLoading, setIsLoading}}>
+=======
     <CartContext.Provider value={{ cart, addToCart, removeFromCart, subtotal, isItemInCart, isLoading}}>
+>>>>>>> cba2d32e104c7ffb911089781ddd61e1c6ae0bad
       {isLoading && <Spinner />}
       {children}
     </CartContext.Provider>

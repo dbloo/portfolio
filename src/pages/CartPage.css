@@ -10,24 +10,51 @@
 }
 
 .checkout-info-wrapper {
+<<<<<<< HEAD
+    width: 80vw;
+=======
+>>>>>>> cba2d32e104c7ffb911089781ddd61e1c6ae0bad
     display: flex;
     justify-content: space-between;
 }
 
 .image-button-wrapper img{
+<<<<<<< HEAD
+width: 100%;
+=======
 width: 43%;
+>>>>>>> cba2d32e104c7ffb911089781ddd61e1c6ae0bad
 margin-bottom: 10%;
     
 }
 
+<<<<<<< HEAD
+.shipping-policy {
+    padding-top: 10%;
+    padding-bottom: 10%;
+
+}
+
+=======
+>>>>>>> cba2d32e104c7ffb911089781ddd61e1c6ae0bad
 .checkout-info-wrapper h2{
     padding-top: 70% ;
 }
 
 .image-button-wrapper{
+<<<<<<< HEAD
+    width: 10%;
+    display: block;
+
+}
+
+
+
+=======
     width: 30%;
 }
 
+>>>>>>> cba2d32e104c7ffb911089781ddd61e1c6ae0bad
 .remove-controls{
     width: 100%;
     margin-bottom: 10%;
@@ -41,6 +68,10 @@ margin-bottom: 10%;
     margin-bottom: 3%;
     display: flex;
     justify-content: space-between;
+<<<<<<< HEAD
+    
+=======
+>>>>>>> cba2d32e104c7ffb911089781ddd61e1c6ae0bad
 }
 
 .checkout-text {
@@ -60,10 +91,19 @@ margin-bottom: 10%;
     background-color: #fff;
     border: 1px solid #000;
     border-radius: 20px;
+<<<<<<< HEAD
+    width: 100%;
+    color: #000;
+    margin-top: 5%;
+    cursor: pointer;
+    margin-top: 10%;
+
+=======
     width: 43%;
     color: #000;
     margin-top: 5%;
     cursor: pointer;
+>>>>>>> cba2d32e104c7ffb911089781ddd61e1c6ae0bad
 
 }
 .price-removeButton:hover{
@@ -107,7 +147,11 @@ margin-bottom: 10%;
     background-color: #fff;
     border: 1px solid #000;
     border-radius: 20px;
+<<<<<<< HEAD
+    width: 30%;
+=======
     width: 10%;
+>>>>>>> cba2d32e104c7ffb911089781ddd61e1c6ae0bad
     color: #000;
     cursor: pointer;
 
@@ -141,6 +185,10 @@ margin-bottom: 10%;
     margin-top: 10%;
     margin-bottom: 10%;
     font-size: 20px;
+<<<<<<< HEAD
+    
+=======
+>>>>>>> cba2d32e104c7ffb911089781ddd61e1c6ae0bad
 }
 
 
@@ -185,7 +233,10 @@ margin-bottom: 10%;
 
     .items-wrapper {
         border-bottom:1px solid #000;
+<<<<<<< HEAD
+=======
         padding-top: 5%;
+>>>>>>> cba2d32e104c7ffb911089781ddd61e1c6ae0bad
         padding-bottom: 25%;
         margin-bottom: 10%;
         display: block;

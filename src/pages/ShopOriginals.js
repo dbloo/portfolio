@@ -1,5 +1,11 @@
 import {loadStripe} from "@stripe/stripe-js"
+<<<<<<< HEAD
+import React, { useState, useEffect } from 'react';
+import { doc, getDoc } from "firebase/firestore";
+import { db } from "../firebase";
+=======
 import React, { PureComponent } from 'react';
+>>>>>>> cba2d32e104c7ffb911089781ddd61e1c6ae0bad
 
 import { useParams } from "react-router-dom";
 
@@ -12,6 +18,16 @@ import { Link } from 'react-router-dom';
 const stripePromise = loadStripe("pk_live_51RGS5Y06EYiUL1OZXsoliznvftgYLeCLiKkX8gXlSDujz1KTwiGv0KUQTC6H3DtMBiRFS6EcSF4WRrRRO6t7RcG200q8ancIPt");
 
 
+<<<<<<< HEAD
+
+
+
+const ShopPrints = ({category, products}) => {
+
+  const [available, setAvailable] = useState(true);
+
+
+=======
 // const products = [
 
 
@@ -51,10 +67,39 @@ const stripePromise = loadStripe("pk_live_51RGS5Y06EYiUL1OZXsoliznvftgYLeCLiKkX8
 
 const ShopPrints = ({category, products}) => {
 
+>>>>>>> cba2d32e104c7ffb911089781ddd61e1c6ae0bad
 
 
 
     const categoryProducts = products[category];
+<<<<<<< HEAD
+    
+
+    const [availabilityMap, setAvailabilityMap] = useState({});
+
+    useEffect(() => {
+      const fetchAllAvailability = async () => {
+        const availability = {};
+        await Promise.all(categoryProducts.map(async (product) => {
+          console.log(product.id)
+          try {
+            const docRef = doc(db, "paintings", String(product.id));
+            const docSnap = await getDoc(docRef);
+            availability[product.id] = docSnap.exists() ? docSnap.data().available : true;
+          } catch (error) {
+            console.error("Error checking availability for", product.id, error);
+            availability[product.id] = true;
+          }
+        }));
+        setAvailabilityMap(availability);
+      };
+  
+      fetchAllAvailability();
+    }, [categoryProducts]);
+
+    
+
+=======
 
     
 
@@ -69,6 +114,7 @@ const ShopPrints = ({category, products}) => {
     await stripe.redirectToCheckout({ sessionId: session.id });
   };
 
+>>>>>>> cba2d32e104c7ffb911089781ddd61e1c6ae0bad
 
   return (
     <div className = "pageContainer">
@@ -85,7 +131,11 @@ const ShopPrints = ({category, products}) => {
                 <Link to = {`/product/${category}/${product.id}`}>
                     <div className="thumbnail-container">
                     
+<<<<<<< HEAD
+                        <img src={product.imageUrl[0].medium} alt={product.name} />
+=======
                         <img src={product.imageUrl} alt={product.name} />
+>>>>>>> cba2d32e104c7ffb911089781ddd61e1c6ae0bad
                         </div>
 
                         <h1>{product.name}</h1>
@@ -97,7 +147,18 @@ const ShopPrints = ({category, products}) => {
 
                         <div className = "buy-container">
 
+<<<<<<< HEAD
+                        {availabilityMap[product.id] === false ? (
+                        <p>Sold Out</p>
+
+                          ) : (
+
+                        <p>${(product.initPrice).toFixed(2)}</p>
+                        
+                           )}
+=======
                             <p>${(product.initPrice).toFixed(2)}</p>
+>>>>>>> cba2d32e104c7ffb911089781ddd61e1c6ae0bad
                             
                         </div>
             </div>

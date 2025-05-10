@@ -11,6 +11,10 @@
 
 }
 
+<<<<<<< HEAD
+
+=======
+>>>>>>> cba2d32e104c7ffb911089781ddd61e1c6ae0bad
 .titleContainer {
 
     border: 1px solid #000; 
@@ -71,21 +75,39 @@
 .product{
 position: relative;
 
+<<<<<<< HEAD
+
+=======
+>>>>>>> cba2d32e104c7ffb911089781ddd61e1c6ae0bad
 }
 
 
 
 .product-container {
+<<<<<<< HEAD
+   padding-bottom: 20%;
+   padding-right: 3%;
+   overflow:hidden;
+
+
+
+=======
    object-fit: cover; 
    overflow: hidden;
    padding-bottom: 20%;
    padding-right: 3%;
    
+>>>>>>> cba2d32e104c7ffb911089781ddd61e1c6ae0bad
 
 
    
 }
 
+<<<<<<< HEAD
+
+
+=======
+>>>>>>> cba2d32e104c7ffb911089781ddd61e1c6ae0bad
 .buy-container {
     display: flex;
     justify-content: space-between;
@@ -104,8 +126,27 @@ position: relative;
 .thumbnail-container{
     display: flex;
     height: 60vh;
+<<<<<<< HEAD
+    transition: transform 0.2s ease-in-out ;
+
+    
 
 
+
+}
+
+
+
+
+
+.thumbnail-container:hover {
+        transform: scale(1.05); /* Slight zoom on hover */
+
+      
+=======
+
+
+>>>>>>> cba2d32e104c7ffb911089781ddd61e1c6ae0bad
 }
 
 .title-thumbnail-wrapper a {

@@ -52,13 +52,31 @@ function Header() {
 
 
     };
+<<<<<<< HEAD
+
+
+
   
     useEffect(() => {
 
+       
+      
+
+
+=======
+  
+    useEffect(() => {
+
+>>>>>>> cba2d32e104c7ffb911089781ddd61e1c6ae0bad
       window.addEventListener('scroll', handleScroll);
   
       return () => {
 
+<<<<<<< HEAD
+
+
+=======
+>>>>>>> cba2d32e104c7ffb911089781ddd61e1c6ae0bad
         window.removeEventListener('scroll', handleScroll);
       };
     }, []);
