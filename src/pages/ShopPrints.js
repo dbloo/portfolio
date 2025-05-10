@@ -89,7 +89,11 @@ const ShopPrints = ({category, products}) => {
                     <div className="thumbnail-container">
                     
 <<<<<<< HEAD
+<<<<<<< HEAD
                         <img src={product.imageUrl[0].medium} alt={product.name} />
+=======
+                        <img src={product.imageUrl} alt={product.name} />
+>>>>>>> cba2d32e104c7ffb911089781ddd61e1c6ae0bad
 =======
                         <img src={product.imageUrl} alt={product.name} />
 >>>>>>> cba2d32e104c7ffb911089781ddd61e1c6ae0bad

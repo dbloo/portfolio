@@ -12,7 +12,10 @@
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
+=======
+>>>>>>> cba2d32e104c7ffb911089781ddd61e1c6ae0bad
 =======
 >>>>>>> cba2d32e104c7ffb911089781ddd61e1c6ae0bad
 .titleContainer {
@@ -76,7 +79,10 @@
 position: relative;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
+=======
+>>>>>>> cba2d32e104c7ffb911089781ddd61e1c6ae0bad
 =======
 >>>>>>> cba2d32e104c7ffb911089781ddd61e1c6ae0bad
 }
@@ -85,6 +91,7 @@ position: relative;
 
 .product-container {
 <<<<<<< HEAD
+<<<<<<< HEAD
    padding-bottom: 20%;
    padding-right: 3%;
    overflow:hidden;
@@ -92,11 +99,16 @@ position: relative;
 
 
 =======
+=======
+>>>>>>> cba2d32e104c7ffb911089781ddd61e1c6ae0bad
    object-fit: cover; 
    overflow: hidden;
    padding-bottom: 20%;
    padding-right: 3%;
    
+<<<<<<< HEAD
+>>>>>>> cba2d32e104c7ffb911089781ddd61e1c6ae0bad
+=======
 >>>>>>> cba2d32e104c7ffb911089781ddd61e1c6ae0bad
 
 
@@ -104,8 +116,11 @@ position: relative;
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> cba2d32e104c7ffb911089781ddd61e1c6ae0bad
 =======
 >>>>>>> cba2d32e104c7ffb911089781ddd61e1c6ae0bad
 .buy-container {
@@ -127,6 +142,7 @@ position: relative;
     display: flex;
     height: 60vh;
 <<<<<<< HEAD
+<<<<<<< HEAD
     transition: transform 0.2s ease-in-out ;
 
     
@@ -143,6 +159,10 @@ position: relative;
         transform: scale(1.05); /* Slight zoom on hover */
 
       
+=======
+
+
+>>>>>>> cba2d32e104c7ffb911089781ddd61e1c6ae0bad
 =======
 
 

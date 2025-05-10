@@ -1,8 +1,12 @@
 import {loadStripe} from "@stripe/stripe-js"
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React, { useState, useEffect } from 'react';
 import { doc, getDoc } from "firebase/firestore";
 import { db } from "../firebase";
+=======
+import React, { PureComponent } from 'react';
+>>>>>>> cba2d32e104c7ffb911089781ddd61e1c6ae0bad
 =======
 import React, { PureComponent } from 'react';
 >>>>>>> cba2d32e104c7ffb911089781ddd61e1c6ae0bad
@@ -19,6 +23,7 @@ const stripePromise = loadStripe("pk_live_51RGS5Y06EYiUL1OZXsoliznvftgYLeCLiKkX8
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 
@@ -28,6 +33,8 @@ const ShopPrints = ({category, products}) => {
 
 
 =======
+=======
+>>>>>>> cba2d32e104c7ffb911089781ddd61e1c6ae0bad
 // const products = [
 
 
@@ -67,11 +74,15 @@ const ShopPrints = ({category, products}) => {
 
 const ShopPrints = ({category, products}) => {
 
+<<<<<<< HEAD
+>>>>>>> cba2d32e104c7ffb911089781ddd61e1c6ae0bad
+=======
 >>>>>>> cba2d32e104c7ffb911089781ddd61e1c6ae0bad
 
 
 
     const categoryProducts = products[category];
+<<<<<<< HEAD
 <<<<<<< HEAD
     
 
@@ -100,6 +111,8 @@ const ShopPrints = ({category, products}) => {
     
 
 =======
+=======
+>>>>>>> cba2d32e104c7ffb911089781ddd61e1c6ae0bad
 
     
 
@@ -114,6 +127,9 @@ const ShopPrints = ({category, products}) => {
     await stripe.redirectToCheckout({ sessionId: session.id });
   };
 
+<<<<<<< HEAD
+>>>>>>> cba2d32e104c7ffb911089781ddd61e1c6ae0bad
+=======
 >>>>>>> cba2d32e104c7ffb911089781ddd61e1c6ae0bad
 
   return (
@@ -132,7 +148,11 @@ const ShopPrints = ({category, products}) => {
                     <div className="thumbnail-container">
                     
 <<<<<<< HEAD
+<<<<<<< HEAD
                         <img src={product.imageUrl[0].medium} alt={product.name} />
+=======
+                        <img src={product.imageUrl} alt={product.name} />
+>>>>>>> cba2d32e104c7ffb911089781ddd61e1c6ae0bad
 =======
                         <img src={product.imageUrl} alt={product.name} />
 >>>>>>> cba2d32e104c7ffb911089781ddd61e1c6ae0bad
@@ -148,6 +168,7 @@ const ShopPrints = ({category, products}) => {
                         <div className = "buy-container">
 
 <<<<<<< HEAD
+<<<<<<< HEAD
                         {availabilityMap[product.id] === false ? (
                         <p>Sold Out</p>
 
@@ -156,6 +177,9 @@ const ShopPrints = ({category, products}) => {
                         <p>${(product.initPrice).toFixed(2)}</p>
                         
                            )}
+=======
+                            <p>${(product.initPrice).toFixed(2)}</p>
+>>>>>>> cba2d32e104c7ffb911089781ddd61e1c6ae0bad
 =======
                             <p>${(product.initPrice).toFixed(2)}</p>
 >>>>>>> cba2d32e104c7ffb911089781ddd61e1c6ae0bad

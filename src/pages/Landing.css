@@ -3,6 +3,7 @@
     display: flex;
     margin-left: 25vw;
 <<<<<<< HEAD
+<<<<<<< HEAD
     animation: fadeIn 0.7s;
 
 }
@@ -10,6 +11,8 @@
 .landingContainer {
     width: 100%;
     height: 100vh;
+=======
+>>>>>>> cba2d32e104c7ffb911089781ddd61e1c6ae0bad
 =======
 >>>>>>> cba2d32e104c7ffb911089781ddd61e1c6ae0bad
 }
@@ -25,6 +28,7 @@
     font-size: 32px;
 }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 @keyframes fadeIn {
     0% {
@@ -42,6 +46,9 @@
         width: 100%;
         height: 60vh;
     }
+=======
+@media (max-width: 768px) {
+>>>>>>> cba2d32e104c7ffb911089781ddd61e1c6ae0bad
 =======
 @media (max-width: 768px) {
 >>>>>>> cba2d32e104c7ffb911089781ddd61e1c6ae0bad

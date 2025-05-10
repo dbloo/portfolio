@@ -642,6 +642,7 @@ const productData = {
     {
       id: 1,
 <<<<<<< HEAD
+<<<<<<< HEAD
       name: "SUNDOWN",
       description: "Do as I say, not as I do.",
       imageUrl: [ 
@@ -651,6 +652,11 @@ const productData = {
           large: "/assets/images/sundown.jpg",
 
       } ],
+=======
+      name: "DON'T BEAT YOURSELF UP",
+      description: "Do as I say, not as I do.",
+      imageUrl: "/assets/images/sundown.jpg",
+>>>>>>> cba2d32e104c7ffb911089781ddd61e1c6ae0bad
 =======
       name: "DON'T BEAT YOURSELF UP",
       description: "Do as I say, not as I do.",
@@ -666,9 +672,13 @@ const productData = {
       initPrice: 30,
       materials: "Giclee Print",
 <<<<<<< HEAD
+<<<<<<< HEAD
       productType: "print",
       imageFilename: 'sundown.jpg',
 
+=======
+      productType: "print"
+>>>>>>> cba2d32e104c7ffb911089781ddd61e1c6ae0bad
 =======
       productType: "print"
 >>>>>>> cba2d32e104c7ffb911089781ddd61e1c6ae0bad
@@ -681,6 +691,7 @@ const productData = {
       name: "DON'T BEAT YOURSELF UP",
       description: "Do as I say, not as I do.",
 <<<<<<< HEAD
+<<<<<<< HEAD
       imageUrl: [ 
         {
           thumbnail: "/assets/images/dbyu-thumb.webp",
@@ -689,6 +700,9 @@ const productData = {
 
       } ],
 
+=======
+      imageUrl: "/assets/images/dbyu.JPG",
+>>>>>>> cba2d32e104c7ffb911089781ddd61e1c6ae0bad
 =======
       imageUrl: "/assets/images/dbyu.JPG",
 >>>>>>> cba2d32e104c7ffb911089781ddd61e1c6ae0bad
@@ -702,8 +716,12 @@ const productData = {
       initPrice: 30,
       materials: "Giclee Print",
 <<<<<<< HEAD
+<<<<<<< HEAD
       productType: "print",
       imageFilename: 'dbyu.JPG',
+=======
+      productType: "print"
+>>>>>>> cba2d32e104c7ffb911089781ddd61e1c6ae0bad
 =======
       productType: "print"
 >>>>>>> cba2d32e104c7ffb911089781ddd61e1c6ae0bad
@@ -716,6 +734,7 @@ const productData = {
       name: "FLY CATCHER",
       description: "Do as I say, not as I do.",
 <<<<<<< HEAD
+<<<<<<< HEAD
       imageUrl: [ 
         {
           thumbnail: "/assets/images/flycatcher-thumb.webp",
@@ -724,6 +743,9 @@ const productData = {
 
       } ],
       
+=======
+      imageUrl: "/assets/images/flycatcher.JPG",
+>>>>>>> cba2d32e104c7ffb911089781ddd61e1c6ae0bad
 =======
       imageUrl: "/assets/images/flycatcher.JPG",
 >>>>>>> cba2d32e104c7ffb911089781ddd61e1c6ae0bad
@@ -737,8 +759,12 @@ const productData = {
       initPrice: 30,
       materials: "Giclee Print",
 <<<<<<< HEAD
+<<<<<<< HEAD
       productType: "print",
       imageFilename: 'flycatcher.JPG',
+=======
+      productType: "print"
+>>>>>>> cba2d32e104c7ffb911089781ddd61e1c6ae0bad
 =======
       productType: "print"
 >>>>>>> cba2d32e104c7ffb911089781ddd61e1c6ae0bad
@@ -751,6 +777,7 @@ const productData = {
       name: "SHOW YOUR FACE",
       description: "Do as I say, not as I do.",
 <<<<<<< HEAD
+<<<<<<< HEAD
       imageUrl: [ 
         {
           thumbnail: "/assets/images/SYF-thumb.webp",
@@ -759,6 +786,9 @@ const productData = {
 
       } ],
       
+=======
+      imageUrl: "/assets/images/SYF.JPG",
+>>>>>>> cba2d32e104c7ffb911089781ddd61e1c6ae0bad
 =======
       imageUrl: "/assets/images/SYF.JPG",
 >>>>>>> cba2d32e104c7ffb911089781ddd61e1c6ae0bad
@@ -772,9 +802,13 @@ const productData = {
       initPrice: 30,
       materials: "Giclee Print",
 <<<<<<< HEAD
+<<<<<<< HEAD
       productType: "print",
       imageFilename: 'SYF.jpg',
 
+=======
+      productType: "print"
+>>>>>>> cba2d32e104c7ffb911089781ddd61e1c6ae0bad
 =======
       productType: "print"
 >>>>>>> cba2d32e104c7ffb911089781ddd61e1c6ae0bad
@@ -787,6 +821,7 @@ const productData = {
       name: "MAKE LESS MONEY",
       description: "Do as I say, not as I do.",
 <<<<<<< HEAD
+<<<<<<< HEAD
       imageUrl:  [{
         thumbnail: "/assets/images/money-thumb.webp",
         medium: "/assets/images/money-medium.webp",
@@ -794,6 +829,9 @@ const productData = {
 
     } ],
       
+=======
+      imageUrl: "/assets/images/money.JPG",
+>>>>>>> cba2d32e104c7ffb911089781ddd61e1c6ae0bad
 =======
       imageUrl: "/assets/images/money.JPG",
 >>>>>>> cba2d32e104c7ffb911089781ddd61e1c6ae0bad
@@ -807,8 +845,12 @@ const productData = {
       initPrice: 30,
       materials: "Giclee Print",
 <<<<<<< HEAD
+<<<<<<< HEAD
       productType: "print",
       imageFilename: 'money.JPG'
+=======
+      productType: "print"
+>>>>>>> cba2d32e104c7ffb911089781ddd61e1c6ae0bad
 =======
       productType: "print"
 >>>>>>> cba2d32e104c7ffb911089781ddd61e1c6ae0bad
@@ -823,6 +865,7 @@ const productData = {
       name: "Mr. Crystal",
       description: "Do as I say, not as I do.",
 <<<<<<< HEAD
+<<<<<<< HEAD
       imageUrl: [ 
         {
           thumbnail: "/assets/images/crystal-thumb.webp",
@@ -831,6 +874,9 @@ const productData = {
 
       } ],
       
+=======
+      imageUrl: "/assets/images/crystal.JPG",
+>>>>>>> cba2d32e104c7ffb911089781ddd61e1c6ae0bad
 =======
       imageUrl: "/assets/images/crystal.JPG",
 >>>>>>> cba2d32e104c7ffb911089781ddd61e1c6ae0bad
@@ -844,9 +890,13 @@ const productData = {
       initPrice: 30,
       materials: "Giclee Print",
 <<<<<<< HEAD
+<<<<<<< HEAD
       productType: "print",
       imageFilename: 'crystal.JPG'
 
+=======
+      productType: "print"
+>>>>>>> cba2d32e104c7ffb911089781ddd61e1c6ae0bad
 =======
       productType: "print"
 >>>>>>> cba2d32e104c7ffb911089781ddd61e1c6ae0bad
@@ -858,6 +908,7 @@ const productData = {
       id: 7,
       name: "All Akimbo",
       description: "Do as I say, not as I do.",
+<<<<<<< HEAD
 <<<<<<< HEAD
       imageUrl: [ 
         {
@@ -871,6 +922,9 @@ const productData = {
 =======
       imageUrl: "/assets/images/akimbo.jpg",
 >>>>>>> cba2d32e104c7ffb911089781ddd61e1c6ae0bad
+=======
+      imageUrl: "/assets/images/akimbo.jpg",
+>>>>>>> cba2d32e104c7ffb911089781ddd61e1c6ae0bad
       size: [
         { name: "8.5 x 11 inches", price: 30 },
         { name: "12 x 16 inches", price: 35 },
@@ -881,9 +935,13 @@ const productData = {
       initPrice: 30,
       materials: "Giclee Print", 
 <<<<<<< HEAD
+<<<<<<< HEAD
       productType: "print",
       imageFilename: 'akimbo.jpg'
 
+=======
+      productType: "print"
+>>>>>>> cba2d32e104c7ffb911089781ddd61e1c6ae0bad
 =======
       productType: "print"
 >>>>>>> cba2d32e104c7ffb911089781ddd61e1c6ae0bad
@@ -895,6 +953,7 @@ const productData = {
       id: 8,
       name: "THE ARBITER",
       description: "Do as I say, not as I do.",
+<<<<<<< HEAD
 <<<<<<< HEAD
       imageUrl: [ 
         {
@@ -908,6 +967,9 @@ const productData = {
 =======
       imageUrl: "/assets/images/arbiter.JPG",
 >>>>>>> cba2d32e104c7ffb911089781ddd61e1c6ae0bad
+=======
+      imageUrl: "/assets/images/arbiter.JPG",
+>>>>>>> cba2d32e104c7ffb911089781ddd61e1c6ae0bad
       size: [
         { name: "8.5 x 11 inches", price: 30 },
         { name: "12 x 16 inches", price: 35 },
@@ -918,9 +980,13 @@ const productData = {
       initPrice: 30,
       materials: "Giclee Print",
 <<<<<<< HEAD
+<<<<<<< HEAD
       productType: "print",
       imageFilename: 'arbiter.jpg'
 
+=======
+      productType: "print"
+>>>>>>> cba2d32e104c7ffb911089781ddd61e1c6ae0bad
 =======
       productType: "print"
 >>>>>>> cba2d32e104c7ffb911089781ddd61e1c6ae0bad
@@ -932,6 +998,7 @@ const productData = {
       id: 9,
       name: "Shutdown",
       description: "Do as I say, not as I do.",
+<<<<<<< HEAD
 <<<<<<< HEAD
       imageUrl: [ 
         {
@@ -945,6 +1012,9 @@ const productData = {
 =======
       imageUrl: "/assets/images/SD.jpg",
 >>>>>>> cba2d32e104c7ffb911089781ddd61e1c6ae0bad
+=======
+      imageUrl: "/assets/images/SD.jpg",
+>>>>>>> cba2d32e104c7ffb911089781ddd61e1c6ae0bad
       size: [
         { name: "8.5 x 11 inches", price: 30 },
         { name: "12 x 16 inches", price: 35 },
@@ -955,9 +1025,13 @@ const productData = {
       initPrice: 30,
       materials: "Giclee Print",
 <<<<<<< HEAD
+<<<<<<< HEAD
       productType: "print",
       imageFilename: 'SD.jpg'
 
+=======
+      productType: "print"
+>>>>>>> cba2d32e104c7ffb911089781ddd61e1c6ae0bad
 =======
       productType: "print"
 >>>>>>> cba2d32e104c7ffb911089781ddd61e1c6ae0bad
@@ -969,6 +1043,7 @@ const productData = {
       id: 10,
       name: "Rogue Poison",
       description: "Do as I say, not as I do.",
+<<<<<<< HEAD
 <<<<<<< HEAD
       imageUrl: [ 
         {
@@ -982,6 +1057,9 @@ const productData = {
 =======
       imageUrl: "/assets/images/rogue.jpg",
 >>>>>>> cba2d32e104c7ffb911089781ddd61e1c6ae0bad
+=======
+      imageUrl: "/assets/images/rogue.jpg",
+>>>>>>> cba2d32e104c7ffb911089781ddd61e1c6ae0bad
       size: [
         { name: "8.5 x 11 inches", price: 30 },
         { name: "12 x 16 inches", price: 35 },
@@ -992,9 +1070,13 @@ const productData = {
       initPrice: 30,
       materials: "Giclee Print",
 <<<<<<< HEAD
+<<<<<<< HEAD
       productType: "print",
       imageFilename: 'rogue.jpg'
 
+=======
+      productType: "print"
+>>>>>>> cba2d32e104c7ffb911089781ddd61e1c6ae0bad
 =======
       productType: "print"
 >>>>>>> cba2d32e104c7ffb911089781ddd61e1c6ae0bad
@@ -1007,6 +1089,7 @@ const productData = {
       name: "thisisntarobberyitsjustperspective",
       description: " ",
 <<<<<<< HEAD
+<<<<<<< HEAD
       imageUrl: [ 
         {
           thumbnail: "/assets/images/robbery-thumb.webp",
@@ -1015,6 +1098,9 @@ const productData = {
 
       } ],
       
+=======
+      imageUrl: "/assets/images/robbery.JPG",
+>>>>>>> cba2d32e104c7ffb911089781ddd61e1c6ae0bad
 =======
       imageUrl: "/assets/images/robbery.JPG",
 >>>>>>> cba2d32e104c7ffb911089781ddd61e1c6ae0bad
@@ -1028,9 +1114,13 @@ const productData = {
       initPrice: 30,
       materials: "Giclee Print",
 <<<<<<< HEAD
+<<<<<<< HEAD
       productType: "print",
       imageFilename: 'robbery.JPG'
 
+=======
+      productType: "print"
+>>>>>>> cba2d32e104c7ffb911089781ddd61e1c6ae0bad
 =======
       productType: "print"
 >>>>>>> cba2d32e104c7ffb911089781ddd61e1c6ae0bad
@@ -1042,6 +1132,7 @@ const productData = {
       name: "DAMNED",
       description: " ",
 <<<<<<< HEAD
+<<<<<<< HEAD
       imageUrl: [ 
         {
           thumbnail: "/assets/images/damned-thumb.webp",
@@ -1050,6 +1141,9 @@ const productData = {
 
       } ],
       
+=======
+      imageUrl: "/assets/images/damned.JPG",
+>>>>>>> cba2d32e104c7ffb911089781ddd61e1c6ae0bad
 =======
       imageUrl: "/assets/images/damned.JPG",
 >>>>>>> cba2d32e104c7ffb911089781ddd61e1c6ae0bad
@@ -1063,9 +1157,13 @@ const productData = {
       initPrice: 30,
       materials: "Giclee Print",
 <<<<<<< HEAD
+<<<<<<< HEAD
       productType: "print",
       imageFilename: 'damned.JPG'
 
+=======
+      productType: "print"
+>>>>>>> cba2d32e104c7ffb911089781ddd61e1c6ae0bad
 =======
       productType: "print"
 >>>>>>> cba2d32e104c7ffb911089781ddd61e1c6ae0bad
@@ -1081,6 +1179,7 @@ const productData = {
       name: "FLY CATCHER",
       description: "Do as I say, not as I do.",
 <<<<<<< HEAD
+<<<<<<< HEAD
       imageUrl: [ 
         {
           thumbnail: "/assets/images/flycatcher-thumb.webp",
@@ -1089,6 +1188,9 @@ const productData = {
 
       } ],
 
+=======
+      imageUrl: "/assets/images/flycatcher.JPG",
+>>>>>>> cba2d32e104c7ffb911089781ddd61e1c6ae0bad
 =======
       imageUrl: "/assets/images/flycatcher.JPG",
 >>>>>>> cba2d32e104c7ffb911089781ddd61e1c6ae0bad
@@ -1101,10 +1203,14 @@ const productData = {
       initPrice: 1200,
       materials: "Acrylic on Canvas",
 <<<<<<< HEAD
+<<<<<<< HEAD
       productType: "original",
       imageFilename: 'flycatcher.JPG'
 
 
+=======
+      productType: "original"
+>>>>>>> cba2d32e104c7ffb911089781ddd61e1c6ae0bad
 =======
       productType: "original"
 >>>>>>> cba2d32e104c7ffb911089781ddd61e1c6ae0bad
@@ -1117,6 +1223,7 @@ const productData = {
       name: "Mr. Crystal",
       description: "Do as I say, not as I do.",
 <<<<<<< HEAD
+<<<<<<< HEAD
       imageUrl: [ 
         {
           thumbnail: "/assets/images/crystal-thumb.webp",
@@ -1128,6 +1235,9 @@ const productData = {
 =======
       imageUrl: "/assets/images/crystal.JPG",
 >>>>>>> cba2d32e104c7ffb911089781ddd61e1c6ae0bad
+=======
+      imageUrl: "/assets/images/crystal.JPG",
+>>>>>>> cba2d32e104c7ffb911089781ddd61e1c6ae0bad
       size: [
         { name: "17 x 15 inches", price: 800 },
 
@@ -1136,9 +1246,13 @@ const productData = {
       initPrice: 800,
       materials: "Acrylic on Canvas",
 <<<<<<< HEAD
+<<<<<<< HEAD
       productType: "original",
       imageFilename: 'crystal.JPG'
 
+=======
+      productType: "original"
+>>>>>>> cba2d32e104c7ffb911089781ddd61e1c6ae0bad
 =======
       productType: "original"
 >>>>>>> cba2d32e104c7ffb911089781ddd61e1c6ae0bad
@@ -1151,6 +1265,7 @@ const productData = {
       name: "Sundown",
       description: "Do as I say, not as I do.",
 <<<<<<< HEAD
+<<<<<<< HEAD
       imageUrl: [ 
         {
           thumbnail: "/assets/images/sundown-thumbnail.webp",
@@ -1162,6 +1277,9 @@ const productData = {
 =======
       imageUrl: "/assets/images/sundown.jpg",
 >>>>>>> cba2d32e104c7ffb911089781ddd61e1c6ae0bad
+=======
+      imageUrl: "/assets/images/sundown.jpg",
+>>>>>>> cba2d32e104c7ffb911089781ddd61e1c6ae0bad
       size: [
         { name: "48 x 48 inches", price: 4300 },
 
@@ -1170,9 +1288,13 @@ const productData = {
       initPrice: 4300,
       materials: "Acrylic on Canvas",
 <<<<<<< HEAD
+<<<<<<< HEAD
       productType: "original",
       imageFilename: 'sundown.jpg'
 
+=======
+      productType: "original"
+>>>>>>> cba2d32e104c7ffb911089781ddd61e1c6ae0bad
 =======
       productType: "original"
 >>>>>>> cba2d32e104c7ffb911089781ddd61e1c6ae0bad
@@ -1185,6 +1307,7 @@ const productData = {
       name: "Make Less Money",
       description: "Do as I say, not as I do.",
 <<<<<<< HEAD
+<<<<<<< HEAD
       imageUrl: [ 
         {
           thumbnail: "/assets/images/money-thumb.webp",
@@ -1196,6 +1319,9 @@ const productData = {
 =======
       imageUrl: "/assets/images/money.JPG",
 >>>>>>> cba2d32e104c7ffb911089781ddd61e1c6ae0bad
+=======
+      imageUrl: "/assets/images/money.JPG",
+>>>>>>> cba2d32e104c7ffb911089781ddd61e1c6ae0bad
       size: [
         { name: "5 x 3 ft", price: 5600 },
 
@@ -1204,9 +1330,13 @@ const productData = {
       initPrice: 5600,
       materials: "Acrylic on Canvas",
 <<<<<<< HEAD
+<<<<<<< HEAD
       productType: "original",
       imageFilename: 'money.JPG'
 
+=======
+      productType: "original"
+>>>>>>> cba2d32e104c7ffb911089781ddd61e1c6ae0bad
 =======
       productType: "original"
 >>>>>>> cba2d32e104c7ffb911089781ddd61e1c6ae0bad
@@ -1219,6 +1349,7 @@ const productData = {
       name: "Try Again",
       description: "Do as I say, not as I do.",
 <<<<<<< HEAD
+<<<<<<< HEAD
       imageUrl: [ 
         {
           thumbnail: "/assets/images/tryagain-thumb.webp",
@@ -1230,6 +1361,9 @@ const productData = {
 =======
       imageUrl: "/assets/images/tryagain.JPG",
 >>>>>>> cba2d32e104c7ffb911089781ddd61e1c6ae0bad
+=======
+      imageUrl: "/assets/images/tryagain.JPG",
+>>>>>>> cba2d32e104c7ffb911089781ddd61e1c6ae0bad
       size: [
         { name: "36 x 36 inches", price: 4600 },
 
@@ -1238,9 +1372,13 @@ const productData = {
       initPrice: 4600,
       materials: "Acrylic on Canvas",
 <<<<<<< HEAD
+<<<<<<< HEAD
       productType: "original",
       imageFilename: 'tryagain.JPG'
 
+=======
+      productType: "original"
+>>>>>>> cba2d32e104c7ffb911089781ddd61e1c6ae0bad
 =======
       productType: "original"
 >>>>>>> cba2d32e104c7ffb911089781ddd61e1c6ae0bad
@@ -1253,6 +1391,7 @@ const productData = {
       name: "SHOW YOUR FACE",
       description: "Do as I say, not as I do.",
 <<<<<<< HEAD
+<<<<<<< HEAD
       imageUrl: [ 
         {
           thumbnail: "/assets/images/SYF-thumb.webp",
@@ -1264,6 +1403,9 @@ const productData = {
 =======
       imageUrl: "/assets/images/SYF.JPG",
 >>>>>>> cba2d32e104c7ffb911089781ddd61e1c6ae0bad
+=======
+      imageUrl: "/assets/images/SYF.JPG",
+>>>>>>> cba2d32e104c7ffb911089781ddd61e1c6ae0bad
       size: [
         { name: "17 x 15 inches", price: 1400 },
 
@@ -1272,9 +1414,13 @@ const productData = {
       initPrice: 1400,
       materials: "Acrylic on Canvas",
 <<<<<<< HEAD
+<<<<<<< HEAD
       productType: "original",
       imageFilename: 'SYF.JPG'
 
+=======
+      productType: "original"
+>>>>>>> cba2d32e104c7ffb911089781ddd61e1c6ae0bad
 =======
       productType: "original"
 >>>>>>> cba2d32e104c7ffb911089781ddd61e1c6ae0bad
@@ -1287,6 +1433,7 @@ const productData = {
       name: "Don't Beat Yourself Up",
       description: "Do as I say, not as I do.",
 <<<<<<< HEAD
+<<<<<<< HEAD
       imageUrl: [ 
         {
           thumbnail: "/assets/images/dbyu-thumb.webp",
@@ -1298,6 +1445,9 @@ const productData = {
 =======
       imageUrl: "/assets/images/dbyu.JPG",
 >>>>>>> cba2d32e104c7ffb911089781ddd61e1c6ae0bad
+=======
+      imageUrl: "/assets/images/dbyu.JPG",
+>>>>>>> cba2d32e104c7ffb911089781ddd61e1c6ae0bad
       size: [
         { name: "10 x 8 inches", price: 400 },
 
@@ -1306,9 +1456,13 @@ const productData = {
       initPrice: 400,
       materials: "Acrylic on Canvas",
 <<<<<<< HEAD
+<<<<<<< HEAD
       productType: "original",
       imageFilename: 'dbyu.JPG'
 
+=======
+      productType: "original"
+>>>>>>> cba2d32e104c7ffb911089781ddd61e1c6ae0bad
 =======
       productType: "original"
 >>>>>>> cba2d32e104c7ffb911089781ddd61e1c6ae0bad
@@ -1321,6 +1475,7 @@ const productData = {
       name: "Catch and Release",
       description: "Do as I say, not as I do.",
 <<<<<<< HEAD
+<<<<<<< HEAD
       imageUrl: [ 
         {
           thumbnail: "/assets/images/catch-thumb.webp",
@@ -1332,6 +1487,9 @@ const productData = {
 =======
       imageUrl: "/assets/images/catch.JPG",
 >>>>>>> cba2d32e104c7ffb911089781ddd61e1c6ae0bad
+=======
+      imageUrl: "/assets/images/catch.JPG",
+>>>>>>> cba2d32e104c7ffb911089781ddd61e1c6ae0bad
       size: [
         { name: "36 x 36 inches", price: 3400 },
 
@@ -1340,9 +1498,13 @@ const productData = {
       initPrice: 3400,
       materials: "Acrylic on Canvas",
 <<<<<<< HEAD
+<<<<<<< HEAD
       productType: "original",
       imageFilename: 'catch.JPG'
 
+=======
+      productType: "original"
+>>>>>>> cba2d32e104c7ffb911089781ddd61e1c6ae0bad
 =======
       productType: "original"
 >>>>>>> cba2d32e104c7ffb911089781ddd61e1c6ae0bad
@@ -1355,6 +1517,7 @@ const productData = {
       name: "Adequate Natural",
       description: "Do as I say, not as I do.",
 <<<<<<< HEAD
+<<<<<<< HEAD
       imageUrl: [ 
         {
           thumbnail: "/assets/images/adequate-thumb.webp",
@@ -1366,6 +1529,9 @@ const productData = {
 =======
       imageUrl: "/assets/images/adequate.jpg",
 >>>>>>> cba2d32e104c7ffb911089781ddd61e1c6ae0bad
+=======
+      imageUrl: "/assets/images/adequate.jpg",
+>>>>>>> cba2d32e104c7ffb911089781ddd61e1c6ae0bad
       size: [
         { name: "36 x 36 inches", price: 4600 },
 
@@ -1374,9 +1540,13 @@ const productData = {
       initPrice: 4600,
       materials: "Acrylic on Canvas",
 <<<<<<< HEAD
+<<<<<<< HEAD
       productType: "original",
       imageFilename: 'adequate.jpg'
 
+=======
+      productType: "original"
+>>>>>>> cba2d32e104c7ffb911089781ddd61e1c6ae0bad
 =======
       productType: "original"
 >>>>>>> cba2d32e104c7ffb911089781ddd61e1c6ae0bad

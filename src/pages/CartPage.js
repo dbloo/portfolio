@@ -1,6 +1,10 @@
 import { useCart } from '../context/CartContext';
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { useEffect, useState } from 'react';
+=======
+import { useEffect } from 'react';
+>>>>>>> cba2d32e104c7ffb911089781ddd61e1c6ae0bad
 =======
 import { useEffect } from 'react';
 >>>>>>> cba2d32e104c7ffb911089781ddd61e1c6ae0bad
@@ -13,6 +17,7 @@ import Spinner from "../components/Spinner";
 
 import "./CartPage.css"
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -108,6 +113,8 @@ useEffect(() => {
   
  
 =======
+=======
+>>>>>>> cba2d32e104c7ffb911089781ddd61e1c6ae0bad
 const stripePromise = loadStripe(process.env.REACT_APP_STRIPE_PUBLISHABLE_KEY);
 
 export default function CartPage() {
@@ -132,6 +139,9 @@ export default function CartPage() {
   
   // Redirect to Stripe
   };
+<<<<<<< HEAD
+>>>>>>> cba2d32e104c7ffb911089781ddd61e1c6ae0bad
+=======
 >>>>>>> cba2d32e104c7ffb911089781ddd61e1c6ae0bad
   if (subtotal !== 0 ){
   return (
@@ -152,7 +162,11 @@ export default function CartPage() {
             
 
 <<<<<<< HEAD
+<<<<<<< HEAD
             <img src = {item.imageUrl[0].thumbnail}></img>
+=======
+            <img src = {item.imageUrl}></img>
+>>>>>>> cba2d32e104c7ffb911089781ddd61e1c6ae0bad
 =======
             <img src = {item.imageUrl}></img>
 >>>>>>> cba2d32e104c7ffb911089781ddd61e1c6ae0bad
@@ -195,11 +209,14 @@ export default function CartPage() {
       </button>
     </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
         <div className= "shipping-policy">
             <h1>SHIPPING POLICY:</h1>
             <p><strong>Domestic Orders (U.S.):</strong> 5-10 Business Days</p>
             <p><strong>Interational Orders:</strong> 10-15 Business Days</p>
         </div>
+=======
+>>>>>>> cba2d32e104c7ffb911089781ddd61e1c6ae0bad
 =======
 >>>>>>> cba2d32e104c7ffb911089781ddd61e1c6ae0bad
     </div>

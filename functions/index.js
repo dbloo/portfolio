@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 const { onDocumentCreated } = require("firebase-functions/v2/firestore");
 const { onRequest } = require("firebase-functions/v2/https");
 const { defineSecret } = require("firebase-functions/params");
@@ -62,6 +63,8 @@ app.post("/checkout", cors(corsOptions), async (req, res) => {
           },
           unit_amount: Math.round(item.price * 100), 
 =======
+=======
+>>>>>>> cba2d32e104c7ffb911089781ddd61e1c6ae0bad
 const functions = require("firebase-functions");
 const admin = require("firebase-admin");
 const stripe = require("stripe")(
@@ -111,11 +114,15 @@ app.post("/checkout", async (req, res) => {
           currency: "usd",
           product_data: {name: products[i].name},
           unit_amount: products[i].price,
+<<<<<<< HEAD
+>>>>>>> cba2d32e104c7ffb911089781ddd61e1c6ae0bad
+=======
 >>>>>>> cba2d32e104c7ffb911089781ddd61e1c6ae0bad
         },
         quantity: item.quantity,
       })),
       mode: "payment",
+<<<<<<< HEAD
 <<<<<<< HEAD
       success_url: "/success",
       cancel_url: "/cancel",
@@ -189,6 +196,8 @@ exports.api = onRequest(
   app
 );
 =======
+=======
+>>>>>>> cba2d32e104c7ffb911089781ddd61e1c6ae0bad
       success_url: `${req.headers.origin}/success`,
       cancel_url: `${req.headers.origin}/cart`,
       metadata: {userId},
@@ -219,4 +228,7 @@ exports.updateInventory = functions.firestore
 
       await batch.commit();
     });
+<<<<<<< HEAD
+>>>>>>> cba2d32e104c7ffb911089781ddd61e1c6ae0bad
+=======
 >>>>>>> cba2d32e104c7ffb911089781ddd61e1c6ae0bad
