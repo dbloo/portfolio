@@ -2,15 +2,9 @@ import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { Carousel } from "react-responsive-carousel";
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 import { doc, getDoc } from "firebase/firestore";
 import { db } from "../firebase";
 
-=======
->>>>>>> cba2d32e104c7ffb911089781ddd61e1c6ae0bad
-=======
->>>>>>> cba2d32e104c7ffb911089781ddd61e1c6ae0bad
 import { useCart } from "../context/CartContext";
 
 
@@ -44,14 +38,8 @@ import "./Info.css";
    const [showConfirmation, setShowConfirmation] = useState(false);
   const [confirmationMessage, setConfirmationMessage] = useState('');
 
-<<<<<<< HEAD
-<<<<<<< HEAD
   const [available, setAvailable] = useState(true);
 
-=======
->>>>>>> cba2d32e104c7ffb911089781ddd61e1c6ae0bad
-=======
->>>>>>> cba2d32e104c7ffb911089781ddd61e1c6ae0bad
    
 
 
@@ -92,8 +80,6 @@ import "./Info.css";
       
    }, []);
 
-<<<<<<< HEAD
-<<<<<<< HEAD
    const [availabilityMap, setAvailabilityMap] = useState({});
 
    useEffect(() => {
@@ -115,38 +101,18 @@ import "./Info.css";
          fetchAllAvailability();
        }, [categoryImages]);
 
-=======
->>>>>>> cba2d32e104c7ffb911089781ddd61e1c6ae0bad
-=======
->>>>>>> cba2d32e104c7ffb911089781ddd61e1c6ae0bad
    const handleAddToCart = () => {
        const item = {
 
          id: product.id,
          name: product.name,
-<<<<<<< HEAD
-<<<<<<< HEAD
          imageUrl: product.imageUrl,  
-=======
-         imageUrl: product.imageUrl,  // Make sure this is correct
->>>>>>> cba2d32e104c7ffb911089781ddd61e1c6ae0bad
-=======
-         imageUrl: product.imageUrl,  // Make sure this is correct
->>>>>>> cba2d32e104c7ffb911089781ddd61e1c6ae0bad
          price: currentSize.price,
          selectedSize: currentSize.name,
          quantity,
          materials: product.materials,
-<<<<<<< HEAD
-<<<<<<< HEAD
          productType: product.productType,
          imageFilename: product.imageFilename
-=======
-         productType: product.productType
->>>>>>> cba2d32e104c7ffb911089781ddd61e1c6ae0bad
-=======
-         productType: product.productType
->>>>>>> cba2d32e104c7ffb911089781ddd61e1c6ae0bad
       
       }
 
@@ -214,15 +180,7 @@ if (category == "prints" ){
               <div className = "image-container">
 
 
-<<<<<<< HEAD
-<<<<<<< HEAD
                         <img src = {product.imageUrl[0].large}></img>
-=======
-                        <img src = {product.imageUrl}></img>
->>>>>>> cba2d32e104c7ffb911089781ddd61e1c6ae0bad
-=======
-                        <img src = {product.imageUrl}></img>
->>>>>>> cba2d32e104c7ffb911089781ddd61e1c6ae0bad
 
               <div className = "info-text-container">
 
@@ -312,15 +270,7 @@ if (category == "prints" ){
               <div className = "image-container">
 
 
-<<<<<<< HEAD
-<<<<<<< HEAD
                         <img src = {product.imageUrl[0].large}></img>
-=======
-                        <img src = {product.imageUrl}></img>
->>>>>>> cba2d32e104c7ffb911089781ddd61e1c6ae0bad
-=======
-                        <img src = {product.imageUrl}></img>
->>>>>>> cba2d32e104c7ffb911089781ddd61e1c6ae0bad
 
               <div className = "info-text-container">
 
@@ -335,29 +285,13 @@ if (category == "prints" ){
 
 
                               <p className = "price"><strong>${(product.initPrice)}</strong></p>
-<<<<<<< HEAD
-<<<<<<< HEAD
                               <button className = "addToCart"  disabled={isItemInCart(product.id, product.productType) || isLoading || availabilityMap[product.id] === false } onClick={() => 
-=======
-                              <button className = "addToCart"  disabled={isItemInCart(product.id, product.productType) || isLoading} onClick={() => 
->>>>>>> cba2d32e104c7ffb911089781ddd61e1c6ae0bad
-=======
-                              <button className = "addToCart"  disabled={isItemInCart(product.id, product.productType) || isLoading} onClick={() => 
->>>>>>> cba2d32e104c7ffb911089781ddd61e1c6ae0bad
                               handleAddToCart()
                                   
                                   }>
 
                                     {isItemInCart(product.id, product.productType) 
-<<<<<<< HEAD
-<<<<<<< HEAD
                                     ? "Already in Cart" : availabilityMap[product.id] === false ? "Sold Out"
-=======
-                                    ? "Already in Cart" 
->>>>>>> cba2d32e104c7ffb911089781ddd61e1c6ae0bad
-=======
-                                    ? "Already in Cart" 
->>>>>>> cba2d32e104c7ffb911089781ddd61e1c6ae0bad
                                     : isLoading ? (<div className="button-message">Adding to Cart...<div className = "spinner-add"><Spinner></Spinner></div></div>): (<>Add to Cart</>)}
                               </button>
 

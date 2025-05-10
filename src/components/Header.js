@@ -52,8 +52,6 @@ function Header() {
 
 
     };
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 
 
@@ -64,28 +62,12 @@ function Header() {
       
 
 
-=======
-  
-    useEffect(() => {
-
->>>>>>> cba2d32e104c7ffb911089781ddd61e1c6ae0bad
-=======
-  
-    useEffect(() => {
-
->>>>>>> cba2d32e104c7ffb911089781ddd61e1c6ae0bad
       window.addEventListener('scroll', handleScroll);
   
       return () => {
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 
-=======
->>>>>>> cba2d32e104c7ffb911089781ddd61e1c6ae0bad
-=======
->>>>>>> cba2d32e104c7ffb911089781ddd61e1c6ae0bad
         window.removeEventListener('scroll', handleScroll);
       };
     }, []);

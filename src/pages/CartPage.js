@@ -1,13 +1,5 @@
 import { useCart } from '../context/CartContext';
-<<<<<<< HEAD
-<<<<<<< HEAD
 import { useEffect, useState } from 'react';
-=======
-import { useEffect } from 'react';
->>>>>>> cba2d32e104c7ffb911089781ddd61e1c6ae0bad
-=======
-import { useEffect } from 'react';
->>>>>>> cba2d32e104c7ffb911089781ddd61e1c6ae0bad
 import { loadStripe } from '@stripe/stripe-js';
 
 import { httpsCallable } from 'firebase/functions';
@@ -17,8 +9,6 @@ import Spinner from "../components/Spinner";
 
 import "./CartPage.css"
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 
 
@@ -112,37 +102,6 @@ useEffect(() => {
   }, [cart]);
   
  
-=======
-=======
->>>>>>> cba2d32e104c7ffb911089781ddd61e1c6ae0bad
-const stripePromise = loadStripe(process.env.REACT_APP_STRIPE_PUBLISHABLE_KEY);
-
-export default function CartPage() {
-  const { cart, removeFromCart, subtotal, addToCart, isLoading } = useCart();
-  useEffect(() => {
-    console.log('Cart contents:', cart);
-  }, [cart]);
-
-  const handleCheckout = async () => {
-
-    
-    const stripe = await stripePromise;
-    const response = await fetch('/api/checkout', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ cart }),
-    });
-
-    const session = await response.json();
-
-  
-  
-  // Redirect to Stripe
-  };
-<<<<<<< HEAD
->>>>>>> cba2d32e104c7ffb911089781ddd61e1c6ae0bad
-=======
->>>>>>> cba2d32e104c7ffb911089781ddd61e1c6ae0bad
   if (subtotal !== 0 ){
   return (
     <div className='page-wrapper'>
@@ -161,15 +120,7 @@ export default function CartPage() {
 
             
 
-<<<<<<< HEAD
-<<<<<<< HEAD
             <img src = {item.imageUrl[0].thumbnail}></img>
-=======
-            <img src = {item.imageUrl}></img>
->>>>>>> cba2d32e104c7ffb911089781ddd61e1c6ae0bad
-=======
-            <img src = {item.imageUrl}></img>
->>>>>>> cba2d32e104c7ffb911089781ddd61e1c6ae0bad
                 <div className='remove-controls'>
 
                     <div className="quantity-controls">
@@ -208,17 +159,11 @@ export default function CartPage() {
         {isLoading ? (<div className = "spinner-checkout"><Spinner></Spinner></div>):(<></>)}
       </button>
     </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
         <div className= "shipping-policy">
             <h1>SHIPPING POLICY:</h1>
             <p><strong>Domestic Orders (U.S.):</strong> 5-10 Business Days</p>
             <p><strong>Interational Orders:</strong> 10-15 Business Days</p>
         </div>
-=======
->>>>>>> cba2d32e104c7ffb911089781ddd61e1c6ae0bad
-=======
->>>>>>> cba2d32e104c7ffb911089781ddd61e1c6ae0bad
     </div>
 
   );
