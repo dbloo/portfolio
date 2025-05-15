@@ -111,8 +111,13 @@ export function CartProvider({ children }) {
     0
   );
 
+  const clearCart = () => {
+    setCart([]);
+    localStorage.removeItem('cart'); // or sessionStorage, whichever you use
+  };
+
   return (
-    <CartContext.Provider value={{ cart, addToCart, removeFromCart, subtotal, isItemInCart, isLoading, setIsLoading}}>
+    <CartContext.Provider value={{ cart, addToCart, removeFromCart, subtotal, isItemInCart, isLoading, setIsLoading, clearCart}}>
       {isLoading && <Spinner />}
       {children}
     </CartContext.Provider>

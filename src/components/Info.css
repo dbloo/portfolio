@@ -24,18 +24,69 @@ h3{
     margin-top: 0px;
 }
 
-.info-container { 
-    margin-top: 18vh;
-    margin-left: 5vw;
-    margin-right: 5vw;
+
+
+.info-container-shop { 
+    
     margin-bottom: 5vw;
     height: auto;
     border: 1px solid #000; 
     border-radius: 10px; 
     padding: 20px; 
+
     
    
 }
+
+.productContainer {
+    margin-top: 12vh;
+    padding: 20px; 
+
+}
+
+.backB span{
+    position: absolute;
+    background-color: #000;
+    border-radius: 40px;
+    width: 40px;
+    left: 0px;
+}
+
+.backB span:nth-child(1){
+    position: absolute;
+
+    rotate: -120deg;
+    top: 0px
+}
+.backB span:nth-child(2){
+    position: absolute;
+
+    rotate: -60deg;
+    top: 0px
+}
+
+
+
+.backB{
+    display: flex;
+    background-color: #fff;
+    border-radius: 20px;
+    border: 1px solid #000; 
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    padding: 1%;
+    width: 20%;
+    margin-top: 4%;
+    margin-bottom: 2%;
+    height: 10px;
+    cursor: pointer;
+}
+
+.backB:hover{
+    background-color: #bfbfbf;
+}
+
 
 .quantitySelector {
     display: flex;
@@ -46,6 +97,16 @@ h3{
     border: 1px solid #000;
     border-radius: 20px;
     margin-left: 15%;
+
+}
+.spinner-add {
+        
+    display: flex;
+    position: absolute;
+    left:  150px;
+    top: 0px;
+    
+
 
 }
 
@@ -92,6 +153,8 @@ h3{
     border-radius: 20px;
 
     cursor: pointer;
+    align-items: center;
+    justify-content: center;
 }
 .addToCart:hover {
     background-color: #bfbfbf;
@@ -104,11 +167,7 @@ h3{
     opacity: 50%;
     cursor: not-allowed;
 
-    .addToCart:hover {
-        background-color: #ffffff;
     
-    
-    }
 
 
 }
@@ -214,9 +273,66 @@ h3{
     position: relative;
   }
 
-
+ 
 
 @media (max-width: 768px) {
+    
+
+    .backB span{
+        position: absolute;
+        background-color: #000;
+        border-radius: 40px;
+        width: 1px;
+        height: 10px;
+        left: 35px;
+        margin-top: 2px;
+    }
+    
+    .backB span:nth-child(1){
+        position: absolute;
+    
+        rotate: -120deg;
+        top: 5px;
+        left: 13px
+    }
+    .backB span:nth-child(2){
+        position: absolute;
+        rotate: -60deg;
+        top: 10px;
+        left: 13px
+    }
+
+    .backB p {
+        font-size: 14px;
+        margin-top: 0%;
+        margin-bottom: 0%;
+
+    }
+
+    .backB{
+        background-color: #fff;
+        border-radius: 20px;
+        border: 1px solid #000; 
+        display: flex;
+        position: relative;
+        color: #000;
+
+        height: 30px;
+        align-items: center;
+        width: 140px;
+        justify-content: center;
+
+        cursor: pointer;
+
+        padding: 0%;
+    }
+    
+   
+    .backbutton{
+        width: 100%;
+        align-items: center;
+
+    }
 
 
 
@@ -320,7 +436,8 @@ h3{
         border-radius: 20px;
         width: 200px;
         height: 50px;
-        color: #000;        
+        color: #000;   
+         
     
 
   }

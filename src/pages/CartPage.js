@@ -22,16 +22,14 @@ export default function CartPage() {
 
 
 
-  // Add this at the top of your CartPage.js
 const FUNCTION_URL = process.env.NODE_ENV === 'development'
-? 'http://localhost:5001/dbportf101/us-central1/api/checkout'
-: 'https://us-central1-dbportf101.cloudfunctions.net/api/checkout';
+? process.env.REACT_APP_API_BASE_URL_DEV + "/checkout"
+: process.env.REACT_APP_API_BASE_URL + "/checkout";
 
 const getImageUrl = (filename) => {
   return (`https://dominicbloomfield.com/assets/images/${filename}`);
 };
 
-// Then update your handleCheckout function:
 const handleCheckout = async () => {
 if (!stripePromise) {
   console.error('Stripe not initialized');
@@ -39,7 +37,7 @@ if (!stripePromise) {
 }
 
 try {
-  console.log('Sending to:', FUNCTION_URL); // Debug log
+  console.log('Sending to:', FUNCTION_URL); 
   setIsLoading(true);
 
   const response = await fetch(FUNCTION_URL, {
@@ -53,7 +51,8 @@ try {
         image: getImageUrl(item.imageFilename),
         quantity: item.quantity,
         materials: item.materials,
-        price: item.price
+        price: item.price,
+        type: item.productType,
       })),
       userId: "user_123"
     }),
@@ -84,7 +83,7 @@ useEffect(() => {
   const initializeStripe = async () => {
     try {
       const publishableKey = process.env.NODE_ENV !== 'development'
-      ? process.env.STRIPE_PUBLISHABLE_KEY :  process.env.STRIPE_PUBLISHABLE_TEST_KEY;
+      ? process.env.REACT_APP_STRIPE_PUBLISHABLE_KEY :  process.env.REACT_APP_STRIPE_PUBLISHABLE_TEST_KEY;
       if (!publishableKey) {
         throw new Error('Stripe publishable key not found');
       }

@@ -1,0 +1,255 @@
+.page-container {
+    height: 100%;
+    margin-top: 20vh;
+    padding: 5%;
+    animation: fadeIn 0.2s ease;
+
+}
+
+.success-container{
+    width: 50%;
+    height: 100%;
+    border-radius: 20px;
+    padding: 5%;
+    margin-bottom: 10vh;
+    margin-left: 20%;
+
+    border: 1px solid #000;
+    display: block;
+}
+
+.success-container img{
+    justify-content: center;
+    width: 10%;
+    border-radius: 20px;
+    
+
+}
+
+.image-container-success img{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    width: 40%;
+    height: 100%;
+    box-shadow: 0px 4px 10px  rgba(0, 0, 0, 0.3); 
+
+    
+}
+
+.image-container-success{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+ 
+    
+}
+
+.image-container-multi {
+    width: 50%;
+    height: 250px;
+    margin-top: 1px;
+    display: flex;
+    align-items: flex-end;
+    
+
+}
+
+.page-container h1 {
+    font-size: 40px;
+}
+
+.page-container{
+    display: flex;
+}
+
+
+.image-container-multi img:nth-child(1){
+    position: absolute;
+    left: 45%;
+    z-index: 0;
+
+    animation: fadeIn 0.4s ease;
+
+    
+
+}
+
+.image-container-multi img:nth-child(2){
+    position: absolute;
+    left: 50%;
+    z-index: -3;
+    animation: fadeIn 0.5s ease;
+
+
+
+
+    
+
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+  }
+
+.image-container-multi img:nth-child(3){
+    position: absolute;
+    animation: fadeIn 0.6s ease;
+    z-index: -1;
+
+
+    
+
+}
+
+.image-container-multi img::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+    background: linear-gradient(to bottom, rgba(0,0,0,0) 40%, rgba(0,0,0,0.5) 100%);
+    pointer-events: none;
+  }
+
+.card-container {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    padding-bottom: 5%;
+
+
+}
+
+.image-container-multi img{
+    position: absolute;
+    box-shadow: 0px 4px 10px  rgba(0, 0, 0, 0.3); 
+
+    
+}
+
+@media (max-width: 768px) {
+
+    .page-container {
+        height: 100%;
+        margin-top: 20vh;
+        padding: 5%;
+        animation: fadeIn 0.2s ease;
+    
+    }
+    
+    .success-container{
+        width: 90%;
+        margin-left: 0;
+
+        height: 100%;
+        border-radius: 20px;
+        padding: 5%;
+        margin-bottom: 10vh;
+    
+        border: 1px solid #000;
+        display: block;
+    }
+    
+    .success-container img{
+        justify-content: center;
+        width: 40%;
+        border-radius: 10%;
+        
+    
+    }
+    
+    .image-container-success {
+        display: flex;
+        justify-content: center;
+        width: 150%;
+        height: 100%;
+        
+    }
+    
+    .image-container-multi {
+        height: 250px;
+        margin-top: 1px;
+        margin-left: 0;
+        display: flex;
+        align-items: flex-end;
+    
+    }
+    
+    .page-container h1 {
+        font-size: 30px;
+    }
+    
+    
+    .image-container-multi img:nth-child(1){
+        position: absolute;
+        left: 51%;
+        z-index: -1;
+    
+        animation: fadeIn 0.4s ease;
+    
+        
+    
+    }
+    
+    .image-container-multi img:nth-child(2){
+        position: absolute;
+        left: 10%;
+        z-index: -10;
+        animation: fadeIn 0.5s ease;
+    
+    
+    
+    
+        
+    
+    }
+    
+    @keyframes fadeIn {
+        0% {
+            opacity: 0;
+            transform: translateY(20px);
+        }
+        100% {
+            opacity: 1;
+            transform: translateY(0);
+        }
+      }
+    
+    .image-container-multi img:nth-child(3){
+        position: absolute;
+        animation: fadeIn 0.6s ease;
+    
+        
+    
+    }
+    
+    .image-container-multi img::after {
+        content: "";
+        position: absolute;
+        inset: 0;
+        border-radius: inherit;
+        background: linear-gradient(to bottom, rgba(0,0,0,0) 40%, rgba(0,0,0,0.5) 100%);
+        pointer-events: none;
+      }
+    
+    .card-container {
+        width: 100%;
+    
+    
+    }
+    
+    .image-container-multi img{
+        position: absolute;
+        box-shadow: 0px 4px 10px  rgba(0, 0, 0, 0.3); 
+    
+        
+    }
+}
+

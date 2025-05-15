@@ -34,7 +34,6 @@ const ShopPrints = ({category, products}) => {
       const fetchAllAvailability = async () => {
         const availability = {};
         await Promise.all(categoryProducts.map(async (product) => {
-          console.log(product.id)
           try {
             const docRef = doc(db, "paintings", String(product.id));
             const docSnap = await getDoc(docRef);

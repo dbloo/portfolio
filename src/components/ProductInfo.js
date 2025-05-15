@@ -6,6 +6,7 @@ import { doc, getDoc } from "firebase/firestore";
 import { db } from "../firebase";
 
 import { useCart } from "../context/CartContext";
+import { Link } from "react-router-dom";
 
 
 import {loadStripe} from "@stripe/stripe-js"
@@ -53,13 +54,13 @@ import "./Info.css";
 
 
    const [selectedSize, setSelectedSize] = useState(
-      (category === "prints" || category === "originals") && image.size?.length > 0
-        ? image.size[0].name
-        : ""
+      ""
     );
 
 
    const currentSize = product.size?.find(size => size.name === selectedSize);
+   const paintingSize = image.size[0]?.name
+
    const currentPrice = currentSize ? (currentSize.price * quantity) : (product.initPrice).toFixed(2) * quantity;
 
    const handleSizeChange = (e) => {
@@ -173,9 +174,13 @@ if (category == "prints" ){
    return (
       
      
-      <>
+      <div className="productContainer">
 
-          <div className= "info-container">
+      <div className = "backbutton">                                 
+           <Link to = "/shop-prints"> <button className = "backB"><span> </span><span> </span><p>Prints</p></button></Link>
+         </div>
+
+          <div className= "info-container-shop">
 
               <div className = "image-container">
 
@@ -199,11 +204,12 @@ if (category == "prints" ){
                                           id = "sizes" 
                                           required value = {selectedSize} 
                                           onChange = {handleSizeChange}
+                                          style = {{textAlign: "center", textAlignLast: "center"}}
                                         > 
-                                             <option value="" disabled selected >Select a Size</option>
+                                             <option value="" disabled selected ><p>Select a Size</p></option>
                                              {product.size.map((size) => (
                                                    <option key={size.name} value={size.name}>
-                                                      {size.name} -- ${(size.price).toFixed(2)}
+                                                      <p>{size.name} -- ${(size.price).toFixed(2)}</p>
                                                    </option>
                                                    ))}
                                        </select>
@@ -253,7 +259,7 @@ if (category == "prints" ){
            </div>
 
           </div> 
-      </>
+      </div>
 
    );
 
@@ -263,9 +269,12 @@ if (category == "prints" ){
    return (
       
      
-      <>
+      <div className="productContainer">
 
-          <div className= "info-container">
+         <div className = "backbutton">                                 
+           <Link to = "/shop-originals"> <button className = "backB"><span> </span><span> </span><p>Originals</p></button></Link>
+         </div>
+          <div className= "info-container-shop">
 
               <div className = "image-container">
 
@@ -275,7 +284,7 @@ if (category == "prints" ){
               <div className = "info-text-container">
 
                  <h1 className = "text-header">{product.name}</h1>
-                 <p className = "description-product">{currentSize.name} | Acrylic on Canvas </p>
+                 <p className = "description-product">{paintingSize} | Acrylic on Canvas </p>
 
 
 
@@ -304,13 +313,10 @@ if (category == "prints" ){
                               )}
 
                             </div>
-
-
                            
 
                   </div>
-                 
-
+               
                   
 
                   
@@ -318,7 +324,7 @@ if (category == "prints" ){
            </div>
 
           </div> 
-      </>
+      </div>
 
    );
    

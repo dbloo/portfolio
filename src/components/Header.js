@@ -103,9 +103,11 @@ function Header() {
     setExpandTA(false);
 
 
+
   };
 
   const expandMenuVD = () => {
+
     setExpandVD(!expandVD);
     setExpandGD(false);
     setExpandShop(false);
@@ -116,6 +118,7 @@ function Header() {
   };
 
   const expandMenuShop = () => {
+
     setExpandShop(!expandShop);
     setExpandGD(false);
     setExpandVD(false);
@@ -126,6 +129,8 @@ function Header() {
   };
 
   const expandMenuTA = () => {
+
+   
     setExpandTA(!expandTA);
     setExpandGD(false);
     setExpandVD(false);
@@ -135,6 +140,55 @@ function Header() {
 
 
   };
+
+  const containerStyleTA = {
+    opacity:  expandTA ? '100%' : "0%",
+    transform: expandTA ? "translateY(-30px)" : "translateY(0px)",
+    pointerEvents: expandTA ? "all" : "none",
+    transition: 'opacity 0.8s ease-in-out',
+    transition: 'transform 0.4s ease-in-out'
+
+     
+
+  }
+
+  const containerStyleGD = {
+    opacity:  expandTA ? '100%' : "0%",
+    transform: expandTA ? "translateY(-30px)" : "translateY(0px)",
+    pointerEvents: expandTA ? "all" : "none",
+    transition: 'opacity 0.8s ease-in-out',
+    transition: 'transform 0.4s ease-in-out'
+
+     
+
+  }
+
+  const containerStyleVD = {
+    opacity:  expandTA ? '100%' : "0%",
+    transform: expandTA ? "translateY(-30px)" : "translateY(0px)",
+    pointerEvents: expandTA ? "all" : "none",
+    transition: 'opacity 0.8s ease-in-out',
+    transition: 'transform 0.4s ease-in-out'
+
+     
+
+  }
+
+  const containerStyleShop = {
+    opacity:  expandTA ? '100%' : "0%",
+    transform: expandTA ? "translateY(-30px)" : "translateY(0px)",
+    pointerEvents: expandTA ? "all" : "none",
+    transition: 'opacity 0.8s ease-in-out',
+    transition: 'transform 0.4s ease-in-out'
+
+     
+
+  }
+
+  const containerStyleHide ={
+      opacity:  '0',
+      transition: 'opacity 0.3s ease-in-out'
+  }
 
  
 
@@ -158,7 +212,7 @@ function Header() {
 
           <div className='cart'>
 
-              <Link className='cartlink' to="/checkout" >
+              <Link className='cartlink' to="/checkout"  onClick={()=>setIsOpen(false)}>
 
 
                     <img src = "./assets/icons/cart.svg" alt = "logo"></img>
@@ -171,21 +225,10 @@ function Header() {
           </div>
           <div className = "hamburger-wrapper" onClick={toggleMenu}>
           <div className="hamburger" >
-
-    
-            {/* // <img src = "./assets/icons/burger-menu.svg" alt = "hamburgerButton" className = "hamburgerButton"></img> */}
            
               <span className = {`ham ${isOpen ? "active" : "" }`}></span>
               <span className = {`ham2 ${isOpen ? "active" : "" }`}></span>
               <span className = {`ham3 ${isOpen ? "active" : "" }`}></span>
-            
-
-
-
-        
-           
-            {/* // <img src = "./assets/icons/x.svg" alt = "logo" className = "closeButton"></img> */}
-
          
 
         </div>
@@ -195,16 +238,15 @@ function Header() {
 
           <li className = "graphicdesign"onClick={expandMenuTA} style={{cursor: "pointer"}}>Traditional Art</li>
 
-            {expandTA ? (
-              <div className = {`expanded-gd ${expandTA ? "expanded" : ""}`}>
-                {/* <li className = "li-logos"><Link to="/video/shortform" onClick={toggleMenu}>Short Form</Link></li>
-                <li className = "li-logos"><Link to="/video/musicvideos" onClick={toggleMenu}>Music Videos</Link></li>
-                <li className = "li-logos"><Link to="/video/shortfilms" onClick={toggleMenu}>Short Films</Link></li> */}
+          {expandTA ? (
+           
+           <div className = {`expanded-gd ${expandTA ? "expanded" : ""}`}>
               <Link to="/paintings"onClick={toggleMenu}><li>Paintings</li></Link>
               <Link to="/drawings"onClick={toggleMenu}><li>Drawings</li></Link>
 
               </div>
-            ):(<></>)}
+              ):(<></>)}
+           
 
             <li className = "graphicdesign"onClick={expandMenuGD} style={{cursor: "pointer"}}>Graphic Design</li>
 
