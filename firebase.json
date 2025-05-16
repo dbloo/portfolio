@@ -1,5 +1,6 @@
 {
   "hosting": {
+    "site": "dbportf101 ",
     "public": "build",
     "ignore": [
       "firebase.json",

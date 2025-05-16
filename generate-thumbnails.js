@@ -7,8 +7,7 @@ const INPUT_DIR = path.join(__dirname, "public/assets/images");
 const OUTPUT_DIR = INPUT_DIR; // Outputs next to original
 
 const sizes = [
-  { suffix: "-thumb", width: 300 },
-  { suffix: "-medium", width: 800 }
+  { suffix: "-thumb", width: 500 },
 ];
 
 async function processImage(file) {
@@ -16,17 +15,15 @@ async function processImage(file) {
   const base = path.basename(file, ext);
   const inputPath = path.join(INPUT_DIR, file);
 
-  // Only process .jpg, .jpeg, .png
-  if (![".jpg", ".JPG", ".jpeg", ".png"].includes(ext)) return;
+  if (![".jpg", "jpeg", "JPG"].includes(ext)) return;
 
   for (const { suffix, width } of sizes) {
-    const outputFileName = `${base}${suffix}.webp`;
+    const outputFileName = `${base}${suffix}.jpg`;
     const outputPath = path.join(OUTPUT_DIR, outputFileName);
 
     try {
       await sharp(inputPath)
         .resize({ width })
-        .webp({ quality: 80 })
         .toFile(outputPath);
       console.log(`✔ Created: ${outputFileName}`);
     } catch (err) {

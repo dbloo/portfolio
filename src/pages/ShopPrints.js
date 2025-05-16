@@ -1,10 +1,13 @@
 import {loadStripe} from "@stripe/stripe-js"
-import React, { PureComponent } from 'react';
+import {React,   useState  }from 'react';
 
-import { useParams } from "react-router-dom";
+import { useParams,} from "react-router-dom";
 
 
 import "./ShopPrints.css"
+
+import Skeleton from "../components/Skeleton";
+
 
 import { Link } from 'react-router-dom';
 
@@ -51,6 +54,9 @@ const stripePromise = loadStripe("pk_live_51RGS5Y06EYiUL1OZXsoliznvftgYLeCLiKkX8
 
 const ShopPrints = ({category, products}) => {
 
+    const [loaded, setLoaded] = useState(false);
+  
+
 
 
 
@@ -88,7 +94,17 @@ const ShopPrints = ({category, products}) => {
                 <Link to = {`/product/${category}/${product.id}`}>
                     <div className="thumbnail-container">
                     
-                        <img src={product.imageUrl[0].medium} alt={product.name} />
+                    <div style = {{
+                                           transition: 'opacity 0.3s ease',
+                      
+                                           opacity: loaded ? 0 : 1,
+                                           position: 'absolute',
+                                           width:"80vw", height: "60vh"
+                                           }}>
+                                           <Skeleton width="100%" height="100%"   borderRadius={0}/>
+                                        </div>
+                    
+                        <img src={product.imageUrl[0].medium} onLoad={() => setLoaded(true)} loading = "lazy" style = {{opacity: loaded ? 1 : 0, transition: 'opacity 0.3s ease',}} alt={product.name} />
                         </div>
 
                         <h1>{product.name}</h1>

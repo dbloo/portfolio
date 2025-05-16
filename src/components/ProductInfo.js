@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState} from "react";
 import { useParams } from "react-router-dom";
 import { Carousel } from "react-responsive-carousel";
 
@@ -6,6 +6,9 @@ import { doc, getDoc } from "firebase/firestore";
 import { db } from "../firebase";
 
 import { useCart } from "../context/CartContext";
+import { Link } from "react-router-dom";
+
+import Skeleton from "./Skeleton";
 
 
 import {loadStripe} from "@stripe/stripe-js"
@@ -41,6 +44,7 @@ import "./Info.css";
   const [available, setAvailable] = useState(true);
 
    
+  const [loaded, setLoaded] = useState(false);
 
 
 
@@ -53,13 +57,13 @@ import "./Info.css";
 
 
    const [selectedSize, setSelectedSize] = useState(
-      (category === "prints" || category === "originals") && image.size?.length > 0
-        ? image.size[0].name
-        : ""
+      ""
     );
 
 
    const currentSize = product.size?.find(size => size.name === selectedSize);
+   const paintingSize = image.size[0]?.name
+
    const currentPrice = currentSize ? (currentSize.price * quantity) : (product.initPrice).toFixed(2) * quantity;
 
    const handleSizeChange = (e) => {
@@ -173,14 +177,36 @@ if (category == "prints" ){
    return (
       
      
-      <>
+      <div className="productContainer">
 
-          <div className= "info-container">
+      <div className = "backbutton">                                 
+           <Link to = "/shop-prints"> <button className = "backB"><span> </span><span> </span><p>Prints</p></button></Link>
+         </div>
 
-              <div className = "image-container">
+          <div className= "info-container-shop">
+
+              <div className = "image-container" style = {{position: "relative"}}>
 
 
-                        <img src = {product.imageUrl[0].large}></img>
+                  <div 
+                  className="skeleton-wrapper"
+                  style = {{
+                     transition: 'opacity 0.3s ease',
+
+                     opacity: loaded ? 0 : 1,
+                     position: 'absolute',
+                     }}>
+                     <Skeleton width="100%" height="100%"   borderRadius={10}/>
+                  </div>
+                  
+                  
+
+
+                       
+
+                        
+
+                        <img src = {product.imageUrl[0].large} onLoad={() => setLoaded(true)} loading = "lazy" style = {{opacity: loaded ? 1 : 0, transition: 'opacity 0.3s ease',}}></img>
 
               <div className = "info-text-container">
 
@@ -199,11 +225,12 @@ if (category == "prints" ){
                                           id = "sizes" 
                                           required value = {selectedSize} 
                                           onChange = {handleSizeChange}
+                                          style = {{textAlign: "center", textAlignLast: "center"}}
                                         > 
-                                             <option value="" disabled selected >Select a Size</option>
+                                             <option value="" disabled selected ><p>Select a Size</p></option>
                                              {product.size.map((size) => (
                                                    <option key={size.name} value={size.name}>
-                                                      {size.name} -- ${(size.price).toFixed(2)}
+                                                      <p>{size.name} -- ${(size.price).toFixed(2)}</p>
                                                    </option>
                                                    ))}
                                        </select>
@@ -253,7 +280,7 @@ if (category == "prints" ){
            </div>
 
           </div> 
-      </>
+      </div>
 
    );
 
@@ -263,19 +290,35 @@ if (category == "prints" ){
    return (
       
      
-      <>
+      <div className="productContainer">
 
-          <div className= "info-container">
+         <div className = "backbutton">                                 
+           <Link to = "/shop-originals"> <button className = "backB"><span> </span><span> </span><p>Originals</p></button></Link>
+         </div>
+          <div className= "info-container-shop">
 
               <div className = "image-container">
 
+              <div className="skeleton-wrapper"
+              
+              style = {{
+                     transition: 'opacity 0.3s ease',
 
-                        <img src = {product.imageUrl[0].large}></img>
+                     opacity: loaded ? 0 : 1,
+                     position: 'absolute',
+                     }}
+                     
+                     >
+                     <Skeleton width="100%" height="100%"   borderRadius={10}/>
+                  </div>
+
+
+                        <img src = {product.imageUrl[0].large } onLoad = {() => setLoaded(true)}loading = "lazy" style = {{opacity: loaded ? 1 : 0, transition: 'opacity 0.3s ease',}}></img>
 
               <div className = "info-text-container">
 
                  <h1 className = "text-header">{product.name}</h1>
-                 <p className = "description-product">{currentSize.name} | Acrylic on Canvas </p>
+                 <p className = "description-product">{paintingSize} | Acrylic on Canvas </p>
 
 
 
@@ -304,13 +347,10 @@ if (category == "prints" ){
                               )}
 
                             </div>
-
-
                            
 
                   </div>
-                 
-
+               
                   
 
                   
@@ -318,7 +358,7 @@ if (category == "prints" ){
            </div>
 
           </div> 
-      </>
+      </div>
 
    );
    

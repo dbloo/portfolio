@@ -9,6 +9,8 @@ import Spinner from "../components/Spinner";
 
 import "./CartPage.css"
 
+import Skeleton from '../components/Skeleton';
+
 
 
 
@@ -16,22 +18,23 @@ import "./CartPage.css"
 
 export default function CartPage() {
 
+  const [loaded, setLoaded] = useState(false);
+  
+
   const [stripePromise, setStripePromise] = useState(null);
 
   const { cart, removeFromCart, subtotal, addToCart, isLoading, setIsLoading } = useCart();
 
 
 
-  // Add this at the top of your CartPage.js
 const FUNCTION_URL = process.env.NODE_ENV === 'development'
-? 'http://localhost:5001/dbportf101/us-central1/api/checkout'
-: 'https://us-central1-dbportf101.cloudfunctions.net/api/checkout';
+? process.env.REACT_APP_API_BASE_URL_DEV + "/checkout"
+: process.env.REACT_APP_API_BASE_URL + "/checkout";
 
 const getImageUrl = (filename) => {
   return (`https://dominicbloomfield.com/assets/images/${filename}`);
 };
 
-// Then update your handleCheckout function:
 const handleCheckout = async () => {
 if (!stripePromise) {
   console.error('Stripe not initialized');
@@ -39,7 +42,7 @@ if (!stripePromise) {
 }
 
 try {
-  console.log('Sending to:', FUNCTION_URL); // Debug log
+  console.log('Sending to:', FUNCTION_URL); 
   setIsLoading(true);
 
   const response = await fetch(FUNCTION_URL, {
@@ -53,7 +56,8 @@ try {
         image: getImageUrl(item.imageFilename),
         quantity: item.quantity,
         materials: item.materials,
-        price: item.price
+        price: item.price,
+        type: item.productType,
       })),
       userId: "user_123"
     }),
@@ -84,7 +88,7 @@ useEffect(() => {
   const initializeStripe = async () => {
     try {
       const publishableKey = process.env.NODE_ENV !== 'development'
-      ? process.env.STRIPE_PUBLISHABLE_KEY :  process.env.STRIPE_PUBLISHABLE_TEST_KEY;
+      ? process.env.REACT_APP_STRIPE_PUBLISHABLE_KEY :  process.env.REACT_APP_STRIPE_PUBLISHABLE_TEST_KEY;
       if (!publishableKey) {
         throw new Error('Stripe publishable key not found');
       }
@@ -118,9 +122,19 @@ useEffect(() => {
             </div>
             <div className = "image-button-wrapper">
 
+              <div style = {{
+                                           transition: 'opacity 0.3s ease',
+                      
+                                           opacity: loaded ? 0 : 1,
+                                           position: 'absolute',
+                                           width:"28.4vw", height: "20vh"
+                                           }}>
+                                           <Skeleton width="100%" height="100%"   borderRadius={10}/>
+                                        </div>
+
             
 
-            <img src = {item.imageUrl[0].thumbnail}></img>
+            <img src = {item.imageUrl[0].thumbnail} onLoad={() => setLoaded(true)} loading = "lazy" style = {{opacity: loaded ? 1 : 0, transition: 'opacity 0.3s ease',}}></img>
                 <div className='remove-controls'>
 
                     <div className="quantity-controls">

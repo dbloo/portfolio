@@ -28,6 +28,8 @@ import Construction from "./pages/Construction.js";
 import ProductPage from "./pages/ProductPage.js";
 import ShopOriginals from "./pages/ShopOriginals.js";
 import CartPage from "./pages/CartPage.js";
+import CheckoutSuccess from "./pages/CheckoutSuccess.js";
+
 
 import { CartProvider } from './context/CartContext';
 
@@ -660,7 +662,7 @@ const productData = {
       initPrice: 30,
       materials: "Giclee Print",
       productType: "print",
-      imageFilename: 'sundown.jpg',
+      imageFilename: 'sundown-thumb.jpg',
 
 
 
@@ -688,7 +690,7 @@ const productData = {
       initPrice: 30,
       materials: "Giclee Print",
       productType: "print",
-      imageFilename: 'dbyu.JPG',
+      imageFilename: 'dbyu-thumb.jpg',
 
 
     },
@@ -715,7 +717,7 @@ const productData = {
       initPrice: 30,
       materials: "Giclee Print",
       productType: "print",
-      imageFilename: 'flycatcher.JPG',
+      imageFilename: 'flycatcher-thumb.jpg',
 
 
     },
@@ -742,7 +744,7 @@ const productData = {
       initPrice: 30,
       materials: "Giclee Print",
       productType: "print",
-      imageFilename: 'SYF.jpg',
+      imageFilename: 'SYF-thumb.jpg',
 
 
 
@@ -769,7 +771,7 @@ const productData = {
       initPrice: 30,
       materials: "Giclee Print",
       productType: "print",
-      imageFilename: 'money.JPG'
+      imageFilename: 'money-thumb.jpg'
 
 
     },
@@ -784,7 +786,7 @@ const productData = {
         {
           thumbnail: "/assets/images/crystal-thumb.webp",
           medium: "/assets/images/crystal-medium.webp",
-          large: "/assets/images/crystal.jpg",
+          large: "/assets/images/crystal.JPG",
 
       } ],
       
@@ -798,7 +800,7 @@ const productData = {
       initPrice: 30,
       materials: "Giclee Print",
       productType: "print",
-      imageFilename: 'crystal.JPG'
+      imageFilename: 'crystal-thumb.jpg'
 
 
 
@@ -827,7 +829,7 @@ const productData = {
       initPrice: 30,
       materials: "Giclee Print", 
       productType: "print",
-      imageFilename: 'akimbo.jpg'
+      imageFilename: 'akimbo-thumb.jpg'
 
 
 
@@ -856,7 +858,7 @@ const productData = {
       initPrice: 30,
       materials: "Giclee Print",
       productType: "print",
-      imageFilename: 'arbiter.jpg'
+      imageFilename: 'arbiter-thumb.jpg'
 
 
 
@@ -885,7 +887,7 @@ const productData = {
       initPrice: 30,
       materials: "Giclee Print",
       productType: "print",
-      imageFilename: 'SD.jpg'
+      imageFilename: 'SD-thumb.jpg'
 
 
 
@@ -914,7 +916,7 @@ const productData = {
       initPrice: 30,
       materials: "Giclee Print",
       productType: "print",
-      imageFilename: 'rogue.jpg'
+      imageFilename: 'rogue-thumb.jpg'
 
 
 
@@ -942,7 +944,7 @@ const productData = {
       initPrice: 30,
       materials: "Giclee Print",
       productType: "print",
-      imageFilename: 'robbery.JPG'
+      imageFilename: 'robbery-thumb.jpg'
 
 
     },
@@ -969,7 +971,7 @@ const productData = {
       initPrice: 30,
       materials: "Giclee Print",
       productType: "print",
-      imageFilename: 'damned.JPG'
+      imageFilename: 'damned-thumb.jpg'
 
 
     },
@@ -999,7 +1001,7 @@ const productData = {
       initPrice: 1200,
       materials: "Acrylic on Canvas",
       productType: "original",
-      imageFilename: 'flycatcher.JPG'
+      imageFilename: 'flycatcher-thumb.jpg'
 
 
 
@@ -1014,7 +1016,7 @@ const productData = {
         {
           thumbnail: "/assets/images/crystal-thumb.webp",
           medium: "/assets/images/crystal-medium.webp",
-          large: "/assets/images/crystal.jpg",
+          large: "/assets/images/crystal.JPG",
 
       } ],
       
@@ -1026,7 +1028,7 @@ const productData = {
       initPrice: 800,
       materials: "Acrylic on Canvas",
       productType: "original",
-      imageFilename: 'crystal.JPG'
+      imageFilename: 'crystal-thumb.jpg'
 
 
 
@@ -1038,7 +1040,7 @@ const productData = {
       description: "Do as I say, not as I do.",
       imageUrl: [ 
         {
-          thumbnail: "/assets/images/sundown-thumbnail.webp",
+          thumbnail: "/assets/images/sundown-thumb.webp",
           medium: "/assets/images/sundown-medium.webp",
           large: "/assets/images/sundown.jpg",
 
@@ -1052,7 +1054,7 @@ const productData = {
       initPrice: 4300,
       materials: "Acrylic on Canvas",
       productType: "original",
-      imageFilename: 'sundown.jpg'
+      imageFilename: 'sundown-thumb.jpg'
 
 
 
@@ -1078,7 +1080,7 @@ const productData = {
       initPrice: 5600,
       materials: "Acrylic on Canvas",
       productType: "original",
-      imageFilename: 'money.JPG'
+      imageFilename: 'money-thumb.jpg'
 
 
 
@@ -1104,7 +1106,7 @@ const productData = {
       initPrice: 4600,
       materials: "Acrylic on Canvas",
       productType: "original",
-      imageFilename: 'tryagain.JPG'
+      imageFilename: 'tryagain-thumb.jpg'
 
 
 
@@ -1130,7 +1132,7 @@ const productData = {
       initPrice: 1400,
       materials: "Acrylic on Canvas",
       productType: "original",
-      imageFilename: 'SYF.JPG'
+      imageFilename: 'SYF-thumb.jpg'
 
 
 
@@ -1156,7 +1158,7 @@ const productData = {
       initPrice: 400,
       materials: "Acrylic on Canvas",
       productType: "original",
-      imageFilename: 'dbyu.JPG'
+      imageFilename: 'dbyu-thumb.jpg'
 
 
 
@@ -1182,7 +1184,7 @@ const productData = {
       initPrice: 3400,
       materials: "Acrylic on Canvas",
       productType: "original",
-      imageFilename: 'catch.JPG'
+      imageFilename: 'catch-thumb.jpg'
 
 
 
@@ -1208,7 +1210,7 @@ const productData = {
       initPrice: 4600,
       materials: "Acrylic on Canvas",
       productType: "original",
-      imageFilename: 'adequate.jpg'
+      imageFilename: 'adequate-thumb.jpg'
 
 
 
@@ -1266,6 +1268,8 @@ const productData = {
               <Route path="/shop-originals" element={<ShopOriginals category = "originals" products = {productData}/>} />
 
               <Route path="/checkout" element={<CartPage />} />
+              <Route path="/success" element={<CheckoutSuccess />} />
+
 
 
 
