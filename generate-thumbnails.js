@@ -7,7 +7,11 @@ const INPUT_DIR = path.join(__dirname, "public/assets/images");
 const OUTPUT_DIR = INPUT_DIR; // Outputs next to original
 
 const sizes = [
+<<<<<<< HEAD
   { suffix: "-thumb", width: 500 },
+=======
+  { suffix: "-thumb", width: 300 },
+>>>>>>> d19cd55083afb602171c57417363b4732424b89f
 ];
 
 async function processImage(file) {
