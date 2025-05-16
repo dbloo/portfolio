@@ -5,10 +5,7 @@ import { useSearchParams } from "react-router-dom";
 import './CheckoutSuccess.css'
 import Realistic from 'react-canvas-confetti/dist/presets/realistic'
 import { useCart } from '../context/CartContext';
-<<<<<<< HEAD
 import Skeleton from "../components/Skeleton";
-=======
->>>>>>> d19cd55083afb602171c57417363b4732424b89f
 
 
 
@@ -18,12 +15,9 @@ function Landing(){
   const [session, setSession] = useState(null);
   const [images, setImages] = useState([]);
 
-<<<<<<< HEAD
 
   const [loaded, setLoaded] = useState(false);
 
-=======
->>>>>>> d19cd55083afb602171c57417363b4732424b89f
   const sessionId = searchParams.get("session_id");
 
   useEffect(() => {
@@ -72,7 +66,6 @@ return (
           
                 <div className = {images.length === 1 ? "image-container-success" : "image-container-multi"}>
                     {images.slice(0, 3 ).map((url, idx) => (
-<<<<<<< HEAD
                       <>
                       <div style = {{
                         transition: 'opacity 0.3s ease',
@@ -99,14 +92,6 @@ return (
                           >
                           </img>
                         </>
-=======
-                        <img
-                        key={idx}
-                        src={url}
-                        alt={`Purchased artwork ${idx + 1}`}
-                        >
-                        </img>
->>>>>>> d19cd55083afb602171c57417363b4732424b89f
                     ))}
             </div>
           </div>
