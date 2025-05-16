@@ -150,7 +150,11 @@ app.post("/webhook" ,express.raw({type: 'application/json'}), async (req, res) =
 
 
     const sig = req.headers["stripe-signature"];
+<<<<<<< HEAD
     const endpointSecret = process.env.REACT_APP_ENDPOINT_SECRET; 
+=======
+    const endpointSecret = "whsec_81d78ca97ae57b214e3951b12debed5290b4658d912b95441cad522b765d2ecc"; 
+>>>>>>> d19cd55083afb602171c57417363b4732424b89f
 
     let event;
 

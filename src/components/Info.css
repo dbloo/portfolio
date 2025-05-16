@@ -273,15 +273,75 @@ h3{
     position: relative;
   }
 
+<<<<<<< HEAD
   .skeleton-wrapper {
     width: 50vw;
     height: 80vh;
 
 }
 
+=======
+>>>>>>> d19cd55083afb602171c57417363b4732424b89f
  
 
 @media (max-width: 768px) {
+    
+
+    .backB span{
+        position: absolute;
+        background-color: #000;
+        border-radius: 40px;
+        width: 1px;
+        height: 10px;
+        left: 35px;
+        margin-top: 2px;
+    }
+    
+    .backB span:nth-child(1){
+        position: absolute;
+    
+        rotate: -120deg;
+        top: 5px;
+        left: 13px
+    }
+    .backB span:nth-child(2){
+        position: absolute;
+        rotate: -60deg;
+        top: 10px;
+        left: 13px
+    }
+
+    .backB p {
+        font-size: 14px;
+        margin-top: 0%;
+        margin-bottom: 0%;
+
+    }
+
+    .backB{
+        background-color: #fff;
+        border-radius: 20px;
+        border: 1px solid #000; 
+        display: flex;
+        position: relative;
+        color: #000;
+
+        height: 30px;
+        align-items: center;
+        width: 140px;
+        justify-content: center;
+
+        cursor: pointer;
+
+        padding: 0%;
+    }
+    
+   
+    .backbutton{
+        width: 100%;
+        align-items: center;
+
+    }
 
     .skeleton-wrapper {
         width: 80vw;

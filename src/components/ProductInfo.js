@@ -7,8 +7,11 @@ import { db } from "../firebase";
 
 import { useCart } from "../context/CartContext";
 import { Link } from "react-router-dom";
+<<<<<<< HEAD
 
 import Skeleton from "./Skeleton";
+=======
+>>>>>>> d19cd55083afb602171c57417363b4732424b89f
 
 
 import {loadStripe} from "@stripe/stripe-js"
@@ -182,6 +185,11 @@ if (category == "prints" ){
       <div className = "backbutton">                                 
            <Link to = "/shop-prints"> <button className = "backB"><span> </span><span> </span><p>Prints</p></button></Link>
          </div>
+<<<<<<< HEAD
+=======
+
+          <div className= "info-container-shop">
+>>>>>>> d19cd55083afb602171c57417363b4732424b89f
 
           <div className= "info-container-shop">
 
