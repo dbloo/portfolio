@@ -19,6 +19,7 @@ import Skeleton from '../components/Skeleton';
 export default function CartPage() {
 
   const [loaded, setLoaded] = useState(false);
+  const [failed , setFailed] = useState(false);
   
 
   const [stripePromise, setStripePromise] = useState(null);
@@ -44,6 +45,8 @@ if (!stripePromise) {
 try {
   console.log('Sending to:', FUNCTION_URL); 
   setIsLoading(true);
+  setFailed(false);
+
 
   const response = await fetch(FUNCTION_URL, {
     method: 'POST',
@@ -78,7 +81,8 @@ try {
   
 } catch (error) {
   console.error('Checkout error:', error);
-  alert(`Checkout failed: ${error.message}`);
+  setIsLoading(false);
+  setFailed(true);
 }
 };
 
@@ -171,7 +175,10 @@ useEffect(() => {
         Proceed to Checkout
 
         {isLoading ? (<div className = "spinner-checkout"><Spinner></Spinner></div>):(<></>)}
+
       </button>
+      {failed ? (<div className='confirmation-message'><p>Failed to proceed to checkout. Please try again later.</p></div>):(<></>)}
+
     </div>
         <div className= "shipping-policy">
             <h1>SHIPPING POLICY:</h1>

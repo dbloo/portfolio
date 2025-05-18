@@ -185,8 +185,9 @@ if (category == "prints" ){
 
           <div className= "info-container-shop">
 
-              <div className = "image-container" style = {{position: "relative"}}>
+              <div className = "image-container" >
 
+              <div className = "image-skeleton-wrapper">
 
                   <div 
                   className="skeleton-wrapper"
@@ -198,15 +199,12 @@ if (category == "prints" ){
                      }}>
                      <Skeleton width="100%" height="100%"   borderRadius={10}/>
                   </div>
-                  
-                  
-
-
-                       
 
                         
 
                         <img src = {product.imageUrl[0].large} onLoad={() => setLoaded(true)} loading = "lazy" style = {{opacity: loaded ? 1 : 0, transition: 'opacity 0.3s ease',}}></img>
+                        </div>
+
 
               <div className = "info-text-container">
 
@@ -298,6 +296,7 @@ if (category == "prints" ){
           <div className= "info-container-shop">
 
               <div className = "image-container">
+               <div className = "image-skeleton-wrapper">
 
               <div className="skeleton-wrapper"
               
@@ -314,6 +313,7 @@ if (category == "prints" ){
 
 
                         <img src = {product.imageUrl[0].large } onLoad = {() => setLoaded(true)}loading = "lazy" style = {{opacity: loaded ? 1 : 0, transition: 'opacity 0.3s ease',}}></img>
+                        </div>
 
               <div className = "info-text-container">
 

@@ -252,6 +252,7 @@ h3{
 }
 
 .info-text-container {
+    
     width: 30vw;
     word-wrap: break-word;
     padding-left: 3%;
@@ -273,18 +274,34 @@ h3{
     position: relative;
   }
 
-<<<<<<< HEAD
   .skeleton-wrapper {
     width: 50vw;
     height: 80vh;
 
 }
 
-=======
->>>>>>> d19cd55083afb602171c57417363b4732424b89f
+
+.image-skeleton-wrapper {
+   
+}
  
 
-@media (max-width: 768px) {
+@media (max-width: 844px) {
+
+    .info-container-shop {
+        display: flex;
+        justify-content: center;
+        align-content: center;
+    }
+
+    .image-skeleton-wrapper {
+        min-height: 70vw;
+        max-height: 120vw;
+        position: relative;
+
+      
+
+    }
     
 
     .backB span{
@@ -463,11 +480,13 @@ h3{
     }
 
     .image-container {
+        width: 100%;
         display: grid;
+        margin-left: -2%;
+
     }
     
     .info-text-container {
-        padding-left: 3%;
     }
 
     .materials {

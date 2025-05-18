@@ -243,6 +243,7 @@ function Header() {
            <div className = {`expanded-gd ${expandTA ? "expanded" : ""}`}>
               <Link to="/paintings"onClick={toggleMenu}><li>Paintings</li></Link>
               <Link to="/drawings"onClick={toggleMenu}><li>Drawings</li></Link>
+              
 
               </div>
               ):(<></>)}
@@ -270,6 +271,9 @@ function Header() {
               </div>
             ):(<></>)}
 
+          <li><Link to="/merch"onClick={toggleMenu}>Merch</Link></li>
+
+
           <li className = "shop"onClick={expandMenuShop} style={{cursor: "pointer"}}>Shop</li>
 
             {expandShop ? (
@@ -284,9 +288,9 @@ function Header() {
               </div>
             ):(<></>)}
           
-            
-            
             <li><Link to="/about"onClick={toggleMenu}>About</Link></li>
+
+            
 
             <div className='cart-desktop'>
             <Link className='cartlink' to="/checkout" >

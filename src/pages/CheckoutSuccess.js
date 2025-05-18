@@ -70,7 +70,7 @@ return (
                       <div style = {{
                         transition: 'opacity 0.3s ease',
    
-                        opacity: loaded ? 1 : 1,
+                        opacity: loaded ? 0 : 1,
                         position: 'absolute',
                         width:"28.4vw", height: "20vh"
                         }}>

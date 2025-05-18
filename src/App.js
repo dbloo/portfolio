@@ -13,6 +13,8 @@ import Header from "./components/Header";
 import AboutMe from "./pages/AboutMe.js";
 import Footer from "./components/Footer.js";
 import Info from "./components/Info.js";
+import Merch from "./pages/Merch.js";
+
 
 import './index.css';
 import { imageData } from "./components/ImageData.js";
@@ -419,6 +421,16 @@ function App() {
 
     },
 
+    {
+      id: 9,
+      name: "SQUARE 1",
+      description: " ",
+      imageUrl: "/assets/images/sq11.JPG",
+      size: "medium",
+      materials: "1080 x 1920px Poster"
+
+    },
+
 
 
 
@@ -427,6 +439,51 @@ function App() {
 
   ],
 
+  merch: [
+    {
+
+      id: 1,
+      name: "MESS",
+      description: " ",
+      imageUrl: "/assets/images/messhoodie.jpg",
+      size: "tall",
+      materials: "Heavyweight Hoodie, Direct to Garment Print"
+
+  },
+
+  {
+
+      id: 2,
+      name: "SPIKE TEE",
+      description: "Unpleasant Design. ",
+      imageUrl: "/assets/images/spiketee.jpg",
+      size: "tall",
+      materials: "Heavyweight T-shirt, Direct to Garment Print"
+
+  },
+  {
+
+      id: 3,
+      name: "Content",
+      description: "Unpleasant Design. ",
+      imageUrl: "/assets/images/content.jpg",
+      size: "tall",
+      materials: "Heavyweight T-shirt, Direct to Garment Print"
+
+  },
+
+  {
+
+      id: 4,
+      name: "PROJECT: RUKUS",
+      description: "Band Merch for Project: Rukus",
+      imageUrl: "/assets/images/merchmockup.jpg",
+      size: "tall",
+      materials: "Heavyweight T-shirt, Direct to Garment Print"
+
+  }
+],
+  
 
   logos: [
 
@@ -524,7 +581,7 @@ function App() {
       {
         id: 1,
         name: "Thanks For LIStening",
-        description: " ",
+        description: "Unreleased",
         imageUrl: "/assets/images/lister.jpg",
         size: "medium",
         materials: " "
@@ -534,7 +591,7 @@ function App() {
       {
         id: 2,
         name: "Tomes from The Underground",
-        description: " ",
+        description: "Mockup",
         imageUrl: "/assets/images/underground.jpg",
         size: "medium",
         materials: "3000 x 3000px Cover Art"
@@ -545,7 +602,7 @@ function App() {
       {
         id: 3,
         name: "LOOP.",
-        description: " ",
+        description: "Project: Rukus 2022",
         imageUrl: "/assets/images/loop.JPG",
         size: "medium",
         materials: "3000 x 3000px Cover Art"
@@ -554,7 +611,7 @@ function App() {
       {
         id: 4,
         name: "TWELFTH HOUR.",
-        description: " ",
+        description: "Project: Rukus 2022",
         imageUrl: "/assets/images/12.JPG",
         size: "medium",
         materials: "3000 x 3000px Cover Art"
@@ -564,7 +621,7 @@ function App() {
       {
         id: 5,
         name: "Florida",
-        description: " ",
+        description: "OnyxDaBerry 2018",
         imageUrl: "/assets/images/florida.jpg",
         size: "medium",
         materials: "3000 x 3000px Cover Art"
@@ -572,10 +629,70 @@ function App() {
       },
 
       {
-        id: 6,
+        id: 7,
         name: "HELLO",
-        description: " ",
+        description: "Mockup",
         imageUrl: "/assets/images/hello.jpg",
+        size: "medium",
+        materials: "3000 x 3000px Cover Art"
+  
+      },
+
+      {
+        id: 8,
+        name: "Gateway",
+        description: "Styx River 2020",
+        imageUrl: "/assets/images/styx.jpg",
+        size: "medium",
+        materials: "3000 x 3000px Cover Art"
+  
+      },
+
+      {
+        id: 9,
+        name: "Thotta",
+        description: "Mawlilz 2021",
+        imageUrl: "/assets/images/thotta.jpg",
+        size: "medium",
+        materials: "3000 x 3000px Cover Art"
+  
+      },
+
+      {
+        id: 10,
+        name: "Listen For Me",
+        description: "Project: Rukus 2021",
+        imageUrl: "/assets/images/listen for me.jpg",
+        size: "medium",
+        materials: "3000 x 3000px Cover Art"
+  
+      },
+
+      {
+        id: 11,
+        name: "Slumsgiving",
+        description: "Project: Rukus 2021",
+        imageUrl: "/assets/images/SG.jpg",
+        size: "medium",
+        materials: "3000 x 3000px Cover Art"
+  
+      },
+
+      {
+        id: 12,
+        name: "Polite",
+        description: "Mockup",
+        imageUrl: "/assets/images/polite.jpg",
+        size: "medium",
+        materials: "3000 x 3000px Cover Art"
+  
+      },
+
+      {
+        id: 13,
+        name: "Amethyst Skies",
+        description: "Aster The Gemini",
+        imageUrl: "/assets/images/amethyst skies.jpg",
         size: "medium",
         materials: "3000 x 3000px Cover Art"
   
@@ -730,7 +847,7 @@ const productData = {
         {
           thumbnail: "/assets/images/SYF-thumb.webp",
           medium: "/assets/images/SYF-medium.webp",
-          large: "/assets/images/SYF.JPG",
+          large: "/assets/images/SYF.jpg",
 
       } ],
       
@@ -872,7 +989,7 @@ const productData = {
         {
           thumbnail: "/assets/images/SD-thumb.webp",
           medium: "/assets/images/SD-medium.webp",
-          large: "/assets/images/damned.jpg",
+          large: "/assets/images/SD.jpg",
 
       } ],
       
@@ -1120,7 +1237,7 @@ const productData = {
         {
           thumbnail: "/assets/images/SYF-thumb.webp",
           medium: "/assets/images/SYF-medium.webp",
-          large: "/assets/images/SYF.JPG",
+          large: "/assets/images/SYF.jpg",
 
       } ],
 
@@ -1250,6 +1367,7 @@ const productData = {
               <Route path="/graphicDesign/cover-art" element={<CoverArt category="coverart" images = {imageData} />} />
               <Route path="/graphicDesign/flyers" element={<Flyers category="flyers" images = {imageData} />} />
               <Route path="/construction" element={<Construction />} />
+              <Route path="/Merch" element={<Merch category="merch" images = {imageData} />} />
 
 
               {/* <Route path="/video/shortform" element={<VideoShortForm category="shortform" images = {imageData} />} />
