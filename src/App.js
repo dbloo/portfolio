@@ -340,7 +340,7 @@ function App() {
       name: "SONDER",
       description: " ",
       imageUrl: "/assets/images/sonder.jpg",
-      size: "medium",
+      size: "tall",
       materials: "1350 x 1080px Movie Poster Mockup"
 
     },
@@ -350,7 +350,7 @@ function App() {
       name: "DOUBLE",
       description: " ",
       imageUrl: "/assets/images/duble.jpg",
-      size: "medium",
+      size: "tall",
       materials: "1350 x 1080px Movie Poster Mockup"
 
     },
@@ -360,7 +360,7 @@ function App() {
       name: "BAUMHEIM",
       description: " ",
       imageUrl: "/assets/images/baum.jpg",
-      size: "medium",
+      size: "tall",
       materials: "1350 x 1080px Movie Poster Mockup"
 
     },
@@ -374,7 +374,7 @@ function App() {
       name: "BREAKCORE",
       description: "A rave hosted by SATURNSARii with Perrero Del Futuro in Wynwood, Miami FL on March, 11 2023 ",
       imageUrl: "/assets/images/bc.jpg",
-      size: "medium",
+      size: "tall",
       materials: "1350 x 1080px Flyer"
 
     },
@@ -386,7 +386,7 @@ function App() {
       name: "IN DUE TIME",
       description: " ",
       imageUrl: "/assets/images/timedue.jpg",
-      size: "medium",
+      size: "tall",
       materials: "1350 x 1080px Poster"
 
     },
@@ -396,7 +396,7 @@ function App() {
       name: "PRESS ON",
       description: " ",
       imageUrl: "/assets/images/press on.jpg",
-      size: "medium",
+      size: "tall",
       materials: "1350 x 1080px Poster"
 
     },
@@ -406,7 +406,7 @@ function App() {
       name: "VILE",
       description: " ",
       imageUrl: "/assets/images/vile.jpg",
-      size: "medium",
+      size: "tall",
       materials: "1080 x 1920px Poster"
 
     },
@@ -416,7 +416,7 @@ function App() {
       name: "FAST IS IN",
       description: " ",
       imageUrl: "/assets/images/moveover.jpg",
-      size: "medium",
+      size: "tall",
       materials: "1080 x 1920px Poster"
 
     },
@@ -426,7 +426,7 @@ function App() {
       name: "SQUARE 1",
       description: " ",
       imageUrl: "/assets/images/sq11.JPG",
-      size: "medium",
+      size: "tall",
       materials: "1080 x 1920px Poster"
 
     },
