@@ -672,7 +672,7 @@ function App() {
         id: 11,
         name: "Slumsgiving",
         description: "Project: Rukus 2021",
-        imageUrl: "/assets/images/SG.jpg",
+        imageUrl: "/assets/images/SG.JPG",
         size: "medium",
         materials: "3000 x 3000px Cover Art"
   
@@ -1093,6 +1093,34 @@ const productData = {
 
     },
 
+    {
+      id: 13,
+      name: "The Prince (Spread)",
+      description: "Do as I say, not as I do.",
+      imageUrl: [ 
+        {
+          thumbnail: "/assets/images/theprince-thumb.webp",
+          medium: "/assets/images/theprince-medium.webp",
+          large: "/assets/images/theprince.jpg",
+
+      } ],
+      
+      size: [
+        { name: "8.5 x 11 inches", price: 30 },
+        { name: "12 x 16 inches", price: 35 },
+        { name: "18 x 24 inches", price: 40 }
+
+      ],
+      
+      initPrice: 30,
+      materials: "Giclee Print",
+      productType: "print",
+      imageFilename: 'theprince-thumb.jpg'
+
+
+
+    },
+
   ],
 
   originals: [
@@ -1328,6 +1356,32 @@ const productData = {
       materials: "Acrylic on Canvas",
       productType: "original",
       imageFilename: 'adequate-thumb.jpg'
+
+
+
+    },
+
+    {
+      id: 10,
+      name: "The Prince (Spread)",
+      description: "Do as I say, not as I do.",
+      imageUrl: [ 
+        {
+          thumbnail: "/assets/images/theprince-thumb.webp",
+          medium: "/assets/images/theprince-medium.webp",
+          large: "/assets/images/theprince.jpg",
+
+      } ],
+      
+      size: [
+        { name: "10 x 12 inches", price: 250 },
+
+      ],
+      
+      initPrice: 250,
+      materials: "Acrylic on Canvas",
+      productType: "original",
+      imageFilename: 'theprince-thumb.jpg'
 
 
 

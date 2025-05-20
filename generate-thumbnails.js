@@ -34,7 +34,7 @@ async function processImage(file) {
 
 async function run() {
   const files = await fs.readdir(INPUT_DIR);
-  await Promise.all(files.map(processImage));
+  await processImage("theprince.jpg");
   console.log("✅ All thumbnails generated!");
 }
 

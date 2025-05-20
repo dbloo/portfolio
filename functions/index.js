@@ -90,7 +90,7 @@ app.post("/checkout", async (req, res) => {
             {
               display_name: "Domestic Shipping (US)",
               type: "fixed_amount",
-              fixed_amount: {amount: 1000, currency: "usd"},
+              fixed_amount: {amount: 500, currency: "usd"},
               delivery_estimate: {
                 minimum: {unit: "business_day", value: 5},
                 maximum: {unit: "business_day", value: 10},
