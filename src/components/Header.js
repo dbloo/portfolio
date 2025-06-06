@@ -19,44 +19,49 @@ function Header() {
 
  
 
-  const [prevScrollPos, setPrevScrollPos] = useState(0);
   const [visible, setVisible] = useState(true);
 
   const hamMenu = document.querySelector('hamburger')
 
-    const handleScroll = () => {
+    
+
+
+
+  
+    useEffect(() => {
+
+      let prevScrollPos = window.scrollY;
+
+      const handleScroll = () => {
 
 
       const currentScrollPos = window.scrollY;
 
   
-      if (currentScrollPos > prevScrollPos ) {
+      if (currentScrollPos > prevScrollPos + 10 ) {
 
-        // console.log('Scrolling down'); 
+         console.log('Scrolling down'); 
 
         setVisible(false);
-      } else if (currentScrollPos < prevScrollPos  + 1){
+      } 
+      if (currentScrollPos < prevScrollPos ){
 
-        // console.log('Scrolling up'); 
+         console.log('Scrolling up'); 
 
 
         setVisible(true);
       }
 
-      setPrevScrollPos(currentScrollPos);
+      prevScrollPos = currentScrollPos
 
-      console.log(prevScrollPos)
+
+      console.log(currentScrollPos)
 
 
   
 
 
     };
-
-
-
-  
-    useEffect(() => {
 
        
       
@@ -196,7 +201,7 @@ function Header() {
 
     <header >
 
-    <div className = {`navWrapper ${!visible && 'hidden'}`}>
+    <div className = {`navWrapper ${!visible ? 'hidden' : " "}`}>
 
 
       <nav> 

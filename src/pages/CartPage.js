@@ -24,7 +24,7 @@ export default function CartPage() {
 
   const [stripePromise, setStripePromise] = useState(null);
 
-  const { cart, removeFromCart, subtotal, addToCart, isLoading, setIsLoading } = useCart();
+  const { cart, removeFromCart, subtotal, addToCart, isLoading, setIsLoading, clearCart } = useCart();
 
 
 
@@ -113,7 +113,10 @@ useEffect(() => {
   if (subtotal !== 0 ){
   return (
     <div className='page-wrapper'>
+      <div className = "title-button-wrapper">
       <h1>Your Cart</h1>
+        <button className = "cart-clearButton" onClick={() => clearCart()}>Clear Cart</button>
+        </div>
       <div className = "cart-wrapper">
       {cart.map((item) => (
         <div className = "items-wrapper">
@@ -172,7 +175,11 @@ useEffect(() => {
       ))}
       <div className = "subtotal-wrapper"><h2 className = "subtotal"><strong>Subtotal: ${(subtotal).toFixed(2)}</strong></h2></div>
       <button className = "checkout-button" onClick={handleCheckout} disabled={!cart.length || isLoading}>
-        Proceed to Checkout
+
+        <div className='stripelogo' style={{width: "100%", height: "100%", display: "inline-flex"}}>
+                   <p style = {{margin: "0" , width: "140px", fontSize: "12px"}}>Proceed to Checkout</p> <img src = "./assets/icons/stripe.svg" style = {{ position: "relative"}}></img>
+        </div>
+
 
         {isLoading ? (<div className = "spinner-checkout"><Spinner></Spinner></div>):(<></>)}
 
@@ -191,11 +198,13 @@ useEffect(() => {
 }else {
 
   return (
-    <div className='page-wrapper'>
-      <h1>Your Cart</h1>
-      <div className = "cart-wrapper">
-        <h2>Your cart is empty.</h2>
-    </div>
+    <div className = "empty-wrapper">
+      <div className='page-wrapper'>
+        <h1>Your Cart</h1>
+        <div className = "cart-wrapper">
+          <h2 className='empty-text'>Your cart is empty. 🥀🥀</h2>
+      </div>
+      </div>
     </div>
 
   );

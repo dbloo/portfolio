@@ -1,0 +1,24 @@
+.dashboard-container{
+    margin-top: 30vh;
+    display: block;
+    justify-content: center;
+    padding: 5%;
+    
+    
+}
+
+.table-container {
+    display: flex;
+    justify-content: space-between;
+    border: 1px solid #000;
+    border-radius: 20px;
+    padding: 2%;
+
+
+}
+
+.table-container img {
+    justify-content: center;
+    align-content: center;
+    width: 20%;
+}

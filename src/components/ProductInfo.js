@@ -63,6 +63,7 @@ import "./Info.css";
 
    const currentSize = product.size?.find(size => size.name === selectedSize);
    const paintingSize = image.size[0]?.name
+   const paintingPrice = product.size[0]?.price
 
    const currentPrice = currentSize ? (currentSize.price * quantity) : (product.initPrice).toFixed(2) * quantity;
 
@@ -106,13 +107,14 @@ import "./Info.css";
        }, [categoryImages]);
 
    const handleAddToCart = () => {
+      console.log(product.size[0]?.price)
        const item = {
 
          id: product.id,
          name: product.name,
          imageUrl: product.imageUrl,  
-         price: currentSize.price,
-         selectedSize: currentSize.name,
+         price: category === "prints" ? currentSize.price : product.size[0]?.price,
+         selectedSize: category === "prints" ? currentSize.name : product.size[0]?.name,
          quantity,
          materials: product.materials,
          productType: product.productType,

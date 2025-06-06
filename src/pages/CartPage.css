@@ -131,14 +131,28 @@ margin-bottom: 10%;
 .spinner-checkout{
     display: flex;
     position: absolute;
-    right: 30px;
-    top: 15px
+    right: 10px;
+    top: 10px
 
     
 }
 
 .checkout-button{
     position: relative;
+     width: 40vw;
+        height: 40px;
+       
+
+        
+}
+
+.stripelogo {
+    justify-content: center;
+}
+
+
+.stripelogo img {
+    width: 120px;
 }
 
 .quantity-controls button:hover {
@@ -159,9 +173,66 @@ margin-bottom: 10%;
 }
 
 
+.cart-clearButton{
+
+
+        background-color: #fff;
+        border: 1px solid #000;
+        border-radius: 20px;
+        width: 10%;
+        height: 30px;
+        color: #000;
+        cursor: pointer;
+
+}
+
+.cart-clearButton:hover {
+
+    background-color: #bfbfbf;
+
+
+
+}
+
+.title-button-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+}
+
+.empty-wrapper {
+    padding-bottom: 10%;
+}
+
 
 
 @media (max-width: 768px) {
+
+    .stripelogo img {
+    width: 79px;
+}
+
+.empty-text {
+    font-size: 22px;
+}
+
+.empty-wrapper {
+    padding-bottom: 50%;
+    padding-top: 30%;
+}
+
+.cart-clearButton{
+
+
+        background-color: #fff;
+        border: 1px solid #000;
+        border-radius: 20px;
+        width: 30%;
+        height: 20px;
+        color: #000;
+
+}
+
     .page-wrapper {
         padding: 5%;
     
@@ -278,13 +349,22 @@ margin-bottom: 10%;
         display: flex;
         justify-content: space-between;
     }
+    
+    .stripelogo{
+
+        align-items: center;
+        align-content: center;
+        justify-content: center;
+    }
 
     .checkout-button {
+        display: inline-flex;
         background-color: #fff;
         border: 1px solid #000;
         border-radius: 20px;
-        padding: 5%;
+        
         width: 100%;
+        height: 40px;
         color: #000;
     
     }
@@ -296,6 +376,10 @@ margin-bottom: 10%;
 
     .checkout-text h3 {
         font-size: 10px;
+    }
+
+    .title-button-wrapper h1 {
+        font-size: 25px;
     }
 
     .checkout-text strong {

@@ -34,6 +34,7 @@ import CheckoutSuccess from "./pages/CheckoutSuccess.js";
 
 
 import { CartProvider } from './context/CartContext';
+import Dashboard from "./pages/Dashboard.js";
 
 
 
@@ -931,7 +932,7 @@ const productData = {
         {
           thumbnail: "/assets/images/akimbo-thumb.webp",
           medium: "/assets/images/akimbo-medium.webp",
-          large: "/assets/images/akimbo.JPG",
+          large: "/assets/images/akimbo.jpg",
 
       } ],
       
@@ -1441,6 +1442,9 @@ const productData = {
 
               <Route path="/checkout" element={<CartPage />} />
               <Route path="/success" element={<CheckoutSuccess />} />
+
+              <Route path="/dashboard" element={<Dashboard category = "prints" products = {productData}/>} />
+
 
 
 

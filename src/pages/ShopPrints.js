@@ -62,6 +62,7 @@ const ShopPrints = ({category, products}) => {
 
     const categoryProducts = products[category];
 
+
     
 
   const handleCheckout = async (productId) => {

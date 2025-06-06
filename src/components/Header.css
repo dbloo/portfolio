@@ -167,14 +167,14 @@ nav ul li:hover {
   right: 0;
   
   z-index: 10000;
-  transition: 0.3s linear ease-in-out;
+  transition: transform 0.3s linear ease-in-out;
   
   
 
 }
 
 .navWrapper.hidden {
-top: -170px;
+top: -190px;
 transition: 0.3s linear ease-in-out;
 position: fixed;
 left: 0;
@@ -222,6 +222,9 @@ z-index: 10000;
       
       z-index: 10000;
       transition: 0.3s linear ease-in-out;
+        padding-bottom: 2%;
+
+      
 
   }
 
@@ -235,6 +238,20 @@ z-index: 10000;
     padding-top: 8%;
     width: 40px;
   }
+
+  .navWrapper {
+
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  
+  z-index: 10000;
+  transition: 0.3s linear;
+  
+  
+
+}
 
   .navWrapper.hidden {
 

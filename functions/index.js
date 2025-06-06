@@ -1,10 +1,10 @@
 // const {onDocumentCreated} = require("firebase-functions/v2/firestore");
-const {onRequest} = require("firebase-functions/v2/https");
-const {defineSecret} = require("firebase-functions/params");
-const admin = require("firebase-admin");
-const express = require("express");
-const cors = require("cors");
-const stripeLib = require("stripe");
+import {onRequest} from "firebase-functions/v2/https";
+import {defineSecret} from "firebase-functions/params";
+import admin from "firebase-admin";
+import express from "express";
+import cors from "cors";
+import stripeLib from "stripe";
 
 admin.initializeApp();
 
@@ -13,21 +13,21 @@ const db = admin.firestore();
 
 
 let stripe;
+
 const stripeSecret = defineSecret("STRIPE_SECRET_KEY");
+const stripeSecretTest = defineSecret("STRIPE_SECRET_KEY_TEST");
+const webhookSecret = defineSecret("STRIPE_WEBHOOK_SECRET");
 
 
+let key;
 const getStripe = async () => {
   if (stripe) return stripe;
-
-  const key =
-    process.env.FUNCTIONS_EMULATOR === "true" ?
-      process.env.REACT_APP_STRIPE_SECRET_KEY_TEST_KEY || process.env.REACT_APP_STRIPE_SECRET_KEY :
+  if (!key) {
+    key = process.env.FUNCTIONS_EMULATOR === "true" ?
+      await stripeSecretTest.value() :
       await stripeSecret.value();
-
+  }
   stripe = stripeLib(key);
-
-  console.log("Using Stripe key:", key ? "exists" : "missing");
-
   return stripe;
 };
 
@@ -67,14 +67,10 @@ app.post("/checkout", async (req, res) => {
     const stripe = await getStripe();
 
 
-    const {items, userId} = req.body;
+    const {items} = req.body;
 
     if (!items || !Array.isArray(items)) {
       return res.status(400).json({error: "Items must be provided"});
-    }
-
-    if (!userId) {
-      return res.status(401).json({error: "User ID is required"});
     }
 
 
@@ -127,6 +123,9 @@ app.post("/checkout", async (req, res) => {
         },
         quantity: item.quantity,
       })),
+      automatic_tax: {
+        enabled: true,
+      },
       mode: "payment",
       success_url:
       process.env.FUNCTIONS_EMULATOR === "true" ?
@@ -142,7 +141,6 @@ app.post("/checkout", async (req, res) => {
         productType: items.map((item) => item.type).join(","),
         productSizes: items.map((item)=> item.size).join(","),
         imageUrls: items.map((item) => item.image).join(","),
-        userId: userId,
 
       },
     });
@@ -161,7 +159,7 @@ app.post("/webhook", express.raw({type: "application/json"}), async (req, res) =
 
 
   const sig = req.headers["stripe-signature"];
-  const endpointSecret = process.env.REACT_APP_ENDPOINT_SECRET;
+  const endpointSecret = await webhookSecret.value();
 
   let event;
 
@@ -208,7 +206,6 @@ app.post("/webhook", express.raw({type: "application/json"}), async (req, res) =
 
     try {
       await db.collection("orders").add({
-        userId: session.collected_information.shipping_details.name + session.collected_information.shipping_details.name[(Math.random(2)*7).toFixed(0)]+ (Math.random()*1000).toFixed(0),
         name: session.collected_information.shipping_details.name || null,
         customerEmail: session.customer_details?.email || null,
         shippingAddress: {
@@ -259,7 +256,7 @@ app.get("/session/:id", async (req, res) => {
 // );
 
 // Export the HTTP function
-exports.api = onRequest(
+export const api =onRequest(
     {
       secrets: [stripeSecret],
     },
