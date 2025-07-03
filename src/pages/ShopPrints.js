@@ -86,7 +86,7 @@ const ShopPrints = ({category, products}) => {
          <h1>PRINTS</h1>
         </div>
       <div className="itemContainer">
-      {categoryProducts.map((product) => (
+      {categoryProducts.slice(0).reverse().map((product) => (
         
         <div className="product-container">
             <div className = "product" key={product.id}>

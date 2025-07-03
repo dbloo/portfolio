@@ -840,15 +840,16 @@ const productData = {
 
     },
 
+    
     {
       id: 4,
-      name: "SHOW YOUR FACE",
-      description: "Do as I say, not as I do.",
+      name: "thisisntarobberyitsjustperspective",
+      description: " ",
       imageUrl: [ 
         {
-          thumbnail: "/assets/images/SYF-thumb.webp",
-          medium: "/assets/images/SYF-medium.webp",
-          large: "/assets/images/SYF.jpg",
+          thumbnail: "/assets/images/robbery-thumb.webp",
+          medium: "/assets/images/robbery-medium.webp",
+          large: "/assets/images/robbery.JPG",
 
       } ],
       
@@ -862,8 +863,7 @@ const productData = {
       initPrice: 30,
       materials: "Giclee Print",
       productType: "print",
-      imageFilename: 'SYF-thumb.jpg',
-
+      imageFilename: 'robbery-thumb.jpg'
 
 
     },
@@ -898,13 +898,13 @@ const productData = {
 
     {
       id: 6,
-      name: "Mr. Crystal",
-      description: "Do as I say, not as I do.",
+      name: "DAMNED",
+      description: " ",
       imageUrl: [ 
         {
-          thumbnail: "/assets/images/crystal-thumb.webp",
-          medium: "/assets/images/crystal-medium.webp",
-          large: "/assets/images/crystal.JPG",
+          thumbnail: "/assets/images/damned-thumb.webp",
+          medium: "/assets/images/damned-medium.webp",
+          large: "/assets/images/damned.JPG",
 
       } ],
       
@@ -918,8 +918,7 @@ const productData = {
       initPrice: 30,
       materials: "Giclee Print",
       productType: "print",
-      imageFilename: 'crystal-thumb.jpg'
-
+      imageFilename: 'damned-thumb.jpg'
 
 
     },
@@ -1040,69 +1039,16 @@ const productData = {
 
     },
 
+
     {
       id: 11,
-      name: "thisisntarobberyitsjustperspective",
-      description: " ",
-      imageUrl: [ 
-        {
-          thumbnail: "/assets/images/robbery-thumb.webp",
-          medium: "/assets/images/robbery-medium.webp",
-          large: "/assets/images/robbery.JPG",
-
-      } ],
-      
-      size: [
-        { name: "8.5 x 11 inches", price: 30 },
-        { name: "12 x 16 inches", price: 35 },
-        { name: "18 x 24 inches", price: 40 }
-
-      ],
-      
-      initPrice: 30,
-      materials: "Giclee Print",
-      productType: "print",
-      imageFilename: 'robbery-thumb.jpg'
-
-
-    },
-
-    {
-      id: 12,
-      name: "DAMNED",
-      description: " ",
-      imageUrl: [ 
-        {
-          thumbnail: "/assets/images/damned-thumb.webp",
-          medium: "/assets/images/damned-medium.webp",
-          large: "/assets/images/damned.JPG",
-
-      } ],
-      
-      size: [
-        { name: "8.5 x 11 inches", price: 30 },
-        { name: "12 x 16 inches", price: 35 },
-        { name: "18 x 24 inches", price: 40 }
-
-      ],
-      
-      initPrice: 30,
-      materials: "Giclee Print",
-      productType: "print",
-      imageFilename: 'damned-thumb.jpg'
-
-
-    },
-
-    {
-      id: 13,
-      name: "The Prince (Spread)",
+      name: "SHOW YOUR FACE",
       description: "Do as I say, not as I do.",
       imageUrl: [ 
         {
-          thumbnail: "/assets/images/theprince-thumb.webp",
-          medium: "/assets/images/theprince-medium.webp",
-          large: "/assets/images/theprince.jpg",
+          thumbnail: "/assets/images/SYF-thumb.webp",
+          medium: "/assets/images/SYF-medium.webp",
+          large: "/assets/images/SYF.jpg",
 
       } ],
       
@@ -1116,7 +1062,67 @@ const productData = {
       initPrice: 30,
       materials: "Giclee Print",
       productType: "print",
-      imageFilename: 'theprince-thumb.jpg'
+      imageFilename: 'SYF-thumb.jpg',
+
+
+
+    },
+
+    
+
+    {
+      id: 12,
+      name: "Mr. Crystal",
+      description: "Do as I say, not as I do.",
+      imageUrl: [ 
+        {
+          thumbnail: "/assets/images/crystal-thumb.webp",
+          medium: "/assets/images/crystal-medium.webp",
+          large: "/assets/images/crystal.JPG",
+
+      } ],
+      
+      size: [
+        { name: "8.5 x 11 inches", price: 30 },
+        { name: "12 x 16 inches", price: 35 },
+        { name: "18 x 24 inches", price: 40 }
+
+      ],
+      
+      initPrice: 30,
+      materials: "Giclee Print",
+      productType: "print",
+      imageFilename: 'crystal-thumb.jpg'
+
+
+
+    },
+
+    
+
+    {
+      id: 13,
+      name: "Foreign Rhymes with Orange",
+      description: "For my fellow aliens",
+      imageUrl: [ 
+        {
+          thumbnail: "/assets/images/foreign-thumb.webp",
+          medium: "/assets/images/foreign-medium.webp",
+          large: "/assets/images/foreign.jpg",
+
+      } ],
+      
+      size: [
+        { name: "8.5 x 11 inches", price: 30 },
+        { name: "12 x 16 inches", price: 35 },
+        { name: "18 x 24 inches", price: 40 }
+
+      ],
+      
+      initPrice: 30,
+      materials: "Giclee Print",
+      productType: "print",
+      imageFilename: 'foreign.jpg'
 
 
 
@@ -1388,8 +1394,37 @@ const productData = {
 
     },
 
+
+    {
+
+      
+      id: 11,
+      name: "Foreign Rhymes with Orange",
+      description: "For my fellow aliens",
+      imageUrl: [ 
+        {
+          thumbnail: "/assets/images/foreign-thumb.webp",
+          medium: "/assets/images/foreign-medium.webp",
+          large: "/assets/images/foreign.jpg",
+
+      } ],
+      
+      size: [
+                { name: "73 x 73 inches", price: 10000 },
+
+      ],
+      
+      initPrice: 10000,
+      materials: "Acrylic on Canvas",
+      productType: "original",
+      imageFilename: 'foreign.jpg'
+
+
+
     
 
+      
+    },
     
 
   ]

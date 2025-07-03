@@ -7,7 +7,7 @@ const INPUT_DIR = path.join(__dirname, "public/assets/images");
 const OUTPUT_DIR = INPUT_DIR; // Outputs next to original
 
 const sizes = [
-  { suffix: "-thumb", width: 500 },
+  { suffix: "-medium", width: 1100 },
 ];
 
 async function processImage(file) {
@@ -18,7 +18,7 @@ async function processImage(file) {
   if (![".jpg", "jpeg", "JPG"].includes(ext)) return;
 
   for (const { suffix, width } of sizes) {
-    const outputFileName = `${base}${suffix}.jpg`;
+    const outputFileName = `${base}${suffix}.webp`;
     const outputPath = path.join(OUTPUT_DIR, outputFileName);
 
     try {
@@ -34,7 +34,7 @@ async function processImage(file) {
 
 async function run() {
   const files = await fs.readdir(INPUT_DIR);
-  await processImage("theprince.jpg");
+  await processImage("foreign.jpg");
   console.log("✅ All thumbnails generated!");
 }
 

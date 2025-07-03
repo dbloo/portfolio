@@ -133,8 +133,10 @@ useEffect(() => {
                                            transition: 'opacity 0.3s ease',
                       
                                            opacity: loaded ? 0 : 1,
+                                           display: loaded ? "none" : "flex",
                                            position: 'absolute',
-                                           width:"28.4vw", height: "20vh"
+                                           width:"28.4vw", height: "20vh",
+                                           zIndex:"-10000"
                                            }}>
                                            <Skeleton width="100%" height="100%"   borderRadius={10}/>
                                         </div>
@@ -189,8 +191,10 @@ useEffect(() => {
     </div>
         <div className= "shipping-policy">
             <h1>SHIPPING POLICY:</h1>
+            
             <p><strong>Domestic Orders (U.S.):</strong> 5-10 Business Days</p>
             <p><strong>Interational Orders:</strong> 10-15 Business Days</p>
+            <strong>Original artwork and merchandise orders can take from 2 to 4 weeks to fufill depending on package weight and delivery location.</strong>
         </div>
     </div>
 

@@ -1,6 +1,7 @@
 
 .logo img{
   margin-left: 5vw;
+  padding-top: 8%;
   width: 80px;
   
 
@@ -110,11 +111,12 @@ nav {
   white-space: nowrap;
 
   background-color: #ffffff;
-  padding-top: 5%;
+  padding-top: 3%;
   padding-right: 5%;
   display: flex;
   justify-content: space-between;
   z-index: auto;
+  padding-bottom: 2%;
 
 
  
@@ -167,7 +169,7 @@ nav ul li:hover {
   right: 0;
   
   z-index: 10000;
-  transition: transform 0.3s linear ease-in-out;
+  transition: 0.5s linear;
   
   
 
@@ -175,7 +177,7 @@ nav ul li:hover {
 
 .navWrapper.hidden {
 top: -190px;
-transition: 0.3s linear ease-in-out;
+transition: 0.5s linear;
 position: fixed;
 left: 0;
 right: 0;
