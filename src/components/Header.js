@@ -1,5 +1,6 @@
 import React, {useState, useEffect, useRef} from 'react';
 import { Link } from 'react-router-dom';
+import { CSSTransition, TransitionGroup } from 'react-transition-group';
 import './Header.css';
 
 import CheckoutPage from '../pages/CartPage';
@@ -12,6 +13,9 @@ function Header() {
   const [expandVD, setExpandVD] = useState(false); 
   const [expandShop, setExpandShop] = useState(false); 
   const [expandTA, setExpandTA] = useState(false); 
+  const [expandPF, setExpandPF] = useState(false); 
+   const nodeRefs = useRef(null);
+
 
 
 
@@ -77,6 +81,8 @@ function Header() {
       };
     }, []);
 
+   
+
   const toggleMenu = () => {
     setIsOpen(!isOpen);
     setExpandGD(false);
@@ -128,6 +134,20 @@ function Header() {
     setExpandGD(false);
     setExpandVD(false);
     setExpandTA(false);
+    setExpandPF(false)
+
+
+
+  };
+
+  const expandMenuPF = () => {
+
+    setExpandPF(!expandPF);
+    setExpandGD(false);
+    setExpandVD(false);
+    setExpandTA(false);
+    setExpandShop(false);
+
 
 
 
@@ -146,45 +166,51 @@ function Header() {
 
   };
 
-  const containerStyleTA = {
-    opacity:  expandTA ? '100%' : "0%",
-    transform: expandTA ? "translateY(-30px)" : "translateY(0px)",
-    pointerEvents: expandTA ? "all" : "none",
-    transition: 'opacity 0.8s ease-in-out',
-    transition: 'transform 0.4s ease-in-out'
+  
+
+  
+
+  const containerStylePF = {
+    opacity: expandPF ? "50%" : "100%",
+    // transition: 'transform 0.4s ease-in-out'
+
+
 
      
 
   }
 
   const containerStyleGD = {
-    opacity:  expandTA ? '100%' : "0%",
-    transform: expandTA ? "translateY(-30px)" : "translateY(0px)",
-    pointerEvents: expandTA ? "all" : "none",
-    transition: 'opacity 0.8s ease-in-out',
-    transition: 'transform 0.4s ease-in-out'
+    opacity: expandGD ? "50%" : "100%",
+    // transform: expandGD ? "translateX(-140px)" : "translateX(0px)",
+    // position: expandGD? "fixed" : "relative",
+    // transition: 'opacity 0.8s ease-in-out',
+    // transition: 'transform 0.4s ease-in-out'
 
      
 
   }
 
-  const containerStyleVD = {
-    opacity:  expandTA ? '100%' : "0%",
-    transform: expandTA ? "translateY(-30px)" : "translateY(0px)",
-    pointerEvents: expandTA ? "all" : "none",
-    transition: 'opacity 0.8s ease-in-out',
-    transition: 'transform 0.4s ease-in-out'
+  const containerStyleTA = {
+    opacity: expandTA ? "50%" : "100%",
+    // transform: expandTA ? "translateX(-140px)" : "translateX(0px)",
+    // position: expandTA? "fixed" : "relative",
+    // transition: 'opacity 0.8s ease-in-out',
+    // transition: 'transform 0.4s ease-in-out'
 
      
 
   }
+
 
   const containerStyleShop = {
-    opacity:  expandTA ? '100%' : "0%",
-    transform: expandTA ? "translateY(-30px)" : "translateY(0px)",
-    pointerEvents: expandTA ? "all" : "none",
-    transition: 'opacity 0.8s ease-in-out',
-    transition: 'transform 0.4s ease-in-out'
+    
+    opacity: expandShop ? "50%" : "100%",
+
+    // transform: expandShop ? "translateX(-140px)" : "translateX(0px)",
+    // position: expandShop? "fixed" : "relative",
+    // transition: 'opacity 0.8s ease-in-out',
+    // transition: 'transform 0.4s ease-in-out'
 
      
 
@@ -239,8 +265,11 @@ function Header() {
         </div>
         </div>
 
-          <ul className={`nav-links ${isOpen ? "open" : ""}`} >
-
+          {/* <ul className={`nav-links ${isOpen ? "open" : ""}`} >
+            
+          <li className = "graphicdesign"onClick={expandMenuPF} style={{cursor: "pointer"}}>Portfolio</li>
+          {expandPF ? (
+            <>
           <li className = "graphicdesign"onClick={expandMenuTA} style={{cursor: "pointer"}}>Traditional Art</li>
 
           {expandTA ? (
@@ -252,40 +281,51 @@ function Header() {
 
               </div>
               ):(<></>)}
-           
-
             <li className = "graphicdesign"onClick={expandMenuGD} style={{cursor: "pointer"}}>Graphic Design</li>
 
             {expandGD ? (
+              <>
+
+           
+
+
               <div className = {`expanded-gd ${expandGD ? "expanded" : ""}`}>
                 <Link to="/graphicDesign/logos" onClick={toggleMenu}><li className = "li-logos">Logos</li></Link>
                 <Link to="/graphicDesign/cover-art" onClick={toggleMenu}> <li className = "li-logos">Cover Art</li></Link>
                 <Link to="/graphicDesign/flyers" onClick={toggleMenu}> <li className = "li-logos">Flyers & Posters</li></Link>
               </div>
+
+              </>
+
+                            ):(<></>)}
+
+
+              </>
+
              ):(<></>)}
 
-            <li className = "video"onClick={expandMenuVD} style={{cursor: "pointer"}}>Video</li>
+             <li className = "video"onClick={expandMenuVD} style={{cursor: "pointer"}}>Video</li>
 
             {expandVD ? (
               <div className = {`expanded-gd ${expandVD ? "expanded" : ""}`}>
-                {/* <li className = "li-logos"><Link to="/video/shortform" onClick={toggleMenu}>Short Form</Link></li>
+                 <li className = "li-logos"><Link to="/video/shortform" onClick={toggleMenu}>Short Form</Link></li>
                 <li className = "li-logos"><Link to="/video/musicvideos" onClick={toggleMenu}>Music Videos</Link></li>
-                <li className = "li-logos"><Link to="/video/shortfilms" onClick={toggleMenu}>Short Films</Link></li> */}
+                <li className = "li-logos"><Link to="/video/shortfilms" onClick={toggleMenu}>Short Films</Link></li> 
                <Link to="/video/reels" onClick={toggleMenu}> <li className = "li-logos">Reels</li></Link>
 
               </div>
-            ):(<></>)}
+            ):(<></>)} 
 
-          <li><Link to="/merch"onClick={toggleMenu}>Merch</Link></li>
+           <li><Link to="/merch"onClick={toggleMenu}>Merch</Link></li> 
 
 
           <li className = "shop"onClick={expandMenuShop} style={{cursor: "pointer"}}>Shop</li>
 
             {expandShop ? (
               <div className = {`expanded-gd ${expandShop ? "expanded" : ""}`}>
-                {/* <li className = "li-logos"><Link to="/video/shortform" onClick={toggleMenu}>Short Form</Link></li>
+                 <li className = "li-logos"><Link to="/video/shortform" onClick={toggleMenu}>Short Form</Link></li>
                 <li className = "li-logos"><Link to="/video/musicvideos" onClick={toggleMenu}>Music Videos</Link></li>
-                <li className = "li-logos"><Link to="/video/shortfilms" onClick={toggleMenu}>Short Films</Link></li> */}
+                <li className = "li-logos"><Link to="/video/shortfilms" onClick={toggleMenu}>Short Films</Link></li> 
                 <Link to="/shop-prints" onClick={toggleMenu}><li className = "li-logos">Prints</li></Link>
                 <Link to="/shop-originals" onClick={toggleMenu}> <li className = "li-logos">Originals</li></Link>
 
@@ -305,6 +345,108 @@ function Header() {
             </Link>
 
             </div>
+          </ul> */}
+           
+          <ul className={`nav-links ${isOpen ? "open":" "}`} >
+
+            
+              <div className="links" >
+
+            
+            <>
+            <li id = "item1" className = {"nav-item"} onClick={expandMenuPF} style = {containerStylePF}>Portfolio</li>
+
+
+              <div className={`expanded-item ${expandPF ? "expanded": ""}`}  >   
+                
+                  <li id = "item2" onClick={expandMenuTA} style = {containerStyleTA}>Traditional Art</li >
+
+                <div className={`expanded-item ${expandTA ? "expanded": ""}`} >
+                  <Link to="/paintings"onClick={toggleMenu}>
+
+                    <li>Paintings</li>
+
+                  </Link>
+
+                  <Link to="/drawings"onClick={toggleMenu}>
+
+                      <li>Drawings</li>
+
+                  </Link>
+
+
+                </div> 
+                
+              
+
+                  <li id = "item3"onClick={expandMenuGD} style = {containerStyleGD}>GraphicDesign</li>
+
+                  <div className={`expanded-item ${expandGD ? "expanded": ""}`}>
+
+                    <Link to="/cover-art"onClick={toggleMenu}>
+
+                        <li>Cover Art</li>
+                    </Link>
+
+                    <Link to="/flyers"onClick={toggleMenu}>
+
+                        <li>Flyers</li>
+                          </Link>
+
+                   <Link to="/logos"onClick={toggleMenu}>
+                                          
+
+                        <li>Logos</li>
+
+                        </Link>
+                  </div> 
+
+              </div>
+              </>
+
+              
+            
+            <li id = "item4" onClick={expandMenuShop} style = {containerStyleShop}>Shop</li>
+
+    
+
+              <div  className={`expanded-item ${expandShop ? "expanded": ""}`}>
+              <Link to="/shop-originals"onClick={toggleMenu}>
+
+                  <li>Originals</li>
+
+              </Link>
+                                        
+                <Link to="/shop-prints"onClick={toggleMenu}>
+
+                  <li>Prints</li>
+
+                </Link>
+
+              </div>
+
+    
+            <Link to="/about"onClick={toggleMenu}>
+
+              <li>About</li>
+
+            </Link>
+
+
+            </div>
+
+            
+
+            <div className='cart-desktop'>
+            <Link className='cartlink' to="/checkout" >
+
+
+            <img src = "./assets/icons/cart.svg" alt = "logo"></img>
+            </Link>
+
+            </div>
+                           
+
           </ul>
 
           

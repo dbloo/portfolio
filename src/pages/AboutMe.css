@@ -1,8 +1,10 @@
 .art-page-container {
     margin-top: 18vh;
+    display: flex;
 
 }
 .about-container {
+    
 
     margin-left: 5vw;
     margin-right: 5vw;
@@ -12,9 +14,30 @@
     border-radius: 10px; 
     padding: 5%; 
 
-    display: grid;
+    display: flex;
     grid-template-columns: repeat(2, 1fr);
 
+}
+
+
+
+.about-cv {
+    cursor: pointer;
+
+}
+
+.about-text-container {
+    padding-right: 10%;
+}
+
+.about-cv {
+    font-size: 1.2rem;
+}
+
+.about-cv:hover {
+    color: gold;
+    transform: translateY(-5px);
+    transition: transform 0.3s ease-out;
 }
 
 .about-container h1{
@@ -28,6 +51,24 @@
     line-height: 80%;
 
 }
+
+
+
+.about-text-pg {
+    padding-bottom: 5%;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+  }
+
 .about-container p{
     font-family: "nimbus-sans-extended", sans-serif;
     font-weight: 100;
@@ -41,19 +82,30 @@
 }
 
 .about-container img {
-    width: 80%;
-    margin-left: 20%;
     border-radius: 10px; 
+    animation: fadeIn 0.7s ease-in-out forwards;
+    width: 30%;
 
 }
 
-.about-text-container {
-    margin-right: 10%;
-}
 
 @media (max-width: 768px) {
+
+    .about-text-pg {
+    padding-bottom: 5%;
+}
+
+    .about-text-container {
+    padding-right: 0%;
+    padding-bottom:15%
+}
+    .art-page-container {
+    margin-top: 18vh;
+    display: block;
+
+}
     .about-container {
-      display: flex;
+      display: block;
       position: relative;
       flex-direction: column; /* Stack the grid items vertically */
       justify-content: center;
@@ -62,14 +114,15 @@
     }
   
     .about-container img {
+      position: relative;
       width: 100%; /* Ensure the image fits the container width */
-      margin-right: 15vw;
-      height: 30rem;
       border-radius: 10px;
       box-shadow: 0px 4px 10px  rgba(0, 0, 0, 0.3); 
+      
 
     }
 
+  
   
   }
 

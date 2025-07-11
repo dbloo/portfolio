@@ -19,6 +19,7 @@
     "react-router-dom": "^6.27.0",
     "react-scripts": "5.0.1",
     "react-social-media-embed": "^2.5.18",
+    "react-transition-group": "^4.4.5",
     "sharp": "^0.34.1",
     "stripe": "^18.0.0",
     "vercel": "^41.7.0",

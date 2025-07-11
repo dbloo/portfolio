@@ -32,6 +32,8 @@ import ShopOriginals from "./pages/ShopOriginals.js";
 import CartPage from "./pages/CartPage.js";
 import CheckoutSuccess from "./pages/CheckoutSuccess.js";
 
+import NotFound from "./pages/NotFound.js"
+
 
 import { CartProvider } from './context/CartContext';
 import Dashboard from "./pages/Dashboard.js";
@@ -1113,13 +1115,15 @@ const productData = {
       } ],
       
       size: [
-        { name: "8.5 x 11 inches", price: 30 },
-        { name: "12 x 16 inches", price: 35 },
-        { name: "18 x 24 inches", price: 40 }
+        { name: "8 x 8 inches", price: 25 },
+        { name: "12 x 12 inches", price: 40 },
+        { name: "24 x 24 inches", price: 130 },
+        { name: "48 x 48 inches", price: 370},
+
 
       ],
       
-      initPrice: 30,
+      initPrice: 25,
       materials: "Giclee Print",
       productType: "print",
       imageFilename: 'foreign.jpg'
@@ -1441,6 +1445,7 @@ const productData = {
         <div className = "content">
         
         <Header />
+        <div className="content-wrapper">
             <Routes>
 
               <Route path= "/" element = {<Landing />} />
@@ -1453,9 +1458,9 @@ const productData = {
 
               <Route path="/drawings" element={<Drawings category="drawings" images = {imageData} />} />
 
-              <Route path="/graphicDesign/logos" element={<Logos category="logos" images = {imageData} />} />
-              <Route path="/graphicDesign/cover-art" element={<CoverArt category="coverart" images = {imageData} />} />
-              <Route path="/graphicDesign/flyers" element={<Flyers category="flyers" images = {imageData} />} />
+              <Route path="/logos" element={<Logos category="logos" images = {imageData} />} />
+              <Route path="/cover-art" element={<CoverArt category="coverart" images = {imageData} />} />
+              <Route path="/flyers" element={<Flyers category="flyers" images = {imageData} />} />
               <Route path="/construction" element={<Construction />} />
               <Route path="/Merch" element={<Merch category="merch" images = {imageData} />} />
 
@@ -1480,17 +1485,15 @@ const productData = {
 
               <Route path="/dashboard" element={<Dashboard category = "prints" products = {productData}/>} />
 
-
-
-
-
-
+              <Route path="*" element={<NotFound />} />
 
 
             </Routes>
   
 
         <Footer />
+
+        </div>
 
         </div>
 

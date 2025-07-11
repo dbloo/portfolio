@@ -1,11 +1,18 @@
 import React from 'react';
 import './AboutMe.css';
 
+import CV from "/Users/dominicbloomfield/Documents/portfolio/src/documents/CV.pdf"
+
+const onResumeClick = () => {
+  window.open(CV)
+}
+
 function AboutMe() {
   return (
     <div className = "art-page-container">
     <div className = "about-container">
-      <div clasName = "about-text-container">
+      <div className = "about-text-container">
+        <div className = "about-text-pg">
         <h1 >Dominic Bloomfield</h1>
         <p>
         Is an Afro-Carribbean multidisciplinary artist from Mandeville Jamaica that specializes in traditional art and graphic design, as well as cinematography and video editing. 
@@ -14,6 +21,12 @@ function AboutMe() {
         which communicates a sense of playfulness that leaves the viewer filling in the pieces with their own experiences. Dominic is also a graphic designer and video editor by trade, having
         worked with mostly local artists and brands to solidify their identity and design language.         
         </p>
+        </div>
+
+        <h4 className = "email">Email: contact.dominicbloomfield@gmail.com</h4>
+        <a onClick={onResumeClick}>
+              <h3 className ="about-cv">View my CV</h3>
+        </a>
       </div>
 
       <img src = "./assets/images/portrait-medium.webp"></img>
