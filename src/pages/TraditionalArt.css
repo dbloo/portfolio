@@ -3,7 +3,6 @@
     margin-top: 2%;
     margin-left: 15vw;
     margin-right: 15vw;
-    margin-bottom: 5vw;
     height: 100%;
     border: 1px solid #000; 
     border-radius: 10px; 
@@ -103,6 +102,8 @@
 
   .art-page-container {
     margin-top: 18vh;
+    display: grid;
+    margin-bottom: 10%;
 
   }
   

@@ -1,14 +1,10 @@
-.art-page-container {
-    margin-top: 18vh;
-    display: flex;
 
-}
 .about-container {
     
 
     margin-left: 5vw;
     margin-right: 5vw;
-    margin-top: 5vw;
+    margin-top: 2vw;
     margin-bottom: 5vw;
     border: 1px solid #000; 
     border-radius: 10px; 
