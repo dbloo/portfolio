@@ -4,7 +4,7 @@
 
     margin-left: 5vw;
     margin-right: 5vw;
-    margin-top: 2vw;
+    margin-top: 10vw;
     margin-bottom: 5vw;
     border: 1px solid #000; 
     border-radius: 10px; 
@@ -95,8 +95,8 @@
     padding-right: 0%;
     padding-bottom:15%
 }
-    .art-page-container {
-    margin-top: 18vh;
+    .about-page-container {
+    margin-top: 15vh;
     display: block;
 
 }
@@ -107,6 +107,9 @@
       justify-content: center;
       align-items: center;
       gap: 20px; /* Add space between items */
+          margin-top: 15vh;
+          margin-bottom: 10vh;
+
     }
   
     .about-container img {

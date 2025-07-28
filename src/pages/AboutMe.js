@@ -9,7 +9,7 @@ const onResumeClick = () => {
 
 function AboutMe() {
   return (
-    <div className = "art-page-container">
+    <div className = "about-page-container">
     <div className = "about-container">
       <div className = "about-text-container">
         <div className = "about-text-pg">

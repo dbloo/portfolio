@@ -59,6 +59,8 @@ function App() {
 
     },
 
+    
+
     {
       id: 15,
       name: "FLY CATCHER",
@@ -117,6 +119,15 @@ function App() {
       name: "LOOK UP",
       description: "As seen in a dream, I knew I needed to bring it back with me.",
       imageUrl: "/assets/images/look up.JPG",
+      size: "medium",
+      materials: "30in x 30in Acrylic on Canvas "
+    },
+
+    {
+      id: 17,
+      name: "FOREIGN RHYMES WITH ORANGE",
+      description: "As seen in a dream, I knew I needed to bring it back with me.",
+      imageUrl: "/assets/images/foreign.jpg",
       size: "medium",
       materials: "30in x 30in Acrylic on Canvas "
     },
@@ -773,9 +784,10 @@ const productData = {
 
       } ],
       size: [
-        { name: "8.5 x 11 inches", price: 30 },
-        { name: "12 x 16 inches", price: 35 },
-        { name: "18 x 24 inches", price: 40 }
+        { name: "8 x 8 inches", price: 25 },
+        { name: "12 x 12 inches", price: 40 },
+        { name: "24 x 24 inches", price: 130 },
+        { name: "48 x 48 inches", price: 370},
 
       ],
       
@@ -788,32 +800,32 @@ const productData = {
 
     },
 
-    {
-      id: 2,
-      name: "DON'T BEAT YOURSELF UP",
-      description: "Do as I say, not as I do.",
-      imageUrl: [ 
-        {
-          thumbnail: "/assets/images/dbyu-thumb.webp",
-          medium: "/assets/images/dbyu-medium.webp",
-          large: "/assets/images/dbyu.JPG",
+    // {
+    //   id: 2,
+    //   name: "DON'T BEAT YOURSELF UP",
+    //   description: "Do as I say, not as I do.",
+    //   imageUrl: [ 
+    //     {
+    //       thumbnail: "/assets/images/dbyu-thumb.webp",
+    //       medium: "/assets/images/dbyu-medium.webp",
+    //       large: "/assets/images/dbyu.JPG",
 
-      } ],
+    //   } ],
 
-      size: [
-        { name: "8.5 x 11 inches", price: 30 },
-        { name: "12 x 16 inches", price: 35 },
-        { name: "18 x 24 inches", price: 40 }
+    //   size: [
+    //     { name: "8.5 x 11 inches", price: 30 },
+    //     { name: "12 x 16 inches", price: 35 },
+    //     { name: "18 x 24 inches", price: 40 }
 
-      ],
+    //   ],
       
-      initPrice: 30,
-      materials: "Giclee Print",
-      productType: "print",
-      imageFilename: 'dbyu-thumb.jpg',
+    //   initPrice: 30,
+    //   materials: "Giclee Print",
+    //   productType: "print",
+    //   imageFilename: 'dbyu-thumb.jpg',
 
 
-    },
+    // },
 
     {
       id: 3,
@@ -843,32 +855,32 @@ const productData = {
     },
 
     
-    {
-      id: 4,
-      name: "thisisntarobberyitsjustperspective",
-      description: " ",
-      imageUrl: [ 
-        {
-          thumbnail: "/assets/images/robbery-thumb.webp",
-          medium: "/assets/images/robbery-medium.webp",
-          large: "/assets/images/robbery.JPG",
+    // {
+    //   id: 4,
+    //   name: "thisisntarobberyitsjustperspective",
+    //   description: " ",
+    //   imageUrl: [ 
+    //     {
+    //       thumbnail: "/assets/images/robbery-thumb.webp",
+    //       medium: "/assets/images/robbery-medium.webp",
+    //       large: "/assets/images/robbery.JPG",
 
-      } ],
+    //   } ],
       
-      size: [
-        { name: "8.5 x 11 inches", price: 30 },
-        { name: "12 x 16 inches", price: 35 },
-        { name: "18 x 24 inches", price: 40 }
+    //   size: [
+    //     { name: "8.5 x 11 inches", price: 30 },
+    //     { name: "12 x 16 inches", price: 35 },
+    //     { name: "18 x 24 inches", price: 40 }
 
-      ],
+    //   ],
       
-      initPrice: 30,
-      materials: "Giclee Print",
-      productType: "print",
-      imageFilename: 'robbery-thumb.jpg'
+    //   initPrice: 30,
+    //   materials: "Giclee Print",
+    //   productType: "print",
+    //   imageFilename: 'robbery-thumb.jpg'
 
 
-    },
+    // },
 
     {
       id: 5,
@@ -898,32 +910,32 @@ const productData = {
 
     
 
-    {
-      id: 6,
-      name: "DAMNED",
-      description: " ",
-      imageUrl: [ 
-        {
-          thumbnail: "/assets/images/damned-thumb.webp",
-          medium: "/assets/images/damned-medium.webp",
-          large: "/assets/images/damned.JPG",
+    // {
+    //   id: 6,
+    //   name: "DAMNED",
+    //   description: " ",
+    //   imageUrl: [ 
+    //     {
+    //       thumbnail: "/assets/images/damned-thumb.webp",
+    //       medium: "/assets/images/damned-medium.webp",
+    //       large: "/assets/images/damned.JPG",
 
-      } ],
+    //   } ],
       
-      size: [
-        { name: "8.5 x 11 inches", price: 30 },
-        { name: "12 x 16 inches", price: 35 },
-        { name: "18 x 24 inches", price: 40 }
+    //   size: [
+    //     { name: "8.5 x 11 inches", price: 30 },
+    //     { name: "12 x 16 inches", price: 35 },
+    //     { name: "18 x 24 inches", price: 40 }
 
-      ],
+    //   ],
       
-      initPrice: 30,
-      materials: "Giclee Print",
-      productType: "print",
-      imageFilename: 'damned-thumb.jpg'
+    //   initPrice: 30,
+    //   materials: "Giclee Print",
+    //   productType: "print",
+    //   imageFilename: 'damned-thumb.jpg'
 
 
-    },
+    // },
 
     {
       id: 7,
@@ -954,92 +966,64 @@ const productData = {
 
     },
 
-    {
-      id: 8,
-      name: "THE ARBITER",
-      description: "Do as I say, not as I do.",
-      imageUrl: [ 
-        {
-          thumbnail: "/assets/images/arbiter-thumb.webp",
-          medium: "/assets/images/arbiter-medium.webp",
-          large: "/assets/images/arbiter.JPG",
+    // {
+    //   id: 8,
+    //   name: "THE ARBITER",
+    //   description: "Do as I say, not as I do.",
+    //   imageUrl: [ 
+    //     {
+    //       thumbnail: "/assets/images/arbiter-thumb.webp",
+    //       medium: "/assets/images/arbiter-medium.webp",
+    //       large: "/assets/images/arbiter.JPG",
 
-      } ],
+    //   } ],
       
       
-      size: [
-        { name: "8.5 x 11 inches", price: 30 },
-        { name: "12 x 16 inches", price: 35 },
-        { name: "18 x 24 inches", price: 40 }
+    //   size: [
+    //     { name: "8.5 x 11 inches", price: 30 },
+    //     { name: "12 x 16 inches", price: 35 },
+    //     { name: "18 x 24 inches", price: 40 }
 
-      ],
+    //   ],
       
-      initPrice: 30,
-      materials: "Giclee Print",
-      productType: "print",
-      imageFilename: 'arbiter-thumb.jpg'
+    //   initPrice: 30,
+    //   materials: "Giclee Print",
+    //   productType: "print",
+    //   imageFilename: 'arbiter-thumb.jpg'
 
 
 
-    },
+    // },
 
-    {
-      id: 9,
-      name: "Shutdown",
-      description: "Do as I say, not as I do.",
-      imageUrl: [ 
-        {
-          thumbnail: "/assets/images/SD-thumb.webp",
-          medium: "/assets/images/SD-medium.webp",
-          large: "/assets/images/SD.jpg",
+    // {
+    //   id: 9,
+    //   name: "Shutdown",
+    //   description: "Do as I say, not as I do.",
+    //   imageUrl: [ 
+    //     {
+    //       thumbnail: "/assets/images/SD-thumb.webp",
+    //       medium: "/assets/images/SD-medium.webp",
+    //       large: "/assets/images/SD.jpg",
 
-      } ],
-      
-      
-      size: [
-        { name: "8.5 x 11 inches", price: 30 },
-        { name: "12 x 16 inches", price: 35 },
-        { name: "18 x 24 inches", price: 40 }
-
-      ],
-      
-      initPrice: 30,
-      materials: "Giclee Print",
-      productType: "print",
-      imageFilename: 'SD-thumb.jpg'
-
-
-
-    },
-
-    {
-      id: 10,
-      name: "Rogue Poison",
-      description: "Do as I say, not as I do.",
-      imageUrl: [ 
-        {
-          thumbnail: "/assets/images/rogue-thumb.webp",
-          medium: "/assets/images/rogue-medium.webp",
-          large: "/assets/images/rogue.JPG",
-
-      } ],
+    //   } ],
       
       
-      size: [
-        { name: "8.5 x 11 inches", price: 30 },
-        { name: "12 x 16 inches", price: 35 },
-        { name: "18 x 24 inches", price: 40 }
+    //   size: [
+    //     { name: "8.5 x 11 inches", price: 30 },
+    //     { name: "12 x 16 inches", price: 35 },
+    //     { name: "18 x 24 inches", price: 40 }
 
-      ],
+    //   ],
       
-      initPrice: 30,
-      materials: "Giclee Print",
-      productType: "print",
-      imageFilename: 'rogue-thumb.jpg'
+    //   initPrice: 30,
+    //   materials: "Giclee Print",
+    //   productType: "print",
+    //   imageFilename: 'SD-thumb.jpg'
 
 
 
-    },
+    // },
+
 
 
     {
@@ -1136,112 +1120,7 @@ const productData = {
 
   originals: [
 
-    {
-      id: 1,
-      name: "FLY CATCHER",
-      description: "Do as I say, not as I do.",
-      imageUrl: [ 
-        {
-          thumbnail: "/assets/images/flycatcher-thumb.webp",
-          medium: "/assets/images/flycatcher-medium.webp",
-          large: "/assets/images/flycatcher.JPG",
-
-      } ],
-
-      size: [
-        { name: "24 x 36 inches", price: 1200 },
-
-
-      ],
-      
-      initPrice: 1200,
-      materials: "Acrylic on Canvas",
-      productType: "original",
-      imageFilename: 'flycatcher-thumb.jpg'
-
-
-
-
-    },
-
-    {
-      id: 2,
-      name: "Mr. Crystal",
-      description: "Do as I say, not as I do.",
-      imageUrl: [ 
-        {
-          thumbnail: "/assets/images/crystal-thumb.webp",
-          medium: "/assets/images/crystal-medium.webp",
-          large: "/assets/images/crystal.JPG",
-
-      } ],
-      
-      size: [
-        { name: "17 x 15 inches", price: 800 },
-
-      ],
-      
-      initPrice: 800,
-      materials: "Acrylic on Canvas",
-      productType: "original",
-      imageFilename: 'crystal-thumb.jpg'
-
-
-
-    },
-
-    {
-      id: 3,
-      name: "Sundown",
-      description: "Do as I say, not as I do.",
-      imageUrl: [ 
-        {
-          thumbnail: "/assets/images/sundown-thumb.webp",
-          medium: "/assets/images/sundown-medium.webp",
-          large: "/assets/images/sundown.jpg",
-
-      } ],
-      
-      size: [
-        { name: "48 x 48 inches", price: 4300 },
-
-      ],
-      
-      initPrice: 4300,
-      materials: "Acrylic on Canvas",
-      productType: "original",
-      imageFilename: 'sundown-thumb.jpg'
-
-
-
-    },
-
-    {
-      id: 4,
-      name: "Make Less Money",
-      description: "Do as I say, not as I do.",
-      imageUrl: [ 
-        {
-          thumbnail: "/assets/images/money-thumb.webp",
-          medium: "/assets/images/money-medium.webp",
-          large: "/assets/images/money.JPG",
-
-      } ],
-
-      size: [
-        { name: "5 x 3 ft", price: 5600 },
-
-      ],
-      
-      initPrice: 5600,
-      materials: "Acrylic on Canvas",
-      productType: "original",
-      imageFilename: 'money-thumb.jpg'
-
-
-
-    },
-
+    
     {
       id: 5,
       name: "Try Again",
@@ -1281,7 +1160,7 @@ const productData = {
       } ],
 
       size: [
-        { name: "17 x 15 inches", price: 1400 },
+        { name: "17 x 15 inches", price: 800 },
 
       ],
       
@@ -1398,6 +1277,113 @@ const productData = {
 
     },
 
+    {
+      id: 1,
+      name: "FLY CATCHER",
+      description: "Do as I say, not as I do.",
+      imageUrl: [ 
+        {
+          thumbnail: "/assets/images/flycatcher-thumb.webp",
+          medium: "/assets/images/flycatcher-medium.webp",
+          large: "/assets/images/flycatcher.JPG",
+
+      } ],
+
+      size: [
+        { name: "24 x 36 inches", price: 1200 },
+
+
+      ],
+      
+      initPrice: 1200,
+      materials: "Acrylic on Canvas",
+      productType: "original",
+      imageFilename: 'flycatcher-thumb.jpg'
+
+
+
+
+    },
+
+    {
+      id: 2,
+      name: "Mr. Crystal",
+      description: "Do as I say, not as I do.",
+      imageUrl: [ 
+        {
+          thumbnail: "/assets/images/crystal-thumb.webp",
+          medium: "/assets/images/crystal-medium.webp",
+          large: "/assets/images/crystal.JPG",
+
+      } ],
+      
+      size: [
+        { name: "17 x 15 inches", price: 800 },
+
+      ],
+      
+      initPrice: 800,
+      materials: "Acrylic on Canvas",
+      productType: "original",
+      imageFilename: 'crystal-thumb.jpg'
+
+
+
+    },
+
+    {
+      id: 3,
+      name: "Sundown",
+      description: "Do as I say, not as I do.",
+      imageUrl: [ 
+        {
+          thumbnail: "/assets/images/sundown-thumb.webp",
+          medium: "/assets/images/sundown-medium.webp",
+          large: "/assets/images/sundown.jpg",
+
+      } ],
+      
+      size: [
+        { name: "48 x 48 inches", price: 4300 },
+
+      ],
+      
+      initPrice: 4300,
+      materials: "Acrylic on Canvas",
+      productType: "original",
+      imageFilename: 'sundown-thumb.jpg'
+
+
+
+    },
+
+    {
+      id: 4,
+      name: "Make Less Money",
+      description: "Do as I say, not as I do.",
+      imageUrl: [ 
+        {
+          thumbnail: "/assets/images/money-thumb.webp",
+          medium: "/assets/images/money-medium.webp",
+          large: "/assets/images/money.JPG",
+
+      } ],
+
+      size: [
+        { name: "5 x 3 ft", price: 5600 },
+
+      ],
+      
+      initPrice: 5600,
+      materials: "Acrylic on Canvas",
+      productType: "original",
+      imageFilename: 'money-thumb.jpg'
+
+
+
+    },
+
+
 
     {
 
@@ -1448,7 +1434,10 @@ const productData = {
         <div className="content-wrapper">
             <Routes>
 
-              <Route path= "/" element = {<Landing />} />
+              {/* <Route path= "/" element = {<Landing category = "prints" products = {productData}/>} /> */}
+
+              <Route path="/" element={<ShopPrints category = "prints" products = {productData}/>} />
+
 
               <Route path="/graphicDesign" element={<GraphicDesign category= "graphicDesign" images = {imageData}/>} />
               <Route path="/paintings" element={<TraditionalArt category="paintings" images = {imageData} />} />
@@ -1477,7 +1466,6 @@ const productData = {
 
               <Route path="/video/reels" element={<VideoReels/>} />
 
-              <Route path="/shop-prints" element={<ShopPrints category = "prints" products = {productData}/>} />
               <Route path="/shop-originals" element={<ShopOriginals category = "originals" products = {productData}/>} />
 
               <Route path="/checkout" element={<CartPage />} />

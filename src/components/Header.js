@@ -4,6 +4,7 @@ import { CSSTransition, TransitionGroup } from 'react-transition-group';
 import './Header.css';
 
 import CheckoutPage from '../pages/CartPage';
+import { use } from 'react';
 
 function Header() {
 
@@ -28,7 +29,13 @@ function Header() {
   const hamMenu = document.querySelector('hamburger')
 
     
+// useEffect(() => {
+//   const handleBodyclick = () => {
 
+
+//     document.body.addEventListener('click')
+//   }
+// }, []);
 
 
   
@@ -42,13 +49,13 @@ function Header() {
       const currentScrollPos = window.scrollY;
 
   
-      if (currentScrollPos > prevScrollPos + 10 ) {
+      if (currentScrollPos - 20 > prevScrollPos ) {
 
          console.log('Scrolling down'); 
 
         setVisible(false);
       } 
-      if (currentScrollPos < prevScrollPos ){
+      if (currentScrollPos  < prevScrollPos ){
 
          console.log('Scrolling up'); 
 
@@ -243,7 +250,7 @@ function Header() {
 
           <div className='cart'>
 
-              <Link className='cartlink' to="/checkout"  onClick={()=>setIsOpen(false)}>
+              <Link className='cartlink' to="/checkout"  onClick={()=>setIsOpen(false)} >
 
 
                     <img src = "./assets/icons/cart.svg" alt = "logo"></img>
@@ -354,7 +361,7 @@ function Header() {
 
             
             <>
-            <li id = "item1" className = {"nav-item"} onClick={expandMenuPF} style = {containerStylePF}>Portfolio</li>
+            <li id = "item1" onClick={expandMenuPF} style = {containerStylePF}>Portfolio</li>
 
 
               <div className={`expanded-item ${expandPF ? "expanded": ""}`}  >   
@@ -379,7 +386,7 @@ function Header() {
                 
               
 
-                  <li id = "item3"onClick={expandMenuGD} style = {containerStyleGD}>GraphicDesign</li>
+                  <li id = "item3"onClick={expandMenuGD} style = {containerStyleGD}>Graphic Design</li>
 
                   <div className={`expanded-item ${expandGD ? "expanded": ""}`}>
 
@@ -417,7 +424,7 @@ function Header() {
 
               </Link>
                                         
-                <Link to="/shop-prints"onClick={toggleMenu}>
+                <Link to="/" onClick={toggleMenu}>
 
                   <li>Prints</li>
 
@@ -426,7 +433,7 @@ function Header() {
               </div>
 
     
-            <Link to="/about"onClick={toggleMenu}>
+            <Link to="/about" onClick={toggleMenu}>
 
               <li>About</li>
 
@@ -437,7 +444,7 @@ function Header() {
 
             
 
-            <div className='cart-desktop'>
+            <div className='cart-desktop' onClick={toggleMenu}>
             <Link className='cartlink' to="/checkout" >
 
 

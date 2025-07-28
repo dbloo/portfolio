@@ -182,7 +182,7 @@ if (category == "prints" ){
       <div className="productContainer">
 
       <div className = "backbutton">                                 
-           <Link to = "/shop-prints"> <button className = "backB"><span> </span><span> </span><p>Prints</p></button></Link>
+           <Link to = "/"> <button className = "backB"><span> </span><span> </span><p>Prints</p></button></Link>
          </div>
 
           <div className= "info-container-shop">

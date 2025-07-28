@@ -6,16 +6,59 @@
 
 }
 
+.cardContainer{
+        margin-top: 20vh;
+        overflow: hidden;
+
+
+
+}
+
+.image-carousel {
+    display: inline-flex;
+
+}
+
+.image-carousel img {
+    width: 20%;
+    height: 20%;
+    margin-right: 2%;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px  rgba(0, 0, 0, 0.3); 
+
+}
+
 .landingContainer {
-    width: 100%;
     height: 100vh;
+   display: block;
+   justify-content: center;
+   padding-left: 10%;
+   padding-right: 10%;
 }
 
 .greetingsContainer {
-    margin-top: 3vh;
-    padding-top: 10%;
-    padding-left: 10%;
+    padding-top: 5%;
+    padding-left: 5%;
+    border-radius: 20px;
+    height: 40%;
+            border: 1px solid black;
+
 }
+
+.title-container {
+    border: 1px solid black;
+    border-radius: 20px;
+    padding-left: 3%;
+    font-size: 48px;
+    margin-bottom: 3%;
+
+
+
+}
+
+
+
+
 
 .greetings h3 {
 
@@ -34,22 +77,44 @@
   }
 
 @media (max-width: 768px) {
-    .landingContainer {
-        width: 100%;
-        height: 60vh;
-    }
-    .anim {
-        width: 70%;
-        margin-left: 14%;
-        margin-top: 10vh;
-        margin-bottom: 13%;
-    }
+   .cardContainer{
+        margin-top: 20svh;
 
-    .greetingsContainer {
-        margin-top: 3vh;
-        padding-top: 20%;
-        padding-left: 10%;
-    }
+
+
+}
+
+.landingContainer {
+    height: 100%;
+   display: block;
+   justify-content: center;
+   align-content: center;
+   padding-left: 10%;
+   padding-right: 10%;
+   padding-bottom: 10%;
+
+}
+
+.greetingsContainer {
+    height: auto;
+    padding-top: 10%;
+    padding-left: 10%;
+    border-radius: 20px;
+    height: 40%;
+            border: 1px solid black;
+
+}
+
+.title-container {
+    border: 1px solid black;
+    border-radius: 20px;
+    padding-left: 3%;
+    font-size: 14px;
+    margin-bottom: 3%;
+
+
+
+}
     
 
 }
