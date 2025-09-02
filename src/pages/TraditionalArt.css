@@ -222,11 +222,19 @@
       margin-left: 5vw;
       margin-right: 5vw;
       margin-bottom: 5vw;
-      height: 100%;
+      height: auto;
       border: 1px solid #000; 
       border-radius: 10px; 
       padding: 20px; 
      
+  }
+
+   .art-page-container {
+    display: flex;
+    margin-top: 13vh;
+    display: grid;
+    margin-bottom: 8%;
+
   }
 
   .container-video { 

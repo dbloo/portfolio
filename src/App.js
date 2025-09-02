@@ -705,8 +705,28 @@ function App() {
       {
         id: 13,
         name: "Amethyst Skies",
-        description: "Aster The Gemini",
+        description: "Aster The Gemini- Amethyst Skies",
         imageUrl: "/assets/images/amethyst skies.jpg",
+        size: "medium",
+        materials: "3000 x 3000px Cover Art"
+  
+      },
+
+      {
+        id: 13,
+        name: "Bandita",
+        description: " ",
+        imageUrl: "/assets/images/bandita.png",
+        size: "medium",
+        materials: "3000 x 3000px Cover Art"
+  
+      },
+
+      {
+        id: 13,
+        name: "Stack It Up",
+        description: "Stack It Up - Dylan Hall",
+        imageUrl: "/assets/images/stackitup.png",
         size: "medium",
         materials: "3000 x 3000px Cover Art"
   
@@ -937,34 +957,7 @@ const productData = {
 
     // },
 
-    {
-      id: 7,
-      name: "All Akimbo",
-      description: "Do as I say, not as I do.",
-      imageUrl: [ 
-        {
-          thumbnail: "/assets/images/akimbo-thumb.webp",
-          medium: "/assets/images/akimbo-medium.webp",
-          large: "/assets/images/akimbo.jpg",
-
-      } ],
-      
-      
-      size: [
-        { name: "8.5 x 11 inches", price: 30 },
-        { name: "12 x 16 inches", price: 35 },
-        { name: "18 x 24 inches", price: 40 }
-
-      ],
-      
-      initPrice: 30,
-      materials: "Giclee Print", 
-      productType: "print",
-      imageFilename: 'akimbo-thumb.jpg'
-
-
-
-    },
+    
 
     // {
     //   id: 8,
@@ -1023,36 +1016,6 @@ const productData = {
 
 
     // },
-
-
-
-    {
-      id: 11,
-      name: "SHOW YOUR FACE",
-      description: "Do as I say, not as I do.",
-      imageUrl: [ 
-        {
-          thumbnail: "/assets/images/SYF-thumb.webp",
-          medium: "/assets/images/SYF-medium.webp",
-          large: "/assets/images/SYF.jpg",
-
-      } ],
-      
-      size: [
-        { name: "8.5 x 11 inches", price: 30 },
-        { name: "12 x 16 inches", price: 35 },
-        { name: "18 x 24 inches", price: 40 }
-
-      ],
-      
-      initPrice: 30,
-      materials: "Giclee Print",
-      productType: "print",
-      imageFilename: 'SYF-thumb.jpg',
-
-
-
-    },
 
     
 
@@ -1116,36 +1079,40 @@ const productData = {
 
     },
 
-  ],
-
-  originals: [
-
-    
     {
-      id: 5,
-      name: "Try Again",
-      description: "Do as I say, not as I do.",
+      id: 14,
+      name: "What if not! Complete??",
+      description: " ",
       imageUrl: [ 
         {
-          thumbnail: "/assets/images/tryagain-thumb.webp",
-          medium: "/assets/images/tryagain-medium.webp",
-          large: "/assets/images/tryagain.JPG",
+          thumbnail: "/assets/images/whatif-thumb.webp",
+          medium: "/assets/images/whatif-medium.webp",
+          large: "/assets/images/whatif.jpg",
 
       } ],
-
+      
       size: [
-        { name: "36 x 36 inches", price: 4600 },
+        { name: "8 x 8 inches", price: 25 },
+        { name: "12 x 12 inches", price: 40 },
+        { name: "24 x 24 inches", price: 130 },
+        { name: "48 x 48 inches", price: 370},
+
 
       ],
       
-      initPrice: 4600,
-      materials: "Acrylic on Canvas",
-      productType: "original",
-      imageFilename: 'tryagain-thumb.jpg'
+      initPrice: 25,
+      materials: "Giclee Print",
+      productType: "print",
+      imageFilename: 'whatif.jpg'
 
 
 
     },
+
+  ],
+
+  originals: [
+
 
     {
       id: 6,
@@ -1164,7 +1131,7 @@ const productData = {
 
       ],
       
-      initPrice: 1400,
+      initPrice: 800,
       materials: "Acrylic on Canvas",
       productType: "original",
       imageFilename: 'SYF-thumb.jpg'
@@ -1225,31 +1192,6 @@ const productData = {
 
     },
 
-    {
-      id: 9,
-      name: "Adequate Natural",
-      description: "Do as I say, not as I do.",
-      imageUrl: [ 
-        {
-          thumbnail: "/assets/images/adequate-thumb.webp",
-          medium: "/assets/images/adequate-medium.webp",
-          large: "/assets/images/adequate.jpg",
-
-      } ],
-      
-      size: [
-        { name: "36 x 36 inches", price: 4600 },
-
-      ],
-      
-      initPrice: 4600,
-      materials: "Acrylic on Canvas",
-      productType: "original",
-      imageFilename: 'adequate-thumb.jpg'
-
-
-
-    },
 
     {
       id: 10,
@@ -1322,7 +1264,7 @@ const productData = {
 
       ],
       
-      initPrice: 800,
+      initPrice: 920,
       materials: "Acrylic on Canvas",
       productType: "original",
       imageFilename: 'crystal-thumb.jpg'
@@ -1357,31 +1299,7 @@ const productData = {
 
     },
 
-    {
-      id: 4,
-      name: "Make Less Money",
-      description: "Do as I say, not as I do.",
-      imageUrl: [ 
-        {
-          thumbnail: "/assets/images/money-thumb.webp",
-          medium: "/assets/images/money-medium.webp",
-          large: "/assets/images/money.JPG",
-
-      } ],
-
-      size: [
-        { name: "5 x 3 ft", price: 5600 },
-
-      ],
-      
-      initPrice: 5600,
-      materials: "Acrylic on Canvas",
-      productType: "original",
-      imageFilename: 'money-thumb.jpg'
-
-
-
-    },
+   
 
 
 
@@ -1414,6 +1332,32 @@ const productData = {
     
 
       
+    },
+
+    {
+      id: 12,
+      name: "What if not! Complete??",
+      description: " ",
+      imageUrl: [ 
+        {
+          thumbnail: "/assets/images/whatif-thumb.webp",
+          medium: "/assets/images/whatif-medium.webp",
+          large: "/assets/images/whatif.jpg",
+
+      } ],
+      
+      size: [
+                { name: "73 x 73 inches", price: 5200 },
+
+      ],
+      
+      initPrice: 5200,
+      materials: "Acrylic on Canvas",
+      productType: "original",
+      imageFilename: 'whatif.jpg'
+
+
+
     },
     
 
