@@ -7,7 +7,7 @@ const INPUT_DIR = path.join(__dirname, "public/assets/images");
 const OUTPUT_DIR = INPUT_DIR; // Outputs next to original
 
 const sizes = [
-  { suffix: "-thumb", width: 800 },
+  { suffix: "-thumb", width: 300 },
 
 ];
 
@@ -35,7 +35,7 @@ async function processImage(file) {
 
 async function run() {
   const files = await fs.readdir(INPUT_DIR);
-  await processImage("whatif.jpg");
+  await processImage("allday.JPG");
   console.log("✅ All thumbnails generated!");
 }
 

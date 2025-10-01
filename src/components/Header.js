@@ -371,13 +371,13 @@ function Header() {
                 <div className={`expanded-item ${expandTA ? "expanded": ""}`} >
                   <Link to="/paintings"onClick={toggleMenu}>
 
-                    <li>Paintings</li>
+                    <li>Paintings </li>
 
                   </Link>
 
                   <Link to="/drawings"onClick={toggleMenu}>
 
-                      <li>Drawings</li>
+                      <li>Drawings </li>
 
                   </Link>
 
@@ -392,19 +392,28 @@ function Header() {
 
                     <Link to="/cover-art"onClick={toggleMenu}>
 
-                        <li>Cover Art</li>
+                        <li> Cover Art </li>
+
                     </Link>
 
                     <Link to="/flyers"onClick={toggleMenu}>
 
-                        <li>Flyers</li>
+                        <li> Flyers </li>
+
                           </Link>
 
                    <Link to="/logos"onClick={toggleMenu}>
                                           
 
-                        <li>Logos</li>
+                        <li> Logos </li>
 
+                        </Link>
+
+                  <Link to="/merch"onClick={toggleMenu}>
+
+
+                        <li> Merch </li> 
+                        
                         </Link>
                   </div> 
 

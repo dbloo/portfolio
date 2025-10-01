@@ -234,7 +234,7 @@ function App() {
     {
       id: 15,
       name: "CATCH AND RELEASE",
-      description: " ",
+      description: "Gotcha!!",
       imageUrl: "/assets/images/catch.JPG",
       size: "medium",
       materials: "36in x 36in Acrylic on Canvas "
@@ -244,10 +244,20 @@ function App() {
     {
       id: 16,
       name: "Mr. Crystal",
-      description: "",
+      description: "Perhaps he is serious.",
       imageUrl: "/assets/images/crystal.JPG",
-      size: "medium",
-      materials: "36in x 36in Acrylic on Canvas "
+      size: "tall",
+      materials: "16in x 14in Acrylic on Canvas "
+
+    },
+
+    {
+      id: 17,
+      name: "I can do this all day",
+      description: "Simply get up again and again and again and again and again and again.",
+      imageUrl: "/assets/images/allday.JPG",
+      size: "tall",
+      materials: "16 in x 14in Acrylic on Canvas "
 
     },
 
@@ -371,11 +381,11 @@ function App() {
 
     {
       id: 3,
-      name: "BAUMHEIM",
-      description: " ",
-      imageUrl: "/assets/images/baum.jpg",
+      name: "How Bazar x Unplesnt Art Exhibit",
+      description: "Flyer for a group art exhibition at Riverset Studios in Miami, 2025 ",
+      imageUrl: "/assets/images/exhibit.JPG",
       size: "tall",
-      materials: "1350 x 1080px Movie Poster Mockup"
+      materials: "1350 x 1080px Flyer"
 
     },
    
@@ -515,10 +525,20 @@ function App() {
 
     {
       id: 2,
-      name: "KEN BENZ Logo Mockup",
+      name: "STRI",
       description: " ",
-      imageUrl: "/assets/images/kbb.jpeg",
+      imageUrl: "/assets/images/stri.jpg",
       imagesUrl: ["/assets/images/lister.JPG", "/assets/images/underground.jpg" , "/assets/images/bc.jpg"],
+      size: "medium",
+      materials: " ",
+      carousel: "no"
+
+    },
+    {
+      id: 3,
+      name: "Studio Unpleasant",
+      description: " ",
+      imageUrl: "/assets/images/unplen.jpg",
       size: "medium",
       materials: " ",
       carousel: "no"
@@ -526,7 +546,7 @@ function App() {
     },
 
     {
-      id: 3,
+      id: 4,
       name: "Studio Unpleasant",
       description: " ",
       imageUrl: "/assets/images/un.jpg",
@@ -536,7 +556,7 @@ function App() {
     },
 
     {
-      id: 4,
+      id: 5,
       name: "Traction",
       description: " ",
       imageUrl: "/assets/images/tracc.jpg",
@@ -546,7 +566,7 @@ function App() {
     },
 
     {
-      id: 5,
+      id: 6,
       name: "MAKUHWAY",
       description: " ",
       imageUrl: "/assets/images/mawling.jpg",
@@ -556,7 +576,7 @@ function App() {
     },
 
     {
-      id: 6,
+      id: 7,
       name: "POSE",
       description: " ",
       imageUrl: "/assets/images/pose.jpg",
@@ -566,7 +586,7 @@ function App() {
     },
 
     {
-      id: 7,
+      id: 8,
       name: "PECK.LIVE",
       description: " ",
       imageUrl: "/assets/images/pkk.jpg",
@@ -576,7 +596,7 @@ function App() {
     },
 
     {
-      id: 8,
+      id: 9,
       name: "BULLS i URBAN",
       description: " ",
       imageUrl: "/assets/images/biu.jpg",
@@ -727,6 +747,16 @@ function App() {
         name: "Stack It Up",
         description: "Stack It Up - Dylan Hall",
         imageUrl: "/assets/images/stackitup.png",
+        size: "medium",
+        materials: "3000 x 3000px Cover Art"
+  
+      },
+
+      {
+        id: 14,
+        name: "Gross",
+        description: "Cover Art Mockup",
+        imageUrl: "/assets/images/gross.jpg",
         size: "medium",
         materials: "3000 x 3000px Cover Art"
   
@@ -1032,13 +1062,13 @@ const productData = {
       } ],
       
       size: [
-        { name: "8.5 x 11 inches", price: 30 },
+        { name: "8.5 x 11 inches", price: 35 },
         { name: "12 x 16 inches", price: 35 },
         { name: "18 x 24 inches", price: 40 }
 
       ],
       
-      initPrice: 30,
+      initPrice: 35,
       materials: "Giclee Print",
       productType: "print",
       imageFilename: 'crystal-thumb.jpg'
@@ -1062,15 +1092,15 @@ const productData = {
       } ],
       
       size: [
-        { name: "8 x 8 inches", price: 25 },
-        { name: "12 x 12 inches", price: 40 },
-        { name: "24 x 24 inches", price: 130 },
-        { name: "48 x 48 inches", price: 370},
+        { name: "8 x 8 inches", price: 35 },
+        { name: "12 x 12 inches", price: 50 },
+        { name: "24 x 24 inches", price: 150 },
+        { name: "48 x 48 inches", price: 400},
 
 
       ],
       
-      initPrice: 25,
+      initPrice: 35,
       materials: "Giclee Print",
       productType: "print",
       imageFilename: 'foreign.jpg'
@@ -1092,18 +1122,48 @@ const productData = {
       } ],
       
       size: [
-        { name: "8 x 8 inches", price: 25 },
-        { name: "12 x 12 inches", price: 40 },
-        { name: "24 x 24 inches", price: 130 },
-        { name: "48 x 48 inches", price: 370},
+        { name: "8 x 8 inches", price: 35 },
+        { name: "12 x 12 inches", price: 50 },
+        { name: "24 x 24 inches", price: 150 },
+        { name: "48 x 48 inches", price: 400},
 
 
       ],
       
-      initPrice: 25,
+      initPrice: 35,
       materials: "Giclee Print",
       productType: "print",
       imageFilename: 'whatif.jpg'
+
+
+
+    },
+
+    {
+      id: 15,
+      name: "I can do this all day.",
+      description: " ",
+      imageUrl: [ 
+        {
+          thumbnail: "/assets/images/allday-thumb.webp",
+          medium: "/assets/images/allday-medium.webp",
+          large: "/assets/images/allday.JPG",
+
+      } ],
+      
+      size: [
+        { name: "8 x 8 inches", price: 35 },
+        { name: "12 x 12 inches", price: 50 },
+        { name: "24 x 24 inches", price: 150 },
+        { name: "48 x 48 inches", price: 400},
+
+
+      ],
+      
+      initPrice: 35,
+      materials: "Giclee Print",
+      productType: "print",
+      imageFilename: 'allday.jpg'
 
 
 
@@ -1179,11 +1239,11 @@ const productData = {
       } ],
       
       size: [
-        { name: "36 x 36 inches", price: 3400 },
+        { name: "36 x 36 inches", price: 1200 },
 
       ],
       
-      initPrice: 3400,
+      initPrice: 1200,
       materials: "Acrylic on Canvas",
       productType: "original",
       imageFilename: 'catch-thumb.jpg'
@@ -1355,6 +1415,32 @@ const productData = {
       materials: "Acrylic on Canvas",
       productType: "original",
       imageFilename: 'whatif.jpg'
+
+
+
+    },
+
+    {
+      id: 13,
+      name: "I can do this all day.",
+      description: " ",
+      imageUrl: [ 
+        {
+          thumbnail: "/assets/images/allday-thumb.webp",
+          medium: "/assets/images/allday-medium.webp",
+          large: "/assets/images/allday.JPG",
+
+      } ],
+      
+      size: [
+        { name: "16 x 14 inches", price: 450 },
+
+      ],
+      
+      initPrice: 450,
+      materials: "Acrylic on Canvas",
+      productType: "original",
+      imageFilename: 'allday.jpg'
 
 
 

@@ -339,8 +339,7 @@ z-index: 10000;
     transition: 0.3s linear;
     left: 0;
     right: 0;
-    background-color: rgb(255, 255, 255);
-    
+    background-color: rgb(255, 255, 255);    
       
     z-index: 10000;
 
@@ -448,8 +447,6 @@ z-index: 10000;
    
   }
   .nav-links {
-    position: fixed;
-    display: flex;
     top: 10.9vh;
     right: 0;
     height: auto;
@@ -457,6 +454,7 @@ z-index: 10000;
     flex-direction: column;
     align-items: right;
     z-index: 10000000;
+    
     
 
     border: 1px solid #000; 
@@ -466,17 +464,20 @@ z-index: 10000;
     box-shadow: 0 8px 32px rgba(0, 0, 0, 0.37); /* Optional shadow for a better effect */
     border-top-left-radius: 10px; /* Rounded corners */
     border-bottom-left-radius: 10px; /* Rounded corners */
-    opacity: 0%;
-    /* Hide the menu by default */
+    display: none;    /* Hide the menu by default */
   }
 
  
 
   .nav-links.open {
+    display: flex;
+    position: fixed;
 
 
     animation: fadeIn 0.5s ease-in-out forwards;
     transition: transform 2s ease-out;
+    
+    
 
    
     
