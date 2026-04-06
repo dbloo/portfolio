@@ -36,39 +36,20 @@ return (
 
     <div className = "landingContainer">
         <div className="cardContainer">
-            <div className="title-container"><h1>New Arrivals</h1></div>
-         <div className = "greetingsContainer">
-             
-             <div className="arrivalsContainer">
-                            
-
-               
-               <div className="image-carousel">
-             
-                {categoryImages.slice(0).reverse().map((image) => (
-                    <>
-                       <div style = {{
-                                           transition: 'opacity 0.3s ease',
-                      
-                                           opacity: loaded ? 0 : 1,
-                                           position: 'absolute',
-                                           width:"20vw", height: "20vh"
-                                           }}>
-                                           <Skeleton width="100%" height="100%"   borderRadius={0}/>
-                                        </div>
-
-                        <img src={image.imageUrl[0].medium} onLoad={() => setLoaded(true)} loading = "lazy" style = {{opacity: loaded ? 1 : 0, transition: 'opacity 0.3s ease',}} alt={image.name} />
-                        </>
-
-                    ))}
-               </div>
-               <button>Shop Prints</button>
-                
+            <div className = "infoWrapper">
+            <div className = "titleWrapper">
+                <h1>The Swiss-Army Knife of Creatives</h1>
+                <h2>I can embelish anything from your home, to your next project.</h2>
             </div>
-                    </div>
 
+            <img src= "./assets/images/12-thumb.jpg" onLoad={() => setLoaded(true)} loading = "lazy" style = {{opacity: loaded ? 1 : 0, transition: 'opacity 0.3s ease',}} />
 
-        </div>
+            </div>
+
+            <button className="navButton">Learn More</button>
+            </div>
+    
+
 {/* 
             <div id = "bm" className = "anim"></div> */}
 

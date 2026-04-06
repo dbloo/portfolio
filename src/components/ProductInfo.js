@@ -144,27 +144,6 @@ import "./Info.css";
     }
    
 
-   
-   
-   
-   
-
-
-   const handleCheckout = async (productId) => {
-      const stripe = await stripePromise;
-      const response = await fetch("/api/checkout", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ productId }),
-      });
-      const session = await response.json();
-      await stripe.redirectToCheckout({ sessionId: session.id });
-    };
- 
-   if (!images[category]) {
-     return <div>Image not found!</div>;
-   }
-
 
 
 

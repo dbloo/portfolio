@@ -427,11 +427,11 @@ function Header() {
     
 
               <div  className={`expanded-item ${expandShop ? "expanded": ""}`}>
-              <Link to="/shop-originals"onClick={toggleMenu}>
+              {/* <Link to="/shop-originals"onClick={toggleMenu}>
 
                   <li>Originals</li>
 
-              </Link>
+              </Link> */}
                                         
                 <Link to="/" onClick={toggleMenu}>
 

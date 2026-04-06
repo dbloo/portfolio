@@ -1,32 +1,11 @@
-.anim {
-    width: 50%;
-    display: flex;
-    margin-left: 25vw;
-    animation: fadeIn 0.7s;
+
+.subtitle {
+    font-size: 24px;
+    margin-bottom: 2%;
 
 }
 
-.cardContainer{
-        margin-top: 20vh;
-        overflow: hidden;
 
-
-
-}
-
-.image-carousel {
-    display: inline-flex;
-
-}
-
-.image-carousel img {
-    width: 20%;
-    height: 20%;
-    margin-right: 2%;
-    border-radius: 10px;
-    box-shadow: 0px 4px 10px  rgba(0, 0, 0, 0.3); 
-
-}
 
 .landingContainer {
     height: 100vh;
@@ -36,29 +15,41 @@
    padding-right: 10%;
 }
 
-.greetingsContainer {
-    padding-top: 5%;
-    padding-left: 5%;
-    border-radius: 20px;
-    height: 40%;
-            border: 1px solid black;
 
-}
 
-.title-container {
+.cardContainer {
     border: 1px solid black;
     border-radius: 20px;
     padding-left: 3%;
     font-size: 48px;
     margin-bottom: 3%;
+    margin-top: 15%;
 
 
 
 }
 
+.infoWrapper {
+    position: relative;
+    display: flex;
+    width: 100%;
+
+}
 
 
 
+.navButton {
+    background-color: #fff;
+    border: 1px solid #000;
+    border-radius: 20px;
+    padding: 5%;
+    margin-top: 12%;
+    display: flex;
+    position: relative;
+    justify-content: center;
+    width: 100%;
+    color: #000;  
+}
 
 .greetings h3 {
 
@@ -95,26 +86,50 @@
 
 }
 
-.greetingsContainer {
-    height: auto;
-    padding-top: 10%;
-    padding-left: 10%;
-    border-radius: 20px;
-    height: 40%;
-            border: 1px solid black;
 
-}
 
-.title-container {
+.cardContainer {
     border: 1px solid black;
     border-radius: 20px;
-    padding-left: 3%;
-    font-size: 14px;
+    padding: 5%;
+    font-size: 20px;
     margin-bottom: 3%;
 
 
 
 }
+
+.infoWrapper {
+    position: relative;
+    display: flex;
+    width: 100%;
+    flex-direction: column-reverse;
+
+}
+.card {
+    display: flex;
+    flex-direction: column;
+    padding: 2%;
+
+    height: 400px;
+
+    box-shadow: 0px 4px 10px  rgba(0, 0, 0, 0.3); 
+    border-radius: 20px;
+    margin-bottom: 10%;
+
+
     
+    
+
+}
+.card h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.cardContainer h2 {
+    font-size: 20px;
+    margin-bottom: 20px;
+}
 
 }

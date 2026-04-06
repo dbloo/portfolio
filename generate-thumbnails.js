@@ -35,7 +35,7 @@ async function processImage(file) {
 
 async function run() {
   const files = await fs.readdir(INPUT_DIR);
-  await processImage("allday.JPG");
+  await processImage(files);
   console.log("✅ All thumbnails generated!");
 }
 

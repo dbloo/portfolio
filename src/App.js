@@ -246,7 +246,7 @@ function App() {
       name: "Mr. Crystal",
       description: "Perhaps he is serious.",
       imageUrl: "/assets/images/crystal.JPG",
-      size: "tall",
+      size: "small",
       materials: "16in x 14in Acrylic on Canvas "
 
     },
@@ -258,6 +258,15 @@ function App() {
       imageUrl: "/assets/images/allday.JPG",
       size: "tall",
       materials: "16 in x 14in Acrylic on Canvas "
+
+    },
+    {
+      id: 18,
+      name: "Light Show: Frame 2",
+      description: "America's Favorite Jester™ ",
+      imageUrl: "/assets/images/lightshowF2.jpg",
+      size: "large",
+      materials: "23 in x 26 in Acrylic on Canvas "
 
     },
 
@@ -354,6 +363,7 @@ function App() {
       materials: "8.5in x 11in Digital "
 
     },
+    
 
   ],
 
@@ -604,6 +614,34 @@ function App() {
       materials: " "
 
     },
+    {
+      id: 10,
+      name: "The Pot",
+      description: " ",
+      imageUrl: "/assets/images/thepot.PNG",
+      size: "medium",
+      materials: " "
+
+    },
+
+    {
+      id: 11,
+      name: "BRAINWASHED GENERATION",
+      description: " ",
+      imageUrl: "/assets/images/bwg.jpg",
+      size: "medium",
+      materials: " "
+
+    },
+    {
+      id: 12,
+      name: "The Wisteria",
+      description: " ",
+      imageUrl: "/assets/images/wist_logo.png",
+      size: "medium",
+      materials: " "
+
+    },
 
     
 
@@ -733,7 +771,7 @@ function App() {
       },
 
       {
-        id: 13,
+        id: 14,
         name: "Bandita",
         description: " ",
         imageUrl: "/assets/images/bandita.png",
@@ -743,7 +781,7 @@ function App() {
       },
 
       {
-        id: 13,
+        id: 15,
         name: "Stack It Up",
         description: "Stack It Up - Dylan Hall",
         imageUrl: "/assets/images/stackitup.png",
@@ -753,10 +791,19 @@ function App() {
       },
 
       {
-        id: 14,
+        id: 16,
         name: "Gross",
         description: "Cover Art Mockup",
         imageUrl: "/assets/images/gross.jpg",
+        size: "medium",
+        materials: "3000 x 3000px Cover Art"
+  
+      },
+      {
+        id: 17,
+        name: "SPARKL",
+        description: "Cover Art Mockup",
+        imageUrl: "/assets/images/typ.jpg",
         size: "medium",
         materials: "3000 x 3000px Cover Art"
   
@@ -932,31 +979,7 @@ const productData = {
 
     // },
 
-    {
-      id: 5,
-      name: "MAKE LESS MONEY",
-      description: "Do as I say, not as I do.",
-      imageUrl:  [{
-        thumbnail: "/assets/images/money-thumb.webp",
-        medium: "/assets/images/money-medium.webp",
-        large: "/assets/images/money.JPG",
-
-    } ],
-      
-      size: [
-        { name: "8.5 x 11 inches", price: 30 },
-        { name: "12 x 16 inches", price: 35 },
-        { name: "18 x 24 inches", price: 40 }
-
-      ],
-      
-      initPrice: 30,
-      materials: "Giclee Print",
-      productType: "print",
-      imageFilename: 'money-thumb.jpg'
-
-
-    },
+  
 
     
 
@@ -1139,35 +1162,6 @@ const productData = {
 
     },
 
-    {
-      id: 15,
-      name: "I can do this all day.",
-      description: " ",
-      imageUrl: [ 
-        {
-          thumbnail: "/assets/images/allday-thumb.webp",
-          medium: "/assets/images/allday-medium.webp",
-          large: "/assets/images/allday.JPG",
-
-      } ],
-      
-      size: [
-        { name: "8 x 8 inches", price: 35 },
-        { name: "12 x 12 inches", price: 50 },
-        { name: "24 x 24 inches", price: 150 },
-        { name: "48 x 48 inches", price: 400},
-
-
-      ],
-      
-      initPrice: 35,
-      materials: "Giclee Print",
-      productType: "print",
-      imageFilename: 'allday.jpg'
-
-
-
-    },
 
   ],
 
@@ -1467,6 +1461,7 @@ const productData = {
               {/* <Route path= "/" element = {<Landing category = "prints" products = {productData}/>} /> */}
 
               <Route path="/" element={<ShopPrints category = "prints" products = {productData}/>} />
+              <Route path="/landing" element={<Landing category = "prints" products = {productData}/>} />
 
 
               <Route path="/graphicDesign" element={<GraphicDesign category= "graphicDesign" images = {imageData}/>} />

@@ -292,14 +292,16 @@ h3{
         align-content: center;
     }
 
-    .image-skeleton-wrapper {
+    .image-skeleton-wrapper  {
         min-height: 70vw;
         max-height: 120vw;
         position: relative;
-
-      
+                
 
     }
+
+    
+    
     
 
     .backB span{
@@ -435,9 +437,9 @@ h3{
     }
    
     .info-text-container {
-        width: 75vw;
+        width: 80vw;
         word-wrap: break-word;
-        padding-left: 3%;
+        padding-left: 0%;
     }
 
     .quantitySelector button:hover {
@@ -480,7 +482,6 @@ h3{
     .image-container {
         width: 100%;
         display: grid;
-        margin-left: -2%;
 
     }
 
@@ -517,13 +518,13 @@ h3{
 
     .sizeSelector select{ 
         margin-top: 10%;
-        padding: 20%;
+        padding: 9%;
         background-color: #fff;
         border: 1px solid #000;
         border-radius: 20px;
         width: 200px;
-        height: 50px;
         color: #000;   
+        cursor: pointer;
          
     
 
