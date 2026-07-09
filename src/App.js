@@ -963,31 +963,7 @@ const productData = {
 
     },
 
-     {
-      id: 4,
-      name: "SRII",
-      description: "My first favorite car ",
-      imageUrl: [ 
-        {
-          thumbnail: "/assets/images/SRII-thumb.webp",
-          medium: "/assets/images/SRII-medium.webp",
-          large: "/assets/images/SRII.jpg",
-
-      } ],
-       size: [
-        { name: "8 x 8 inches", price: 35 },
-        { name: "12 x 12 inches", price: 50 },
-        { name: "24 x 24 inches", price: 150 },
-        { name: "48 x 48 inches", price: 400},
-
-
-      ],
-       initPrice: 35,
-      materials: "Giclee Print",
-      productType: "print",
-      imageFilename: 'flycatcher-thumb.jpg',
-
-    },
+     
 
 
     
@@ -1198,6 +1174,32 @@ const productData = {
       imageFilename: 'whatif.jpg'
 
 
+
+    },
+
+    {
+      id: 15,
+      name: "SRII",
+      description: "My first favorite car ",
+      imageUrl: [ 
+        {
+          thumbnail: "/assets/images/SRII-thumb.webp",
+          medium: "/assets/images/SRII-medium.webp",
+          large: "/assets/images/SRII.jpg",
+
+      } ],
+       size: [
+        { name: "8 x 8 inches", price: 35 },
+        { name: "12 x 12 inches", price: 50 },
+        { name: "24 x 24 inches", price: 150 },
+        { name: "48 x 48 inches", price: 400},
+
+
+      ],
+       initPrice: 35,
+      materials: "Giclee Print",
+      productType: "print",
+      imageFilename: 'flycatcher-thumb.jpg',
 
     },
 
