@@ -8,9 +8,12 @@ import { TanStackDevtools } from '@tanstack/react-devtools'
 
 import TanStackQueryDevtools from '../integrations/tanstack-query/devtools'
 
+import Navbar from '../components/ui/navbar'
+
 import appCss from '../styles.css?url'
 
 import type { QueryClient } from '@tanstack/react-query'
+import { Footer } from '#/components/ui/footer'
 
 interface MyRouterContext {
   queryClient: QueryClient
@@ -27,7 +30,7 @@ export const Route = createRootRouteWithContext<MyRouterContext>()({
         content: 'width=device-width, initial-scale=1',
       },
       {
-        title: 'TanStack Start Starter',
+        title: 'Dominic Bloomfield',
       },
     ],
     links: [
@@ -47,8 +50,10 @@ function RootDocument({ children }: { children: React.ReactNode }) {
         <HeadContent />
       </head>
       <body>
+        <Navbar />
         {children}
-        <TanStackDevtools
+        <Footer />
+        {/* <TanStackDevtools
           config={{
             position: 'bottom-right',
           }}
@@ -59,7 +64,7 @@ function RootDocument({ children }: { children: React.ReactNode }) {
             },
             TanStackQueryDevtools,
           ]}
-        />
+        /> */}
         <Scripts />
       </body>
     </html>

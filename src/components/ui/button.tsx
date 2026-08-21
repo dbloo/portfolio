@@ -1,6 +1,12 @@
 import * as React from "react"
 import { cva, type VariantProps } from "class-variance-authority"
 import { Slot } from "radix-ui"
+import {motion} from 'framer-motion'
+import { Link } from "@tanstack/react-router"
+
+import {useState, useRef} from 'react'
+
+
 
 import { cn } from "#/lib/utils.ts"
 
@@ -10,6 +16,7 @@ const buttonVariants = cva(
     variants: {
       variant: {
         default: "bg-primary text-primary-foreground hover:bg-primary/90",
+        styled: "bg-white   text-white cursor-pointer",
         destructive:
           "bg-destructive text-white hover:bg-destructive/90 focus-visible:ring-destructive/20 dark:bg-destructive/60 dark:focus-visible:ring-destructive/40",
         outline:
@@ -47,7 +54,7 @@ function Button({
 }: React.ComponentProps<"button"> &
   VariantProps<typeof buttonVariants> & {
     asChild?: boolean
-  }) {
+  })  {
   const Comp = asChild ? Slot.Root : "button"
 
   return (
@@ -60,5 +67,75 @@ function Button({
     />
   )
 }
+
+
+function StyledButton({
+  className,
+  size = "default",
+  asChild = false,
+  children,
+  color,
+  params,
+  to,
+  hash,
+  type,
+  disabled,
+  onClick,
+}: React.ComponentProps<"button"> &
+  VariantProps<typeof buttonVariants> & {
+    asChild?: boolean
+    to?:string
+    params?: any
+    hash?: string
+    disabled?: boolean
+  
+  }) {
+
+  const [clicked, isClicked] = useState(false)
+  const pressTimer = useRef<ReturnType<typeof setTimeout> | null>(null)
+  
+  const handlePointerDown = () => {
+    if (disabled) return
+    isClicked(true)
+  }
+  
+  const handlePointerUp = () => {
+    pressTimer.current = setTimeout(() => isClicked(false), 100)
+  }
+  
+  const handlePointerLeave = () => {
+    if (!clicked) return
+    isClicked(false)
+  }
+
+  return (
+    <span className = {` ${disabled == true ? "opacity-50" : ""} relative rounded-full  h-full`}>
+                        <motion.span
+                        animate={clicked ? { y: 5, x: 0 } : { y: 0, x: 0 }}
+                        transition={
+                          clicked
+                            ? { type: "spring", stiffness: 600, damping: 20 }
+                            : { type: "spring", stiffness: 400, damping: 15 }
+                        }
+                       onPointerDown={handlePointerDown}
+                      onPointerUp={handlePointerUp}
+                      onPointerLeave={handlePointerLeave}
+                      onPointerCancel={() => isClicked(false)} 
+                      style={{ touchAction: "none" }} 
+                      
+                      className="relative inline-block z-10 w-full"
+                        
+                        >
+                        <Link params= {params} hash = {hash} to ={to}><Button type = {type} onClick = {onClick} variant = "styled" className = {`${className }   z-10 select-none border border-${color} text-${color} `}>{children}</Button></Link>
+                        </motion.span>
+                        <Button 
+                        aria-hidden="true"
+                        tabIndex={-1}
+                        variant="styled" type = {type} className={`${className }  select-none border border-${color} absolute top-2 z-0 left-0  bg-${color}`}>{children}</Button>
+                        </span>
+  )
+}
+
+export {StyledButton}
 
 export { Button, buttonVariants }

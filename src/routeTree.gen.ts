@@ -9,38 +9,148 @@
 // Additionally, you should also exclude this file from your linter and/or formatter to prevent it from being checked or modified.
 
 import { Route as rootRouteImport } from './routes/__root'
+import { Route as PrintsRouteImport } from './routes/prints'
+import { Route as OriginalsRouteImport } from './routes/originals'
+import { Route as GraphicdesignRouteImport } from './routes/graphicdesign'
+import { Route as AboutRouteImport } from './routes/about'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as PrintSlugRouteImport } from './routes/print/$slug'
+import { Route as OriginalSlugRouteImport } from './routes/original/$slug'
 
+const PrintsRoute = PrintsRouteImport.update({
+  id: '/prints',
+  path: '/prints',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const OriginalsRoute = OriginalsRouteImport.update({
+  id: '/originals',
+  path: '/originals',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const GraphicdesignRoute = GraphicdesignRouteImport.update({
+  id: '/graphicdesign',
+  path: '/graphicdesign',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const AboutRoute = AboutRouteImport.update({
+  id: '/about',
+  path: '/about',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
+const PrintSlugRoute = PrintSlugRouteImport.update({
+  id: '/print/$slug',
+  path: '/print/$slug',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const OriginalSlugRoute = OriginalSlugRouteImport.update({
+  id: '/original/$slug',
+  path: '/original/$slug',
+  getParentRoute: () => rootRouteImport,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/about': typeof AboutRoute
+  '/graphicdesign': typeof GraphicdesignRoute
+  '/originals': typeof OriginalsRoute
+  '/prints': typeof PrintsRoute
+  '/original/$slug': typeof OriginalSlugRoute
+  '/print/$slug': typeof PrintSlugRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/about': typeof AboutRoute
+  '/graphicdesign': typeof GraphicdesignRoute
+  '/originals': typeof OriginalsRoute
+  '/prints': typeof PrintsRoute
+  '/original/$slug': typeof OriginalSlugRoute
+  '/print/$slug': typeof PrintSlugRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/about': typeof AboutRoute
+  '/graphicdesign': typeof GraphicdesignRoute
+  '/originals': typeof OriginalsRoute
+  '/prints': typeof PrintsRoute
+  '/original/$slug': typeof OriginalSlugRoute
+  '/print/$slug': typeof PrintSlugRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/'
+  fullPaths:
+    | '/'
+    | '/about'
+    | '/graphicdesign'
+    | '/originals'
+    | '/prints'
+    | '/original/$slug'
+    | '/print/$slug'
   fileRoutesByTo: FileRoutesByTo
-  to: '/'
-  id: '__root__' | '/'
+  to:
+    | '/'
+    | '/about'
+    | '/graphicdesign'
+    | '/originals'
+    | '/prints'
+    | '/original/$slug'
+    | '/print/$slug'
+  id:
+    | '__root__'
+    | '/'
+    | '/about'
+    | '/graphicdesign'
+    | '/originals'
+    | '/prints'
+    | '/original/$slug'
+    | '/print/$slug'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  AboutRoute: typeof AboutRoute
+  GraphicdesignRoute: typeof GraphicdesignRoute
+  OriginalsRoute: typeof OriginalsRoute
+  PrintsRoute: typeof PrintsRoute
+  OriginalSlugRoute: typeof OriginalSlugRoute
+  PrintSlugRoute: typeof PrintSlugRoute
 }
 
 declare module '@tanstack/react-router' {
   interface FileRoutesByPath {
+    '/prints': {
+      id: '/prints'
+      path: '/prints'
+      fullPath: '/prints'
+      preLoaderRoute: typeof PrintsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/originals': {
+      id: '/originals'
+      path: '/originals'
+      fullPath: '/originals'
+      preLoaderRoute: typeof OriginalsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/graphicdesign': {
+      id: '/graphicdesign'
+      path: '/graphicdesign'
+      fullPath: '/graphicdesign'
+      preLoaderRoute: typeof GraphicdesignRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/about': {
+      id: '/about'
+      path: '/about'
+      fullPath: '/about'
+      preLoaderRoute: typeof AboutRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/': {
       id: '/'
       path: '/'
@@ -48,12 +158,41 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/print/$slug': {
+      id: '/print/$slug'
+      path: '/print/$slug'
+      fullPath: '/print/$slug'
+      preLoaderRoute: typeof PrintSlugRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/original/$slug': {
+      id: '/original/$slug'
+      path: '/original/$slug'
+      fullPath: '/original/$slug'
+      preLoaderRoute: typeof OriginalSlugRouteImport
+      parentRoute: typeof rootRouteImport
+    }
   }
 }
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  AboutRoute: AboutRoute,
+  GraphicdesignRoute: GraphicdesignRoute,
+  OriginalsRoute: OriginalsRoute,
+  PrintsRoute: PrintsRoute,
+  OriginalSlugRoute: OriginalSlugRoute,
+  PrintSlugRoute: PrintSlugRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
   ._addFileTypes<FileRouteTypes>()
+
+import type { getRouter } from './router.tsx'
+import type { createStart } from '@tanstack/react-start'
+declare module '@tanstack/react-start' {
+  interface Register {
+    ssr: true
+    router: Awaited<ReturnType<typeof getRouter>>
+  }
+}
